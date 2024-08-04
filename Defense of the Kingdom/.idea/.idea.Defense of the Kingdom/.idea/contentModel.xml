@@ -13,6 +13,10 @@
           <e p="Character" t="Include">
             <e p="PlayerController.cs" t="Include" />
           </e>
+          <e p="Enemy" t="Include">
+            <e p="MoveEnemy.cs" t="Include" />
+            <e p="SpawnEnemy.cs" t="Include" />
+          </e>
           <e p="MessageTrigger" t="Include">
             <e p="ShowStartMessage.cs" t="Include" />
           </e>
