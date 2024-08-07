@@ -13,7 +13,7 @@ public class SpawnEnemy : MonoBehaviour
     {
         for (int i = 0; i < _spawnPointEnemy.Length; i++)
         {
-            Instantiate(_commonEnemyPrefab, _spawnPointEnemy[i].position, Quaternion.identity);
+           var newEnemy = Instantiate(_commonEnemyPrefab, _spawnPointEnemy[i].position, Quaternion.identity);
         }
     }
 }

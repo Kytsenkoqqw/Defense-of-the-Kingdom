@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4960734712799987815}
   - component: {fileID: 1220397143584430237}
   - component: {fileID: 8111986185904921009}
+  - component: {fileID: 1819203393860250006}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Untagged
@@ -158,3 +159,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1819203393860250006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199523505313875016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baba3ab9f09fcdf45aa3cdccabd9f4c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyTarget: {fileID: 619689781281711984, guid: 40b146365dac05f4288d49926bd9226d, type: 3}
+  _speed: 5

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7972996805073963531}
   - component: {fileID: 4448198148350532485}
   - component: {fileID: 4191828214745107089}
+  - component: {fileID: 3649723943336043732}
   m_Layer: 0
   m_Name: CommonEnemy
   m_TagString: Untagged
@@ -158,3 +159,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &3649723943336043732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5143575079677692343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc2a46d0b8f73447a19d9dcdb9e7cf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 5
+  _target: {fileID: 0}
