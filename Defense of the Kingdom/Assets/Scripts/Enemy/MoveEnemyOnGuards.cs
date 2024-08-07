@@ -20,6 +20,7 @@ public class MoveEnemyOnGuards : MonoBehaviour
         if (_guard != null)
         {
             EnemyMove();
+            FindNewGuard();
         }
     }
 

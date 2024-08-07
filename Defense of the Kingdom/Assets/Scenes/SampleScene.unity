@@ -2238,18 +2238,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guard
       objectReference: {fileID: 0}
-    - target: {fileID: 3477562647450770865, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477562647450770865, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -539.27704
-      objectReference: {fileID: 0}
-    - target: {fileID: 5272444282701605299, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
-      propertyPath: m_Name
-      value: background
-      objectReference: {fileID: 0}
     - target: {fileID: 8406289712368812309, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.46
