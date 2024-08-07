@@ -25,12 +25,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health/HealthUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/ObjectStateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/FightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/SearchState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -76,7 +76,7 @@
       <workItem from="1722776452137" duration="1594000" />
       <workItem from="1722782274330" duration="2227000" />
       <workItem from="1723023897619" duration="7144000" />
-      <workItem from="1723035850893" duration="3980000" />
+      <workItem from="1723035850893" duration="5391000" />
     </task>
     <servers />
   </component>
