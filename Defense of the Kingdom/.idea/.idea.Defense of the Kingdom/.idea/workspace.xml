@@ -10,19 +10,22 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageTrigger/ShowStartMessage.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MessegeTrigger/ShowStartMessage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MessageTrigger/ShowStartMessage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Health/HealthUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -67,7 +70,8 @@
       <workItem from="1722774955638" duration="590000" />
       <workItem from="1722776452137" duration="1594000" />
       <workItem from="1722782274330" duration="2227000" />
-      <workItem from="1723023897619" duration="2647000" />
+      <workItem from="1723023897619" duration="7144000" />
+      <workItem from="1723035850893" duration="948000" />
     </task>
     <servers />
   </component>

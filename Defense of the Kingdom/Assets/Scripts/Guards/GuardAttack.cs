@@ -6,6 +6,8 @@ using UnityEngine;
 public class GuardAttack : MonoBehaviour
 {
     [SerializeField] private float _speed = 5f;
+    [SerializeField] private int _damage = 10;
+    
     private MoveEnemyOnGuards _enemy;
 
     private void Start()
@@ -27,7 +29,12 @@ public class GuardAttack : MonoBehaviour
     {
         if (other.gameObject.GetComponent<MoveEnemyOnGuards>())
         {
-            _speed = 0f;
+            HealthSystem heroHealth = other.gameObject.GetComponent<HealthSystem>();
+            if (heroHealth != null)
+            {
+                // Наносим урон герою
+                heroHealth.TakeDamage(_damage);
+            }
         }
     }
 }
