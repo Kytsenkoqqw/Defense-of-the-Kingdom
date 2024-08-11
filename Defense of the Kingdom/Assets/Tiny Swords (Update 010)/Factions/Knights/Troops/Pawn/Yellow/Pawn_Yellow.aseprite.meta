@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 295
       width: 58
       height: 59
-    spriteID: 631e9eaf557d32d41bdcffa3091f2f82
+    spriteID: 1db9e331df8b64b4bb0cd9f69cbd7dba
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 295
       width: 58
       height: 59
-    spriteID: b49621a15afc21c49919854a2e05f7ca
+    spriteID: 2f7842843d486b2489ab92825202b060
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 363
       width: 58
       height: 57
-    spriteID: ac31408a35abf994c867b02e7c8b97c9
+    spriteID: e6dcab10830786147a54ec51c6993756
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 363
       width: 58
       height: 56
-    spriteID: b113d3f3b7885ac4ba05d0a7cf3a7846
+    spriteID: a9d7f24dbcfb7b14382153e12a677c07
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -212,7 +212,7 @@ ScriptedImporter:
       y: 363
       width: 58
       height: 57
-    spriteID: 3510b97c013a7174cadc3f086d51ba63
+    spriteID: 592721a92406d654f982c7cd94313c25
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -232,7 +232,7 @@ ScriptedImporter:
       y: 363
       width: 58
       height: 58
-    spriteID: aac0600a35541fa41b659c5542e31e0d
+    spriteID: 1a5d55a6a2c83a0489aca2ee77bbaaa4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -252,7 +252,7 @@ ScriptedImporter:
       y: 295
       width: 58
       height: 59
-    spriteID: b3b0196a71c93b742b9569a5fc2d4f39
+    spriteID: a21571b601365b841b92dd7a32f184a6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -272,7 +272,7 @@ ScriptedImporter:
       y: 227
       width: 58
       height: 60
-    spriteID: d22a72dae75f411449723fac540528dc
+    spriteID: 7d6234ef2eb1f5f4c9db716865e8bed4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -292,7 +292,7 @@ ScriptedImporter:
       y: 295
       width: 58
       height: 59
-    spriteID: 8656845ffc5995c49a43060ab2ff101c
+    spriteID: 807842b36e735444ca75315b1b3dc2b5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -312,7 +312,7 @@ ScriptedImporter:
       y: 78
       width: 58
       height: 55
-    spriteID: 5590e9d1034acaf4d9d58c7995fbee57
+    spriteID: 856295893b2df7a45885a7c34a0a3481
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -332,7 +332,7 @@ ScriptedImporter:
       y: 227
       width: 62
       height: 60
-    spriteID: 431a95829decf2b428d284bdd92e4c06
+    spriteID: 25204190f6a5f5c40a1b5bcac2e18edf
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -352,7 +352,7 @@ ScriptedImporter:
       y: 227
       width: 59
       height: 59
-    spriteID: 670435fe8da4ce7498905ed1394446c1
+    spriteID: 7d99e5b697f49db499089c41fc65f85b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -372,7 +372,7 @@ ScriptedImporter:
       y: 78
       width: 58
       height: 55
-    spriteID: 0c80f0329c734b349b97943091f8806b
+    spriteID: 05ad8ad42c3902b4fb0319b43355aa82
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -392,7 +392,7 @@ ScriptedImporter:
       y: 142
       width: 65
       height: 75
-    spriteID: ee20e8ecf9059034f9f7e7e102cf8dd9
+    spriteID: ea6233a3b7f6b2e4d887259b6f0e8486
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -412,7 +412,7 @@ ScriptedImporter:
       y: 142
       width: 65
       height: 77
-    spriteID: 0b4500cc563f21f42999185d105ec94c
+    spriteID: db6846a13014cc84091ad02264673452
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -432,7 +432,7 @@ ScriptedImporter:
       y: 142
       width: 65
       height: 77
-    spriteID: 3ddec2e8ff9c49d46955422a147c191c
+    spriteID: c54b43beaa88c7b4a8a277d63bdb8929
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -452,7 +452,7 @@ ScriptedImporter:
       y: 4
       width: 92
       height: 66
-    spriteID: 377efcd946caa7049b3e513cb23c13ce
+    spriteID: 907f3f7dc15ad2d44b95d5e6794a7e61
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -472,7 +472,7 @@ ScriptedImporter:
       y: 4
       width: 89
       height: 56
-    spriteID: 2df11d1ee6ac48d448e2ce33cdde2ae4
+    spriteID: 3a78de2ad0da21941b667eb57f9ac0b3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -492,7 +492,7 @@ ScriptedImporter:
       y: 142
       width: 76
       height: 58
-    spriteID: 5add9137f9d79734c9a70fc5947bd1d2
+    spriteID: f3a4adccd360dbc45b6cb037889e34b6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -512,7 +512,7 @@ ScriptedImporter:
       y: 142
       width: 81
       height: 60
-    spriteID: 1cb26e381d0e4ab4595dc7b09fce4c6b
+    spriteID: 3ebdfc66e01f3f541a003ab1cf00f3a9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -532,7 +532,7 @@ ScriptedImporter:
       y: 4
       width: 88
       height: 64
-    spriteID: 74fae43281ba8344882260031b569e5e
+    spriteID: 1723e80cce5938f4da44168c0ba83b61
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -552,7 +552,7 @@ ScriptedImporter:
       y: 4
       width: 88
       height: 64
-    spriteID: f396012ce2b42f3458d2e2483274f1f0
+    spriteID: d36e660a381abbe4bbd9db414dd5db37
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -572,7 +572,7 @@ ScriptedImporter:
       y: 4
       width: 110
       height: 54
-    spriteID: b00d2cc49d045fa4dbb3ab85f13753d5
+    spriteID: ea825be711282a74db0371e9b2af504b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -592,7 +592,7 @@ ScriptedImporter:
       y: 78
       width: 99
       height: 56
-    spriteID: 7e3158a162785bc4aaf801e0d3503b5a
+    spriteID: 5158fc9c5e47b624e94c4c1321addfde
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -612,7 +612,7 @@ ScriptedImporter:
       y: 142
       width: 69
       height: 66
-    spriteID: e8db0854ffaa632478f29c849716c913
+    spriteID: b1179b83008a5b94ebba05b27ac9912f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -632,7 +632,7 @@ ScriptedImporter:
       y: 227
       width: 58
       height: 60
-    spriteID: 976fe9734ec36764e97a675078856ad4
+    spriteID: ad55b2c084d740547a40954e7faf1453
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -652,7 +652,7 @@ ScriptedImporter:
       y: 295
       width: 58
       height: 59
-    spriteID: f86c4263d02c0e84d87e5cc9fe81da1c
+    spriteID: 896a25ca669ee9d4ca4994f2420fb5fe
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -672,7 +672,7 @@ ScriptedImporter:
       y: 363
       width: 58
       height: 58
-    spriteID: 1ae9aa8375b84ab4b8a609b50aa1f02f
+    spriteID: b0f341ac37244074da2833db05fab61e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -692,7 +692,7 @@ ScriptedImporter:
       y: 363
       width: 58
       height: 57
-    spriteID: c03e336b5a66dbc40b89136fb229dd55
+    spriteID: 3a1ec2423789f6848bf0dc65d58579fa
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -712,7 +712,7 @@ ScriptedImporter:
       y: 363
       width: 58
       height: 58
-    spriteID: b8c0b6b49b89a28418d5a5b609e32610
+    spriteID: 72e29eec84df72d488da67d9a7d123c0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -732,7 +732,7 @@ ScriptedImporter:
       y: 295
       width: 58
       height: 59
-    spriteID: 7afb8c7100c33664b822210f2a5c3825
+    spriteID: 12b59c951d6d2aa48867017c0ff905ac
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -752,7 +752,7 @@ ScriptedImporter:
       y: 227
       width: 58
       height: 60
-    spriteID: fb2f9eb021f4c42478648f5389fbceea
+    spriteID: 9921045d36349a741bf58a323af2231c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -772,7 +772,7 @@ ScriptedImporter:
       y: 227
       width: 58
       height: 60
-    spriteID: 7a528054ec3d94140a27c0070d7306f6
+    spriteID: 690d2049053f7ed49a6c9daadf50681c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -792,7 +792,7 @@ ScriptedImporter:
       y: 78
       width: 58
       height: 56
-    spriteID: dc13d4e61278bc740a76d08fbb199af2
+    spriteID: 2c08a28e2e31421468332046359ca809
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -812,7 +812,7 @@ ScriptedImporter:
       y: 227
       width: 58
       height: 60
-    spriteID: 0289595d0ee4d704995a07065c239278
+    spriteID: 454329b507e66144bb9e97159ea28fe4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -832,7 +832,7 @@ ScriptedImporter:
       y: 295
       width: 58
       height: 60
-    spriteID: 73522bddf0ae5084eb8a531878badc31
+    spriteID: 9fe00c4855d7d6842bee96d40fdfa8f4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -852,7 +852,7 @@ ScriptedImporter:
       y: 78
       width: 58
       height: 56
-    spriteID: 6b6185356da1e8c4aad8956266ee9db7
+    spriteID: 012029a65c5bf8f41bfff57c9c960005
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -878,7 +878,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 59
-      spriteId: 631e9eaf557d32d41bdcffa3091f2f82
+      spriteId: 1db9e331df8b64b4bb0cd9f69cbd7dba
     - name: Pawn_Yellow_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
@@ -887,7 +887,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 59
-      spriteId: b49621a15afc21c49919854a2e05f7ca
+      spriteId: 2f7842843d486b2489ab92825202b060
     - name: Pawn_Yellow_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
@@ -896,7 +896,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 57
-      spriteId: ac31408a35abf994c867b02e7c8b97c9
+      spriteId: e6dcab10830786147a54ec51c6993756
     - name: Pawn_Yellow_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
@@ -905,7 +905,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 56
-      spriteId: b113d3f3b7885ac4ba05d0a7cf3a7846
+      spriteId: a9d7f24dbcfb7b14382153e12a677c07
     - name: Pawn_Yellow_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
@@ -914,7 +914,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 57
-      spriteId: 3510b97c013a7174cadc3f086d51ba63
+      spriteId: 592721a92406d654f982c7cd94313c25
     - name: Pawn_Yellow_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
@@ -923,7 +923,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 58
-      spriteId: aac0600a35541fa41b659c5542e31e0d
+      spriteId: 1a5d55a6a2c83a0489aca2ee77bbaaa4
     - name: Pawn_Yellow_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
@@ -932,7 +932,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 59
-      spriteId: b3b0196a71c93b742b9569a5fc2d4f39
+      spriteId: a21571b601365b841b92dd7a32f184a6
     - name: Pawn_Yellow_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
@@ -941,7 +941,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 60
-      spriteId: d22a72dae75f411449723fac540528dc
+      spriteId: 7d6234ef2eb1f5f4c9db716865e8bed4
     - name: Pawn_Yellow_Frame_8
       frameIndex: 8
       additiveSortOrder: 0
@@ -950,7 +950,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 59
-      spriteId: 8656845ffc5995c49a43060ab2ff101c
+      spriteId: 807842b36e735444ca75315b1b3dc2b5
     - name: Pawn_Yellow_Frame_9
       frameIndex: 9
       additiveSortOrder: 0
@@ -959,7 +959,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 55
-      spriteId: 5590e9d1034acaf4d9d58c7995fbee57
+      spriteId: 856295893b2df7a45885a7c34a0a3481
     - name: Pawn_Yellow_Frame_10
       frameIndex: 10
       additiveSortOrder: 0
@@ -968,7 +968,7 @@ ScriptedImporter:
         y: 64
         width: 62
         height: 60
-      spriteId: 431a95829decf2b428d284bdd92e4c06
+      spriteId: 25204190f6a5f5c40a1b5bcac2e18edf
     - name: Pawn_Yellow_Frame_11
       frameIndex: 11
       additiveSortOrder: 0
@@ -977,7 +977,7 @@ ScriptedImporter:
         y: 64
         width: 59
         height: 59
-      spriteId: 670435fe8da4ce7498905ed1394446c1
+      spriteId: 7d99e5b697f49db499089c41fc65f85b
     - name: Pawn_Yellow_Frame_12
       frameIndex: 12
       additiveSortOrder: 0
@@ -986,7 +986,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 55
-      spriteId: 0c80f0329c734b349b97943091f8806b
+      spriteId: 05ad8ad42c3902b4fb0319b43355aa82
     - name: Pawn_Yellow_Frame_13
       frameIndex: 13
       additiveSortOrder: 0
@@ -995,7 +995,7 @@ ScriptedImporter:
         y: 64
         width: 65
         height: 75
-      spriteId: ee20e8ecf9059034f9f7e7e102cf8dd9
+      spriteId: ea6233a3b7f6b2e4d887259b6f0e8486
     - name: Pawn_Yellow_Frame_14
       frameIndex: 14
       additiveSortOrder: 0
@@ -1004,7 +1004,7 @@ ScriptedImporter:
         y: 64
         width: 65
         height: 77
-      spriteId: 0b4500cc563f21f42999185d105ec94c
+      spriteId: db6846a13014cc84091ad02264673452
     - name: Pawn_Yellow_Frame_15
       frameIndex: 15
       additiveSortOrder: 0
@@ -1013,7 +1013,7 @@ ScriptedImporter:
         y: 64
         width: 65
         height: 77
-      spriteId: 3ddec2e8ff9c49d46955422a147c191c
+      spriteId: c54b43beaa88c7b4a8a277d63bdb8929
     - name: Pawn_Yellow_Frame_16
       frameIndex: 16
       additiveSortOrder: 0
@@ -1022,7 +1022,7 @@ ScriptedImporter:
         y: 64
         width: 92
         height: 66
-      spriteId: 377efcd946caa7049b3e513cb23c13ce
+      spriteId: 907f3f7dc15ad2d44b95d5e6794a7e61
     - name: Pawn_Yellow_Frame_17
       frameIndex: 17
       additiveSortOrder: 0
@@ -1031,7 +1031,7 @@ ScriptedImporter:
         y: 64
         width: 89
         height: 56
-      spriteId: 2df11d1ee6ac48d448e2ce33cdde2ae4
+      spriteId: 3a78de2ad0da21941b667eb57f9ac0b3
     - name: Pawn_Yellow_Frame_18
       frameIndex: 18
       additiveSortOrder: 0
@@ -1040,7 +1040,7 @@ ScriptedImporter:
         y: 64
         width: 76
         height: 58
-      spriteId: 5add9137f9d79734c9a70fc5947bd1d2
+      spriteId: f3a4adccd360dbc45b6cb037889e34b6
     - name: Pawn_Yellow_Frame_19
       frameIndex: 19
       additiveSortOrder: 0
@@ -1049,7 +1049,7 @@ ScriptedImporter:
         y: 64
         width: 81
         height: 60
-      spriteId: 1cb26e381d0e4ab4595dc7b09fce4c6b
+      spriteId: 3ebdfc66e01f3f541a003ab1cf00f3a9
     - name: Pawn_Yellow_Frame_20
       frameIndex: 20
       additiveSortOrder: 0
@@ -1058,7 +1058,7 @@ ScriptedImporter:
         y: 64
         width: 88
         height: 64
-      spriteId: 74fae43281ba8344882260031b569e5e
+      spriteId: 1723e80cce5938f4da44168c0ba83b61
     - name: Pawn_Yellow_Frame_21
       frameIndex: 21
       additiveSortOrder: 0
@@ -1067,7 +1067,7 @@ ScriptedImporter:
         y: 64
         width: 88
         height: 64
-      spriteId: f396012ce2b42f3458d2e2483274f1f0
+      spriteId: d36e660a381abbe4bbd9db414dd5db37
     - name: Pawn_Yellow_Frame_22
       frameIndex: 22
       additiveSortOrder: 0
@@ -1076,7 +1076,7 @@ ScriptedImporter:
         y: 64
         width: 110
         height: 54
-      spriteId: b00d2cc49d045fa4dbb3ab85f13753d5
+      spriteId: ea825be711282a74db0371e9b2af504b
     - name: Pawn_Yellow_Frame_23
       frameIndex: 23
       additiveSortOrder: 0
@@ -1085,7 +1085,7 @@ ScriptedImporter:
         y: 64
         width: 99
         height: 56
-      spriteId: 7e3158a162785bc4aaf801e0d3503b5a
+      spriteId: 5158fc9c5e47b624e94c4c1321addfde
     - name: Pawn_Yellow_Frame_24
       frameIndex: 24
       additiveSortOrder: 0
@@ -1094,7 +1094,7 @@ ScriptedImporter:
         y: 56
         width: 69
         height: 66
-      spriteId: e8db0854ffaa632478f29c849716c913
+      spriteId: b1179b83008a5b94ebba05b27ac9912f
     - name: Pawn_Yellow_Frame_25
       frameIndex: 25
       additiveSortOrder: 0
@@ -1103,7 +1103,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 60
-      spriteId: 976fe9734ec36764e97a675078856ad4
+      spriteId: ad55b2c084d740547a40954e7faf1453
     - name: Pawn_Yellow_Frame_26
       frameIndex: 26
       additiveSortOrder: 0
@@ -1112,7 +1112,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 59
-      spriteId: f86c4263d02c0e84d87e5cc9fe81da1c
+      spriteId: 896a25ca669ee9d4ca4994f2420fb5fe
     - name: Pawn_Yellow_Frame_27
       frameIndex: 27
       additiveSortOrder: 0
@@ -1121,7 +1121,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 58
-      spriteId: 1ae9aa8375b84ab4b8a609b50aa1f02f
+      spriteId: b0f341ac37244074da2833db05fab61e
     - name: Pawn_Yellow_Frame_28
       frameIndex: 28
       additiveSortOrder: 0
@@ -1130,7 +1130,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 57
-      spriteId: c03e336b5a66dbc40b89136fb229dd55
+      spriteId: 3a1ec2423789f6848bf0dc65d58579fa
     - name: Pawn_Yellow_Frame_29
       frameIndex: 29
       additiveSortOrder: 0
@@ -1139,7 +1139,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 58
-      spriteId: b8c0b6b49b89a28418d5a5b609e32610
+      spriteId: 72e29eec84df72d488da67d9a7d123c0
     - name: Pawn_Yellow_Frame_30
       frameIndex: 30
       additiveSortOrder: 0
@@ -1148,7 +1148,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 59
-      spriteId: 7afb8c7100c33664b822210f2a5c3825
+      spriteId: 12b59c951d6d2aa48867017c0ff905ac
     - name: Pawn_Yellow_Frame_31
       frameIndex: 31
       additiveSortOrder: 0
@@ -1157,7 +1157,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 60
-      spriteId: fb2f9eb021f4c42478648f5389fbceea
+      spriteId: 9921045d36349a741bf58a323af2231c
     - name: Pawn_Yellow_Frame_32
       frameIndex: 32
       additiveSortOrder: 0
@@ -1166,7 +1166,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 60
-      spriteId: 7a528054ec3d94140a27c0070d7306f6
+      spriteId: 690d2049053f7ed49a6c9daadf50681c
     - name: Pawn_Yellow_Frame_33
       frameIndex: 33
       additiveSortOrder: 0
@@ -1175,7 +1175,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 56
-      spriteId: dc13d4e61278bc740a76d08fbb199af2
+      spriteId: 2c08a28e2e31421468332046359ca809
     - name: Pawn_Yellow_Frame_34
       frameIndex: 34
       additiveSortOrder: 0
@@ -1184,7 +1184,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 60
-      spriteId: 0289595d0ee4d704995a07065c239278
+      spriteId: 454329b507e66144bb9e97159ea28fe4
     - name: Pawn_Yellow_Frame_35
       frameIndex: 35
       additiveSortOrder: 0
@@ -1193,7 +1193,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 60
-      spriteId: 73522bddf0ae5084eb8a531878badc31
+      spriteId: 9fe00c4855d7d6842bee96d40fdfa8f4
     - name: Pawn_Yellow_Frame_36
       frameIndex: 36
       additiveSortOrder: 0
@@ -1202,7 +1202,7 @@ ScriptedImporter:
         y: 64
         width: 58
         height: 56
-      spriteId: 6b6185356da1e8c4aad8956266ee9db7
+      spriteId: 012029a65c5bf8f41bfff57c9c960005
     linkedCells: []
     parentIndex: -1
   platformSettings: []

@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 146
       height: 155
-    spriteID: d0d4b0be2a59ee34a94ff871522fa1c1
+    spriteID: 26df50bfdddae984a8d8115f3ef17715
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 4
       width: 130
       height: 155
-    spriteID: 23315f52f90f8864dab0fba9ae0e5e45
+    spriteID: 9d89a7ed787f160469cacbaeee497be4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 4
       width: 130
       height: 155
-    spriteID: 816db4afe98cd1547b4267aaa8e7a4be
+    spriteID: 12a1608f6ae41e5489ab9ec064ea8b0b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 167
       width: 130
       height: 155
-    spriteID: 092f17426e690234b8b50ce0f6c75c22
+    spriteID: e3ddd6e5a206c9a47b934f876d8498b0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -212,7 +212,7 @@ ScriptedImporter:
       y: 167
       width: 126
       height: 155
-    spriteID: 7af1c8a0881c9cc429ca954dd4362f1e
+    spriteID: a32de08508f5b2c4bb76860da74754cf
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -238,7 +238,7 @@ ScriptedImporter:
         y: 21
         width: 146
         height: 155
-      spriteId: d0d4b0be2a59ee34a94ff871522fa1c1
+      spriteId: 26df50bfdddae984a8d8115f3ef17715
     - name: Wood_Tower_Yellow_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
@@ -247,7 +247,7 @@ ScriptedImporter:
         y: 21
         width: 130
         height: 155
-      spriteId: 23315f52f90f8864dab0fba9ae0e5e45
+      spriteId: 9d89a7ed787f160469cacbaeee497be4
     - name: Wood_Tower_Yellow_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
@@ -256,7 +256,7 @@ ScriptedImporter:
         y: 21
         width: 130
         height: 155
-      spriteId: 816db4afe98cd1547b4267aaa8e7a4be
+      spriteId: 12a1608f6ae41e5489ab9ec064ea8b0b
     - name: Wood_Tower_Yellow_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
@@ -265,7 +265,7 @@ ScriptedImporter:
         y: 21
         width: 130
         height: 155
-      spriteId: 092f17426e690234b8b50ce0f6c75c22
+      spriteId: e3ddd6e5a206c9a47b934f876d8498b0
     - name: Wood_Tower_Yellow_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
@@ -274,7 +274,7 @@ ScriptedImporter:
         y: 21
         width: 126
         height: 155
-      spriteId: 7af1c8a0881c9cc429ca954dd4362f1e
+      spriteId: a32de08508f5b2c4bb76860da74754cf
     linkedCells: []
     parentIndex: -1
   platformSettings: []

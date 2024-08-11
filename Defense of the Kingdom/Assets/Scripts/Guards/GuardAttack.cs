@@ -22,7 +22,7 @@ public class GuardAttack : MonoBehaviour
 
     private void MoveGuard()
     {
-        transform.position = Vector2.MoveTowards(transform.position, _enemy.transform.position, _speed * Time.deltaTime);
+      //  transform.position = Vector2.MoveTowards(transform.position, _enemy.transform.position, _speed * Time.deltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
