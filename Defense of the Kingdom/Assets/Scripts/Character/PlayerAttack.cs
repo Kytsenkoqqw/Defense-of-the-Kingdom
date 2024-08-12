@@ -18,22 +18,10 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        Attack();
+        FrontAttack();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.GetComponent<GuardAttack>())
-        {
-            HealthSystem heroHealth = other.gameObject.GetComponent<HealthSystem>();
-            if (heroHealth != null)
-            {
-                heroHealth.TakeDamage(_damage);
-            }
-        }
-    }
-
-    private void Attack()
+    private void FrontAttack()
     {
         if (Input.GetMouseButtonDown(0))
         {
