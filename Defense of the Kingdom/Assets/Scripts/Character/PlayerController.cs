@@ -6,9 +6,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _speed = 5f;
-    [SerializeField] private int _damage = 15;
     private Animator _animator;
-
+    
     private void Start()
     {
         _animator = GetComponent<Animator>();
@@ -17,10 +16,10 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
        MoveCharacter();
-       Fight();
+      // Fight();
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    /*private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.GetComponent<MoveEnemyOnGuards>())
         {
@@ -31,7 +30,7 @@ public class PlayerController : MonoBehaviour
                 heroHealth.TakeDamage(_damage);
             }
         }
-    }
+    }*/
 
     private void MoveCharacter()
     {
@@ -59,12 +58,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Fight()
+    /*private void Fight()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            _animator.SetTrigger("IsFighting");
+            _animator.SetBool("IsFighting", true);
+            _attackArea.SetActive(true);
         }
-    }
-    
+        if (Input.GetMouseButtonUp(0))
+        {
+            _animator.SetBool("IsFighting", false);
+            _attackArea.SetActive(false);
+        }
+    }*/
 }

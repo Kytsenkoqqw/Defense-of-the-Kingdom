@@ -10,6 +10,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageTrigger/ShowStartMessage.cs" root0="FORCE_HIGHLIGHTING" />
@@ -31,6 +32,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/State/SearchState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" />
       </list>
     </option>
   </component>
@@ -79,7 +81,8 @@
       <workItem from="1723035850893" duration="5495000" />
       <workItem from="1723292321016" duration="4727000" />
       <workItem from="1723379511249" duration="1343000" />
-      <workItem from="1723384728240" duration="2053000" />
+      <workItem from="1723384728240" duration="2143000" />
+      <workItem from="1723463286796" duration="3443000" />
     </task>
     <servers />
   </component>
