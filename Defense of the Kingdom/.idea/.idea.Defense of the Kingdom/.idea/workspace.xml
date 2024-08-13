@@ -8,7 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/MoveGuardOnEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" root0="FORCE_HIGHLIGHTING" />
@@ -35,9 +35,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/HorizontalAttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/MoveGuardOnEnemy.cs" />
       </list>
     </option>
   </component>
@@ -88,7 +89,7 @@
       <workItem from="1723379511249" duration="1343000" />
       <workItem from="1723384728240" duration="2143000" />
       <workItem from="1723463286796" duration="5576000" />
-      <workItem from="1723550255385" duration="3039000" />
+      <workItem from="1723550255385" duration="4010000" />
     </task>
     <servers />
   </component>

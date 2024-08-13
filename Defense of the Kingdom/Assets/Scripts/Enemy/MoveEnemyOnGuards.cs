@@ -8,7 +8,7 @@ public class MoveEnemyOnGuards : MonoBehaviour
     [SerializeField] private float _speed = 5f;
     [SerializeField] private int _damage = 10;
     
-    private GuardAttack _guard;
+    private MoveGuardOnEnemy _moveGuard;
 
     private void Start()
     {
@@ -17,7 +17,7 @@ public class MoveEnemyOnGuards : MonoBehaviour
 
     private void Update()
     {
-        if (_guard != null)
+        if (_moveGuard != null)
         {
             EnemyMove();
             FindNewGuard();
@@ -26,15 +26,15 @@ public class MoveEnemyOnGuards : MonoBehaviour
 
     private void EnemyMove()
     {
-        if (_guard != null)
+        if (_moveGuard != null)
         {
-            transform.position = Vector2.MoveTowards(transform.position, _guard.transform.position, _speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, _moveGuard.transform.position, _speed * Time.deltaTime);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.GetComponent<GuardAttack>())
+        if (other.gameObject.GetComponent<MoveGuardOnEnemy>())
         {
             HealthSystem heroHealth = other.gameObject.GetComponent<HealthSystem>();
             if (heroHealth != null)
@@ -47,10 +47,10 @@ public class MoveEnemyOnGuards : MonoBehaviour
 
     private void FindNewGuard()
     {
-        _guard = FindObjectOfType<GuardAttack>();
-        if (_guard != null)
+        _moveGuard = FindObjectOfType<MoveGuardOnEnemy>();
+        if (_moveGuard != null)
         {
-            HealthSystem guardHealth = _guard.GetComponent<HealthSystem>();
+            HealthSystem guardHealth = _moveGuard.GetComponent<HealthSystem>();
             if (guardHealth != null)
             {
                 guardHealth.OnDeath.AddListener(OnGuardDeath);
@@ -60,16 +60,16 @@ public class MoveEnemyOnGuards : MonoBehaviour
 
     private void OnGuardDeath()
     {
-        if (_guard != null)
+        if (_moveGuard != null)
         {
-            HealthSystem guardHealth = _guard.GetComponent<HealthSystem>();
+            HealthSystem guardHealth = _moveGuard.GetComponent<HealthSystem>();
             if (guardHealth != null)
             {
                 guardHealth.OnDeath.RemoveListener(OnGuardDeath);
             }
         }
         
-        _guard = null;
+        _moveGuard = null;
         FindNewGuard();
     }
 }
