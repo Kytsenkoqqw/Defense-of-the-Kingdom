@@ -20,6 +20,7 @@
             <e p="SpawnEnemy.cs" t="Include" />
           </e>
           <e p="Guards" t="Include">
+            <e p="DeathGuard.cs" t="Include" />
             <e p="GuardAttack.cs" t="Include" />
           </e>
           <e p="Health" t="Include">

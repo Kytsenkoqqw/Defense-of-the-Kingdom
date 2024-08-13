@@ -14,6 +14,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageTrigger/ShowStartMessage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -24,18 +25,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MessageTrigger/ShowStartMessage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health/HealthUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/ObjectStateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/FightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/SearchState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/HorizontalAttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
       </list>
     </option>
   </component>
@@ -85,7 +87,8 @@
       <workItem from="1723292321016" duration="4727000" />
       <workItem from="1723379511249" duration="1343000" />
       <workItem from="1723384728240" duration="2143000" />
-      <workItem from="1723463286796" duration="4978000" />
+      <workItem from="1723463286796" duration="5576000" />
+      <workItem from="1723550255385" duration="3039000" />
     </task>
     <servers />
   </component>

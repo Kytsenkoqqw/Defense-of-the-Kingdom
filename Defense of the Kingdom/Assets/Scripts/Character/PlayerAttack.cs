@@ -34,7 +34,9 @@ public class PlayerAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(0.40f);
         _attackArea.SetActive(true);
-        yield return new WaitForSeconds(0.1f); // Время, на которое активируется область атаки
+        yield return new WaitForSeconds(0.3f); // Время, на которое активируется область атаки
         _attackArea.SetActive(false);
     }
+    
+    
 }

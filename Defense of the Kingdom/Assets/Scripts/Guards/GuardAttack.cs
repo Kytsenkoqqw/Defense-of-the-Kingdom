@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GuardAttack : MonoBehaviour
@@ -9,10 +10,19 @@ public class GuardAttack : MonoBehaviour
     [SerializeField] private int _damage = 10;
     
     private MoveEnemyOnGuards _enemy;
+    private HealthSystem _healthSystem;
+    private Animator _animator;
 
     private void Start()
     {
         _enemy = FindObjectOfType<MoveEnemyOnGuards>();
+        _animator = GetComponent<Animator>();
+        /*_healthSystem = GetComponent<HealthSystem>();
+
+        if (_healthSystem != null)
+        {
+            _healthSystem.OnDeath.AddListener(Die);            
+        }*/
     }
 
     private void Update()
@@ -37,4 +47,11 @@ public class GuardAttack : MonoBehaviour
             }
         }
     }
+
+    /*private void Die()
+    {
+        _animator.SetBool("IsDeath", true);
+    }
+    */
+
 }
