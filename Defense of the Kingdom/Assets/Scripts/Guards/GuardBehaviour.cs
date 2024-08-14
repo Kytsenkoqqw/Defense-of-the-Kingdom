@@ -3,20 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class MoveGuardOnEnemy : MonoBehaviour
+public class GuardBehaviour : MonoBehaviour
 {
+    public static Action OnFighting;
     [SerializeField] private float _speed = 5f;
-
+    [SerializeField] private Canvas _hpBar;
+    
     private PlayerController _playerController;
     private Animator _animator;
     private Vector2 _previousPosition;
+    private HealthSystem _healthSystem;
 
     private void Start()
     {
         _playerController = FindObjectOfType<PlayerController>();
         _animator = GetComponent<Animator>();
+        _healthSystem = GetComponent<HealthSystem>();    
         _previousPosition = transform.position;
+        _healthSystem.OnDeath.AddListener(Die);
     }
 
     private void Update()
@@ -26,9 +32,20 @@ public class MoveGuardOnEnemy : MonoBehaviour
         UpdateDirection();
     }
 
+    public void SetSpeed(float newSpeed)
+    {
+        _speed = newSpeed;
+    }
+
     private void MoveGuard()
     {
         transform.position = Vector2.MoveTowards(transform.position, _playerController.transform.position, _speed * Time.deltaTime);
+        
+        float detectionRange = Vector2.Distance(transform.position, _playerController.transform.position);
+        if (detectionRange <= 1)
+        {
+            OnFighting?.Invoke();
+        }
     }
 
     private void UpdateAnimation()
@@ -59,6 +76,20 @@ public class MoveGuardOnEnemy : MonoBehaviour
         }
     }
 
+    private void Die()
+    {
+        _speed = 0f;
+        _hpBar.enabled = false;
+        _animator.SetBool("IsDeath", true);
+        StartCoroutine(DestroyGuard());
+    }
+
+    private IEnumerator DestroyGuard()
+    {
+        yield return  new WaitForSeconds(3f);
+        Destroy(gameObject);
+    }
+
     /*private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.GetComponent<MoveEnemyOnGuards>())
@@ -72,3 +103,4 @@ public class MoveGuardOnEnemy : MonoBehaviour
         }
     }*/
 }
+

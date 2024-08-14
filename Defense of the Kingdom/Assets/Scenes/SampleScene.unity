@@ -5417,6 +5417,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hpBar: {fileID: 1635492065}
+  _animator: {fileID: 0}
+  _healthSystem: {fileID: 0}
+--- !u!114 &1934454654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934454636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fd616900ff21242a0bd7fadd4d434e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1986024246
 GameObject:
   m_ObjectHideFlags: 0
@@ -5634,10 +5648,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8345393694500152604, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
+      propertyPath: _hpBar
+      value: 
+      objectReference: {fileID: 1635492065}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7053590401556371146, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 1934454654}
     - targetCorrespondingSourceObject: {fileID: 7053590401556371146, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1934454646}

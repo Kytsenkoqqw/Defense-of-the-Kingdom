@@ -8,13 +8,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/MoveGuardOnEnemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/GuardBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/FightGuard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageTrigger/ShowStartMessage.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -35,10 +34,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/HorizontalAttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/MoveGuardOnEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/FightGuard.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardBehaviour.cs" />
       </list>
     </option>
   </component>
@@ -89,7 +90,8 @@
       <workItem from="1723379511249" duration="1343000" />
       <workItem from="1723384728240" duration="2143000" />
       <workItem from="1723463286796" duration="5576000" />
-      <workItem from="1723550255385" duration="4010000" />
+      <workItem from="1723550255385" duration="5836000" />
+      <workItem from="1723637288665" duration="5347000" />
     </task>
     <servers />
   </component>
