@@ -31,10 +31,9 @@
             <e p="ShowStartMessage.cs" t="Include" />
           </e>
           <e p="State" t="Include">
-            <e p="FightState.cs" t="Include" />
+            <e p="IdleState.cs" t="Include" />
             <e p="ObjectState.cs" t="Include" />
-            <e p="ObjectStateManager.cs" t="Include" />
-            <e p="SearchState.cs" t="Include" />
+            <e p="StateMachine.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

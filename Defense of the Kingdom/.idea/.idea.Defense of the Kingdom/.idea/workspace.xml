@@ -11,9 +11,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/GuardBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/FightGuard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageTrigger/ShowStartMessage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/IdleState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -26,7 +28,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health/HealthUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/ObjectStateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/FightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/SearchState.cs" />
@@ -40,6 +41,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/MoveGuardOnEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/FightGuard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/IdleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/StateMachine.cs" />
       </list>
     </option>
   </component>
@@ -91,7 +95,7 @@
       <workItem from="1723384728240" duration="2143000" />
       <workItem from="1723463286796" duration="5576000" />
       <workItem from="1723550255385" duration="5836000" />
-      <workItem from="1723637288665" duration="5347000" />
+      <workItem from="1723637288665" duration="7456000" />
     </task>
     <servers />
   </component>
@@ -101,10 +105,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="784" y="236" key="RiderGenerateDialog" timestamp="1723040893581">
+    <state x="784" y="236" key="RiderGenerateDialog" timestamp="1723643499421">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="784" y="236" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1723040893581" />
+    <state x="784" y="236" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1723643499421" />
     <state x="538" y="330" width="672" height="678" key="search.everywhere.popup" timestamp="1722784884866">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
