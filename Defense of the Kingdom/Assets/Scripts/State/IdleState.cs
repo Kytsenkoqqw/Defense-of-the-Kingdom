@@ -1,54 +1,106 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class IdleState : ObjectState
 {
-    // Update is called once per frame
+    [SerializeField] private Transform[] waypoints;
     private float moveSpeed = 2f;
-    private float moveTimer = 0f;
-    private float moveDuration = 2f;
-    private bool movingRight = true;
     private Transform objectTransform;
+    private Animator animator;
+    private int currentWaypointIndex = 0;
+    private float waitTime = 2f; // Время ожидания на точке
+    private float waitTimer = 0f;
+    private bool waiting = false; // Флаг ожидания
 
-    public IdleState(Transform transform)
+    public IdleState(Transform transform, Animator animator, Transform[] waypoints)
     {
         objectTransform = transform;
+        this.animator = animator;
+        this.waypoints = waypoints;
+
+        if (waypoints == null || waypoints.Length == 0)
+        {
+            Debug.LogError("Waypoints array is null or empty!");
+        }
     }
 
     public override void Enter()
     {
         Debug.Log("Entering Idle State");
-        moveTimer = moveDuration; // Начать с задержки
+        MoveToNextWaypoint();
+        PlayRunAnimation(true); // Включаем анимацию бега
     }
 
     public override void Update()
     {
-        // Перемещение объекта влево и вправо
-        MoveSideToSide();
-        moveTimer -= Time.deltaTime;
-        if (moveTimer <= 0)
+        if (waiting)
         {
-            // После завершения перемещения переключаемся на другое состояние
-            // Например, можно перейти к преследованию
-            //  StateMachine.ChangeState(new ChasingState());
+            HandleWaiting();
+        }
+        else
+        {
+            MoveTowardsCurrentWaypoint();
+            CheckAndHandleWaypointArrival();
         }
     }
 
     public override void Exit()
     {
         Debug.Log("Exiting Idle State");
+        PlayRunAnimation(false); // Останавливаем анимацию бега при выходе из состояния
     }
 
-    private void MoveSideToSide()
+    private void MoveTowardsCurrentWaypoint()
     {
-        float direction = movingRight ? 1 : -1;
-        objectTransform.Translate(Vector2.right * direction * moveSpeed * Time.deltaTime);
+        if (waypoints.Length == 0) return;
 
-        // Проверяем границы передвижения и меняем направление
-        if (objectTransform.position.x > 2f || objectTransform.position.x < -2f)
+        Vector2 direction = (waypoints[currentWaypointIndex].position - objectTransform.position).normalized;
+        objectTransform.Translate(direction * moveSpeed * Time.deltaTime);
+
+        // Поворот в сторону движения
+        objectTransform.localScale = new Vector3(Mathf.Sign(direction.x), 1, 1);
+    }
+
+    private void CheckAndHandleWaypointArrival()
+    {
+        if (waypoints.Length == 0) return;
+
+        if ((waypoints[currentWaypointIndex].position - objectTransform.position).sqrMagnitude < 0.01f)
         {
-            movingRight = !movingRight;
+            StartWaiting(); // Начинаем ожидание
+        }
+    }
+
+    private void HandleWaiting()
+    {
+        waitTimer -= Time.deltaTime;
+        if (waitTimer <= 0)
+        {
+            waiting = false; // Завершаем ожидание
+            MoveToNextWaypoint(); // Переходим к следующей точке
+        }
+    }
+
+    private void MoveToNextWaypoint()
+    {
+        if (waypoints.Length == 0) return;
+
+        currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
+    }
+
+    private void StartWaiting()
+    {
+        waiting = true; // Устанавливаем флаг ожидания
+        waitTimer = waitTime; // Сбрасываем таймер
+    }
+
+    private void PlayRunAnimation(bool play)
+    {
+        if (animator != null)
+        {
+            animator.SetBool("IsMoving", play);
         }
     }
 }

@@ -2,46 +2,36 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.XR;
 
 public class StateMachine : MonoBehaviour
 {
-    private static StateMachine instance;
+    private ObjectState _currentState;
+    private Transform _objectTransform;
+    private Animator _animator;
 
-    public static StateMachine Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                instance = FindObjectOfType<StateMachine>();
-            }
-            return instance;
-        }
-        
-    }
-
-    private ObjectState currentState;
-    private Transform objectTransform;
+    [SerializeField] private Transform[] _waypoints; // Задай пути в инспекторе
 
     private void Start()
     {
-        objectTransform = transform;
-        ChangeState(new IdleState(objectTransform));
+        _objectTransform = transform; // Получаем Transform текущего объекта
+        _animator = GetComponent<Animator>();
+        ChangeState(new IdleState(_objectTransform, _animator, _waypoints));
     }
 
     private void Update()
     {
-        currentState.Update();
+        _currentState.Update();
     }
 
     public void ChangeState(ObjectState newState)
     {
-        if (currentState != null)
+        if (_currentState != null)
         {
-            currentState.Exit();
+            _currentState.Exit();
         }
-        currentState = newState;
-        currentState.Enter();
+        _currentState = newState;
+        _currentState.Enter();
     }
 }
