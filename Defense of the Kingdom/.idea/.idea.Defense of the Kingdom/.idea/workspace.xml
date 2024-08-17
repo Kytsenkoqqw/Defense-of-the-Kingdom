@@ -14,6 +14,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/GuardFightState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageTrigger/ShowStartMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/IdleState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" root0="FORCE_HIGHLIGHTING" />
@@ -42,10 +43,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/FightGuard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/StateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/IdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FPS/FPSCounter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/IdleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardFightState.cs" />
       </list>
     </option>
   </component>
@@ -100,7 +102,7 @@
       <workItem from="1723637288665" duration="8822000" />
       <workItem from="1723724952040" duration="994000" />
       <workItem from="1723726237094" duration="2308000" />
-      <workItem from="1723894539121" duration="960000" />
+      <workItem from="1723894539121" duration="6861000" />
     </task>
     <servers />
   </component>
@@ -110,10 +112,11 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="784" y="236" key="RiderGenerateDialog" timestamp="1723643499421">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="784" y="238" key="RiderGenerateDialog" timestamp="1723897747361">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="784" y="236" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1723643499421" />
+    <state x="784" y="238" key="RiderGenerateDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1723897747361" />
     <state x="538" y="330" width="672" height="678" key="search.everywhere.popup" timestamp="1722784884866">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

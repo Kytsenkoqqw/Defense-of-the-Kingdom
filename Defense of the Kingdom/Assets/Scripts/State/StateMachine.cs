@@ -10,14 +10,16 @@ public class StateMachine : MonoBehaviour
     private ObjectState _currentState;
     private Transform _objectTransform;
     private Animator _animator;
+    private LayerMask _enemyLayer;
 
-    [SerializeField] private Transform[] _waypoints; // Задай пути в инспекторе
+    [SerializeField] private Transform[] _waypoints;
 
     private void Start()
     {
-        _objectTransform = transform; // Получаем Transform текущего объекта
+        _objectTransform = transform; 
         _animator = GetComponent<Animator>();
-        ChangeState(new IdleState(_objectTransform, _animator, _waypoints));
+        // Передайте ссылку на StateMachine
+        ChangeState(new IdleState(_objectTransform, _animator, _waypoints, this));
     }
 
     private void Update()
