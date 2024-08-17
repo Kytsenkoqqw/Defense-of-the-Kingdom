@@ -19,6 +19,9 @@
             <e p="MoveEnemyOnGuards.cs" t="Include" />
             <e p="SpawnEnemy.cs" t="Include" />
           </e>
+          <e p="FPS" t="Include">
+            <e p="FPSCounter.cs" t="Include" />
+          </e>
           <e p="Guards" t="Include">
             <e p="FightGuard.cs" t="Include" />
             <e p="GuardBehaviour.cs" t="Include" />

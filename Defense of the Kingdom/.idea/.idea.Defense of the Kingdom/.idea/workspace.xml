@@ -17,6 +17,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageTrigger/ShowStartMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/IdleState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPS/FPSCounter.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -34,7 +35,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/HorizontalAttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
@@ -42,8 +42,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/FightGuard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/IdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/IdleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FPS/FPSCounter.cs" />
       </list>
     </option>
   </component>
@@ -98,6 +100,7 @@
       <workItem from="1723637288665" duration="8822000" />
       <workItem from="1723724952040" duration="994000" />
       <workItem from="1723726237094" duration="2308000" />
+      <workItem from="1723894539121" duration="960000" />
     </task>
     <servers />
   </component>

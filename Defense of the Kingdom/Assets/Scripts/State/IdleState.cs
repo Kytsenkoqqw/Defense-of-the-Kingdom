@@ -88,10 +88,12 @@ public class IdleState : ObjectState
         if (waypoints.Length == 0) return;
 
         currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
+        PlayRunAnimation(true);
     }
 
     private void StartWaiting()
     {
+        PlayRunAnimation(false);
         waiting = true; // Устанавливаем флаг ожидания
         waitTimer = waitTime; // Сбрасываем таймер
     }

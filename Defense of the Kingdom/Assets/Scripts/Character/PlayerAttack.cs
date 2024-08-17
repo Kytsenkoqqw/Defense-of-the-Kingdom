@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private GameObject _attackArea;
-    [SerializeField] private int _damage = 5;
     private Animator _animator;
 
 
