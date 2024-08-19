@@ -11,6 +11,10 @@ public class StateMachine : MonoBehaviour
     private Transform _objectTransform;
     private Animator _animator;
     private LayerMask _enemyLayer;
+    
+    [SerializeField] private PolygonCollider2D _upAttackArea;
+    [SerializeField] private PolygonCollider2D _frontAttackArea;
+    [SerializeField] private PolygonCollider2D _downAttackArea;
 
     [SerializeField] private Transform[] _waypoints;
 

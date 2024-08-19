@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
        MoveCharacter();
-      // Fight();
     }
 
     /*private void OnCollisionEnter2D(Collision2D other)
@@ -57,18 +56,4 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1); 
         }
     }
-
-    /*private void Fight()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            _animator.SetBool("IsFighting", true);
-            _attackArea.SetActive(true);
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            _animator.SetBool("IsFighting", false);
-            _attackArea.SetActive(false);
-        }
-    }*/
 }

@@ -6,12 +6,15 @@ using UnityEngine;
 
 public class GuardFightState : ObjectState
 {
-    private Transform _objectTransform;
+     private Transform _objectTransform;
     private Animator _animator;
     private Transform _enemyTransform;
-    private Transform[] _waypoints; // Добавляем поле для waypoints
-    private StateMachine _stateMachine; // Добавляем поле для stateMachine
-    private HealthSystem _healthSystem;
+    private Transform[] _waypoints; 
+    private StateMachine _stateMachine;
+    [SerializeField] private PolygonCollider2D _downAttackArea;
+    [SerializeField] private PolygonCollider2D _upAttackArea;
+    [SerializeField] private PolygonCollider2D _frontAttackArea;
+    private float _attackDuration = 0.5f; // Длительность атаки в секундах
 
     public GuardFightState(Transform objectTransform, Animator animator, Transform enemyTransform, Transform[] waypoints, StateMachine stateMachine)
     {
@@ -20,20 +23,43 @@ public class GuardFightState : ObjectState
         _enemyTransform = enemyTransform;
         _waypoints = waypoints;
         _stateMachine = stateMachine;
-   
     }
 
     public override void Enter()
     {
         Debug.Log("Entering Fight State");
-        _animator.SetBool("IsFighting", true);
+        /*_downAttackArea.enabled = false;
+        _upAttackArea.enabled = false;
+        _frontAttackArea.enabled = false;*/
     }
 
     public override void Update()
     {
-        if (_enemyTransform == null || !IsEnemyInRange())
+        if (_enemyTransform == null)
         {
-            // Если враг исчезает или выходит за пределы радиуса, переключаемся обратно в состояние покоя
+            Debug.LogWarning("Enemy transform is null, switching to Idle state.");
+            _stateMachine.ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints, _stateMachine));
+            _animator.SetBool("IsFighting", false);
+            return;
+        }
+
+        Vector2 direction = _enemyTransform.position - _objectTransform.position;
+
+        if (direction.y > 0)
+        {
+            AttackUp();
+        }
+        else if (direction.y < 0)
+        {
+            AttackDown();
+        }
+        else
+        {
+            FrontAttack();
+        }
+
+        if (!IsEnemyInRange())
+        {
             _stateMachine.ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints, _stateMachine));
             _animator.SetBool("IsFighting", false);
         }
@@ -56,8 +82,32 @@ public class GuardFightState : ObjectState
 
     private bool IsEnemyInRange()
     {
-        // Проверяем, находится ли враг в радиусе обнаружения
-        return Vector2.Distance(_objectTransform.position, _enemyTransform.position) <= 5f; // Замените 5f на ваш радиус
+        return Vector2.Distance(_objectTransform.position, _enemyTransform.position) <= 5f; 
+    }
+
+    private void AttackUp()
+    {
+        _animator.SetTrigger("AttackUp");
+     //   StartCoroutine(OnOffAttackArea(_upAttackArea));
+    }
+
+    private void AttackDown()
+    {
+        _animator.SetTrigger("AttackDown");
+      //  StartCoroutine(OnOffAttackArea(_downAttackArea));
+    }
+
+    private void FrontAttack()
+    {
+        _animator.SetTrigger("AttackFront");
+      //  StartCoroutine(OnOffAttackArea(_frontAttackArea));
     }
     
+    /*private IEnumerator OnOffAttackArea(PolygonCollider2D attackArea)
+    {
+        attackArea.enabled = true;
+        yield return new WaitForSeconds(_attackDuration);
+        attackArea.enabled = false;
+    }*/
+
 }

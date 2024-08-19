@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+ 
 public class AttackArea : MonoBehaviour
 {
     [SerializeField] private int _damage = 5;
