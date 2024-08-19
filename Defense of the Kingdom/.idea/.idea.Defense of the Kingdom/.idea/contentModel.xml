@@ -23,8 +23,7 @@
             <e p="FPSCounter.cs" t="Include" />
           </e>
           <e p="Guards" t="Include">
-            <e p="FightGuard.cs" t="Include" />
-            <e p="GuardBehaviour.cs" t="Include" />
+            <e p="DeathGuard.cs" t="Include" />
           </e>
           <e p="Health" t="Include">
             <e p="HealthSystem.cs" t="Include" />
@@ -35,7 +34,7 @@
           </e>
           <e p="State" t="Include">
             <e p="GuardFightState.cs" t="Include" />
-            <e p="IdleState.cs" t="Include" />
+            <e p="GuardIdleState.cs" t="Include" />
             <e p="ObjectState.cs" t="Include" />
             <e p="StateMachine.cs" t="Include" />
           </e>

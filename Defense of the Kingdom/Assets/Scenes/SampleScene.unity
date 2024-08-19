@@ -5735,6 +5735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75fd616900ff21242a0bd7fadd4d434e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _guardBehaviour: {fileID: 0}
 --- !u!114 &1934454655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6090,6 +6091,30 @@ PrefabInstance:
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 758349007404487804, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 758349007404487804, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11500000, guid: baba3ab9f09fcdf45aa3cdccabd9f4c8, type: 3}
+    - target: {fileID: 758349007404487804, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 758349007404487804, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 758349007404487804, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 758349007404487804, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7053590401556371146, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
       propertyPath: m_Name
       value: Guard
@@ -6147,7 +6172,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7053590401556371146, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
-      insertIndex: 5
+      insertIndex: 4
       addedObject: {fileID: 1934454654}
     - targetCorrespondingSourceObject: {fileID: 7053590401556371146, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
       insertIndex: -1

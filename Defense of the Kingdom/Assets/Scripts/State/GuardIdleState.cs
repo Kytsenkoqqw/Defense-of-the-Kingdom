@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class IdleState : ObjectState
+public class GuardIdleState : ObjectState
 {
     [SerializeField] private Transform[] _waypoints;
     private float _moveSpeed = 2f;
@@ -18,7 +18,7 @@ public class IdleState : ObjectState
     private MoveEnemyOnGuards _enemyComponent; // Измените имя, если необходимо
     private StateMachine _stateMachine; // Ссылка на StateMachine
 
-    public IdleState(Transform transform, Animator animator, Transform[] waypoints, StateMachine stateMachine)
+    public GuardIdleState(Transform transform, Animator animator, Transform[] waypoints, StateMachine stateMachine)
     {
         _objectTransform = transform;
         _animator = animator;

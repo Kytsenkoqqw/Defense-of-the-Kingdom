@@ -19,7 +19,7 @@ public class StateMachine : MonoBehaviour
         _objectTransform = transform; 
         _animator = GetComponent<Animator>();
         // Передайте ссылку на StateMachine
-        ChangeState(new IdleState(_objectTransform, _animator, _waypoints, this));
+        ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints, this));
     }
 
     private void Update()

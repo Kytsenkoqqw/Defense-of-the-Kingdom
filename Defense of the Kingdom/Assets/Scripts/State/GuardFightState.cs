@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditorInternal;
@@ -10,6 +11,7 @@ public class GuardFightState : ObjectState
     private Transform _enemyTransform;
     private Transform[] _waypoints; // Добавляем поле для waypoints
     private StateMachine _stateMachine; // Добавляем поле для stateMachine
+    private HealthSystem _healthSystem;
 
     public GuardFightState(Transform objectTransform, Animator animator, Transform enemyTransform, Transform[] waypoints, StateMachine stateMachine)
     {
@@ -18,6 +20,7 @@ public class GuardFightState : ObjectState
         _enemyTransform = enemyTransform;
         _waypoints = waypoints;
         _stateMachine = stateMachine;
+   
     }
 
     public override void Enter()
@@ -31,7 +34,7 @@ public class GuardFightState : ObjectState
         if (_enemyTransform == null || !IsEnemyInRange())
         {
             // Если враг исчезает или выходит за пределы радиуса, переключаемся обратно в состояние покоя
-            _stateMachine.ChangeState(new IdleState(_objectTransform, _animator, _waypoints, _stateMachine));
+            _stateMachine.ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints, _stateMachine));
             _animator.SetBool("IsFighting", false);
         }
         else
@@ -43,6 +46,7 @@ public class GuardFightState : ObjectState
     public override void Exit()
     {
         Debug.Log("Exiting Fight State");
+        _animator.SetBool("IsFighting", false);
     }
 
     private void GuardAttack()
@@ -55,4 +59,5 @@ public class GuardFightState : ObjectState
         // Проверяем, находится ли враг в радиусе обнаружения
         return Vector2.Distance(_objectTransform.position, _enemyTransform.position) <= 5f; // Замените 5f на ваш радиус
     }
+    
 }
