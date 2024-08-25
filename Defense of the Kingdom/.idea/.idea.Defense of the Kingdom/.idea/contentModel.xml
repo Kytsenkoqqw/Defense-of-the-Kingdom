@@ -22,6 +22,9 @@
           <e p="FPS" t="Include">
             <e p="FPSCounter.cs" t="Include" />
           </e>
+          <e p="GameManager" t="Include">
+            <e p="GameManager.cs" t="Include" />
+          </e>
           <e p="Guards" t="Include">
             <e p="DeathGuard.cs" t="Include" />
             <e p="GuardAttack.cs" t="Include" />

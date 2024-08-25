@@ -11,6 +11,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
@@ -42,13 +43,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FPS/FPSCounter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/IdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardFightState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -61,6 +63,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -104,7 +107,11 @@
       <workItem from="1723724952040" duration="994000" />
       <workItem from="1723726237094" duration="2308000" />
       <workItem from="1723894539121" duration="8208000" />
-      <workItem from="1724065373763" duration="8492000" />
+      <workItem from="1724065373763" duration="9327000" />
+      <workItem from="1724082437599" duration="3579000" />
+      <workItem from="1724154204833" duration="3344000" />
+      <workItem from="1724506752801" duration="1306000" />
+      <workItem from="1724588957182" duration="1904000" />
     </task>
     <servers />
   </component>
@@ -119,6 +126,10 @@
     </state>
     <state x="784" y="236" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1723643499421" />
     <state x="784" y="238" key="RiderGenerateDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1723897747361" />
+    <state x="922" y="187" key="SettingsEditor" timestamp="1724158420431">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="922" y="187" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1724158420431" />
     <state x="538" y="330" width="672" height="678" key="search.everywhere.popup" timestamp="1722784884866">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

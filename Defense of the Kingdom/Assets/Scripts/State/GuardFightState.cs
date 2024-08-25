@@ -6,14 +6,11 @@ using UnityEngine;
 
 public class GuardFightState : ObjectState
 {
-     private Transform _objectTransform;
+    private Transform _objectTransform;
     private Animator _animator;
     private Transform _enemyTransform;
     private Transform[] _waypoints; 
     private StateMachine _stateMachine;
-    [SerializeField] private PolygonCollider2D _downAttackArea;
-    [SerializeField] private PolygonCollider2D _upAttackArea;
-    [SerializeField] private PolygonCollider2D _frontAttackArea;
     private float _attackDuration = 0.5f; // Длительность атаки в секундах
 
     public GuardFightState(Transform objectTransform, Animator animator, Transform enemyTransform, Transform[] waypoints, StateMachine stateMachine)
@@ -28,9 +25,6 @@ public class GuardFightState : ObjectState
     public override void Enter()
     {
         Debug.Log("Entering Fight State");
-        /*_downAttackArea.enabled = false;
-        _upAttackArea.enabled = false;
-        _frontAttackArea.enabled = false;*/
     }
 
     public override void Update()
@@ -39,29 +33,45 @@ public class GuardFightState : ObjectState
         {
             Debug.LogWarning("Enemy transform is null, switching to Idle state.");
             _stateMachine.ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints, _stateMachine));
-            _animator.SetBool("IsFighting", false);
             return;
         }
 
         Vector2 direction = _enemyTransform.position - _objectTransform.position;
 
-        if (direction.y > 0)
+        // Определяем направление движения (слева или справа)
+        float horizontalDirection = direction.x;
+
+        // Поворачиваем стражника в сторону врага
+        if (horizontalDirection > 0)
         {
-            AttackUp();
+            // Враг справа, стражник смотрит вправо
+            _objectTransform.localScale = new Vector3(Mathf.Abs(_objectTransform.localScale.x), _objectTransform.localScale.y, _objectTransform.localScale.z);
         }
-        else if (direction.y < 0)
+        else if (horizontalDirection < 0)
         {
-            AttackDown();
+            // Враг слева, стражник смотрит влево
+            _objectTransform.localScale = new Vector3(-Mathf.Abs(_objectTransform.localScale.x), _objectTransform.localScale.y, _objectTransform.localScale.z);
+        }
+
+        // Выбор типа атаки на основе вертикальной позиции врага
+        if (Mathf.Abs(direction.y) < 0.1f) // Если враг находится на одном уровне по высоте (с допуском)
+        {
+            FrontAttack(); // Боковая атака
+        }
+        else if (direction.y > 0)
+        {
+            AttackUp(); // Атака вверх
         }
         else
         {
-            FrontAttack();
+            AttackDown(); // Атака вниз
         }
 
+        // Проверяем, находится ли враг в радиусе атаки
         if (!IsEnemyInRange())
         {
             _stateMachine.ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints, _stateMachine));
-            _animator.SetBool("IsFighting", false);
+            _animator.SetBool("IsMoving", true);
         }
         else
         {
@@ -71,8 +81,10 @@ public class GuardFightState : ObjectState
 
     public override void Exit()
     {
+        _animator.ResetTrigger("FrontAttack");
+        _animator.ResetTrigger("DownAttack");
+        _animator.ResetTrigger("UpAttack");
         Debug.Log("Exiting Fight State");
-        _animator.SetBool("IsFighting", false);
     }
 
     private void GuardAttack()
@@ -87,27 +99,17 @@ public class GuardFightState : ObjectState
 
     private void AttackUp()
     {
-        _animator.SetTrigger("AttackUp");
-     //   StartCoroutine(OnOffAttackArea(_upAttackArea));
+        _animator.SetTrigger("UpAttack");
     }
 
     private void AttackDown()
     {
-        _animator.SetTrigger("AttackDown");
-      //  StartCoroutine(OnOffAttackArea(_downAttackArea));
+        _animator.SetTrigger("DownAttack");
     }
 
     private void FrontAttack()
     {
-        _animator.SetTrigger("AttackFront");
-      //  StartCoroutine(OnOffAttackArea(_frontAttackArea));
+        _animator.SetTrigger("FrontAttack");
     }
-    
-    /*private IEnumerator OnOffAttackArea(PolygonCollider2D attackArea)
-    {
-        attackArea.enabled = true;
-        yield return new WaitForSeconds(_attackDuration);
-        attackArea.enabled = false;
-    }*/
 
 }

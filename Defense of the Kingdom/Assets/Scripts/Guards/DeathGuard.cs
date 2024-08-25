@@ -7,13 +7,10 @@ using UnityEngine.Events;
 
 public class DeathGuard : MonoBehaviour
 {
-   
-    [SerializeField] private float _speed = 5f;
     [SerializeField] private Canvas _hpBar;
     
     private PlayerController _playerController;
     private Animator _animator;
-    private Vector2 _previousPosition;
     private HealthSystem _healthSystem;
 
     private void Start()
@@ -25,15 +22,14 @@ public class DeathGuard : MonoBehaviour
     
     private void Die()
     {
-        _speed = 0f;
+        _animator.SetTrigger("Die");
         _hpBar.enabled = false;
-        _animator.SetBool("IsDeath", true);
         StartCoroutine(DestroyGuard());
     }
 
     private IEnumerator DestroyGuard()
     {
-        yield return  new WaitForSeconds(3f);
+        yield return  new WaitForSeconds(4f);
         Destroy(gameObject);
     }
 

@@ -35,7 +35,7 @@ public class GuardIdleState : ObjectState
     {
         Debug.Log("Entering Idle State");
         MoveToNextWaypoint();
-        PlayRunAnimation(true); // Включаем анимацию бега
+        //PlayRunAnimation(true); // Включаем анимацию бега
     }
 
     public override void Update()
@@ -55,7 +55,8 @@ public class GuardIdleState : ObjectState
     public override void Exit()
     {
         Debug.Log("Exiting Idle State");
-        PlayRunAnimation(false); // Останавливаем анимацию бега при выходе из состояния
+        _animator.SetBool("IsMoving", false); // Останавливаем анимацию бега при выходе из состояния
+        
     }
 
     private void MoveTowardsCurrentWaypoint()
