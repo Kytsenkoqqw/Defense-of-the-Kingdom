@@ -81,9 +81,6 @@ public class GuardFightState : ObjectState
 
     public override void Exit()
     {
-        _animator.ResetTrigger("FrontAttack");
-        _animator.ResetTrigger("DownAttack");
-        _animator.ResetTrigger("UpAttack");
         Debug.Log("Exiting Fight State");
     }
 
@@ -99,17 +96,17 @@ public class GuardFightState : ObjectState
 
     private void AttackUp()
     {
-        _animator.SetTrigger("UpAttack");
+        _animator.SetBool("UpAttack", true);
     }
 
     private void AttackDown()
     {
-        _animator.SetTrigger("DownAttack");
+        _animator.SetBool("DownAttack", true);
     }
 
     private void FrontAttack()
     {
-        _animator.SetTrigger("FrontAttack");
+        _animator.SetBool("FrontAttack", true);
     }
 
 }

@@ -22,7 +22,7 @@ public class DeathGuard : MonoBehaviour
     
     private void Die()
     {
-        _animator.SetTrigger("Die");
+        _animator.SetBool("IsDeath", true);
         _hpBar.enabled = false;
         StartCoroutine(DestroyGuard());
     }
@@ -32,18 +32,5 @@ public class DeathGuard : MonoBehaviour
         yield return  new WaitForSeconds(4f);
         Destroy(gameObject);
     }
-
-    /*private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.GetComponent<MoveEnemyOnGuards>())
-        {
-            HealthSystem heroHealth = other.gameObject.GetComponent<HealthSystem>();
-            if (heroHealth != null)
-            {
-                // Наносим урон герою
-                heroHealth.TakeDamage(_damage);
-            }
-        }
-    }*/
 }
 

@@ -9,7 +9,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" root0="FORCE_HIGHLIGHTING" />
@@ -48,9 +47,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/State/StateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardFightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardFightState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
       </list>
     </option>
   </component>
@@ -111,7 +110,8 @@
       <workItem from="1724082437599" duration="3579000" />
       <workItem from="1724154204833" duration="3344000" />
       <workItem from="1724506752801" duration="1306000" />
-      <workItem from="1724588957182" duration="1904000" />
+      <workItem from="1724588957182" duration="2568000" />
+      <workItem from="1724760697638" duration="1581000" />
     </task>
     <servers />
   </component>

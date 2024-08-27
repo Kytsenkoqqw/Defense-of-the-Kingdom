@@ -36,6 +36,11 @@ public class GameManager : MonoBehaviour
         _IsPaused = false;
         _pauseMenu.SetActive(false);
         Time.timeScale = 1f;
-        
+    }
+
+    public void ResumeButton()
+    {
+        _pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
