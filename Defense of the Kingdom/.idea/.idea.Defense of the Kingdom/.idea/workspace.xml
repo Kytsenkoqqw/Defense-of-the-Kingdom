@@ -10,6 +10,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPS/FPSCounter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" root0="FORCE_HIGHLIGHTING" />
@@ -18,7 +19,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageTrigger/ShowStartMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPS/FPSCounter.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -29,7 +29,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health/HealthUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/ObjectStateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/FightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/SearchState.cs" />
@@ -48,8 +47,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardFightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemap/RandomGenerationTilemap.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardFightState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" />
       </list>
     </option>
   </component>
@@ -111,7 +112,7 @@
       <workItem from="1724154204833" duration="3344000" />
       <workItem from="1724506752801" duration="1306000" />
       <workItem from="1724588957182" duration="2568000" />
-      <workItem from="1724760697638" duration="1581000" />
+      <workItem from="1724760697638" duration="3995000" />
     </task>
     <servers />
   </component>

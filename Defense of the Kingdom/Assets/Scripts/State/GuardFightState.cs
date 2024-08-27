@@ -54,7 +54,7 @@ public class GuardFightState : ObjectState
         }
 
         // Выбор типа атаки на основе вертикальной позиции врага
-        if (Mathf.Abs(direction.y) < 0.1f) // Если враг находится на одном уровне по высоте (с допуском)
+        if (Mathf.Abs(direction.y) < 0.3f) // Если враг находится на одном уровне по высоте (с допуском)
         {
             FrontAttack(); // Боковая атака
         }
@@ -97,16 +97,24 @@ public class GuardFightState : ObjectState
     private void AttackUp()
     {
         _animator.SetBool("UpAttack", true);
+        _animator.SetBool("FrontAttack", false);
+        _animator.SetBool("DownAttack", false);
+    }
+    
+    private void FrontAttack()
+    {
+        _animator.SetBool("FrontAttack", true);
+        _animator.SetBool("DownAttack", false);
+        _animator.SetBool("UpAttack", false);
     }
 
     private void AttackDown()
     {
         _animator.SetBool("DownAttack", true);
+        _animator.SetBool("FrontAttack", false);
+        _animator.SetBool("UpAttack", false);
     }
 
-    private void FrontAttack()
-    {
-        _animator.SetBool("FrontAttack", true);
-    }
+    
 
 }

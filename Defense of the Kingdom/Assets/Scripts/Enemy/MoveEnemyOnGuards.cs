@@ -7,11 +7,13 @@ public class MoveEnemyOnGuards : MonoBehaviour
 {
     [SerializeField] private float _speed = 5f;
     [SerializeField] private int _damage = 10;
+    private Animator _animator;
     
     private DeathGuard _deathGuard;
 
     private void Start()
     {
+        _animator = GetComponent<Animator>();
         FindNewGuard();
     }
 
@@ -29,6 +31,12 @@ public class MoveEnemyOnGuards : MonoBehaviour
         if (_deathGuard != null)
         {
             transform.position = Vector2.MoveTowards(transform.position, _deathGuard.transform.position, _speed * Time.deltaTime);
+            _animator.SetBool("IsMoving", true);
+            
+            if (_speed <= 0)
+            {
+                _animator.SetBool("IsMoving", false);
+            }
         }
     }
 
