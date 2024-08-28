@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public class GuardFightState : ObjectState
 {
@@ -11,15 +12,21 @@ public class GuardFightState : ObjectState
     private Transform _enemyTransform;
     private Transform[] _waypoints; 
     private StateMachine _stateMachine;
-    private float _attackDuration = 0.5f; // Длительность атаки в секундах
+    private PolygonCollider2D _upAttackArea;
+    private PolygonCollider2D _frontAttackArea;
+    private PolygonCollider2D _downAttackArea;
 
-    public GuardFightState(Transform objectTransform, Animator animator, Transform enemyTransform, Transform[] waypoints, StateMachine stateMachine)
+    public GuardFightState(Transform objectTransform, Animator animator, Transform enemyTransform, Transform[] waypoints, StateMachine stateMachine, 
+        PolygonCollider2D upAttackArea, PolygonCollider2D frontAttackArea, PolygonCollider2D downAttackArea)
     {
         _objectTransform = objectTransform;
         _animator = animator;
         _enemyTransform = enemyTransform;
         _waypoints = waypoints;
         _stateMachine = stateMachine;
+        _upAttackArea = upAttackArea;
+        _frontAttackArea = frontAttackArea;
+        _downAttackArea = downAttackArea;
     }
 
     public override void Enter()
@@ -96,6 +103,7 @@ public class GuardFightState : ObjectState
 
     private void AttackUp()
     {
+        _stateMachine.SetAttackAreaActive("UpAttack");
         _animator.SetBool("UpAttack", true);
         _animator.SetBool("FrontAttack", false);
         _animator.SetBool("DownAttack", false);
@@ -103,6 +111,7 @@ public class GuardFightState : ObjectState
     
     private void FrontAttack()
     {
+        _stateMachine.SetAttackAreaActive("FrontAttack");
         _animator.SetBool("FrontAttack", true);
         _animator.SetBool("DownAttack", false);
         _animator.SetBool("UpAttack", false);
@@ -110,6 +119,7 @@ public class GuardFightState : ObjectState
 
     private void AttackDown()
     {
+        _stateMachine.SetAttackAreaActive("DownAttack");
         _animator.SetBool("DownAttack", true);
         _animator.SetBool("FrontAttack", false);
         _animator.SetBool("UpAttack", false);

@@ -40,4 +40,26 @@ public class StateMachine : MonoBehaviour
         _currentState = newState;
         _currentState.Enter();
     }
+    
+    public void SetAttackAreaActive(string attackType)
+    {
+        // Деактивируем все коллайдеры
+        _upAttackArea.enabled = false;
+        _frontAttackArea.enabled = false;
+        _downAttackArea.enabled = false;
+
+        // Активируем нужный коллайдер
+        switch (attackType)
+        {
+            case "UpAttack":
+                _upAttackArea.enabled = true;
+                break;
+            case "FrontAttack":
+                _frontAttackArea.enabled = true;
+                break;
+            case "DownAttack":
+                _downAttackArea.enabled = true;
+                break;
+        }
+    }
 }

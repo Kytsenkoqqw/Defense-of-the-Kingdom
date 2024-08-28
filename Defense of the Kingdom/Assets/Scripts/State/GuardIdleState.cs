@@ -7,6 +7,9 @@ using UnityEngine.Serialization;
 public class GuardIdleState : ObjectState
 {
     [SerializeField] private Transform[] _waypoints;
+    [SerializeField] private PolygonCollider2D _upAttackArea;
+    [SerializeField] private PolygonCollider2D _frontAttackArea;
+    [SerializeField] private PolygonCollider2D _downAttackArea;
     private float _moveSpeed = 2f;
     private Transform _objectTransform;
     private Animator _animator;
@@ -17,7 +20,7 @@ public class GuardIdleState : ObjectState
     private float _detectionRadius = 5f;
     private MoveEnemyOnGuards _enemyComponent; // Измените имя, если необходимо
     private StateMachine _stateMachine; // Ссылка на StateMachine
-
+    
     public GuardIdleState(Transform transform, Animator animator, Transform[] waypoints, StateMachine stateMachine)
     {
         _objectTransform = transform;
@@ -123,7 +126,7 @@ public class GuardIdleState : ObjectState
             {
                 Debug.Log("Enemy detected, switching to FightState");
                 Transform enemyTransform = collider.transform;
-                _stateMachine.ChangeState(new GuardFightState(_objectTransform, _animator, enemyTransform, _waypoints, _stateMachine));
+                _stateMachine.ChangeState(new GuardFightState(_objectTransform, _animator, enemyTransform, _waypoints, _stateMachine, _upAttackArea, _frontAttackArea, _downAttackArea));
                 return; // Прекратить дальнейший поиск после нахождения первого врага
             }
         }
