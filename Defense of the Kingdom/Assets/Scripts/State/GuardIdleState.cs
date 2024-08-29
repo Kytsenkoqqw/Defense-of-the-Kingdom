@@ -7,9 +7,9 @@ using UnityEngine.Serialization;
 public class GuardIdleState : ObjectState
 {
     [SerializeField] private Transform[] _waypoints;
-    [SerializeField] private PolygonCollider2D _upAttackArea;
-    [SerializeField] private PolygonCollider2D _frontAttackArea;
-    [SerializeField] private PolygonCollider2D _downAttackArea;
+    private GameObject _upAttackArea;
+    private GameObject _frontAttackArea;
+    private GameObject _downAttackArea;
     private float _moveSpeed = 2f;
     private Transform _objectTransform;
     private Animator _animator;
@@ -37,6 +37,7 @@ public class GuardIdleState : ObjectState
     public override void Enter()
     {
         Debug.Log("Entering Idle State");
+        OffAttackAnimation();
         MoveToNextWaypoint();
         //PlayRunAnimation(true); // Включаем анимацию бега
     }
@@ -130,5 +131,12 @@ public class GuardIdleState : ObjectState
                 return; // Прекратить дальнейший поиск после нахождения первого врага
             }
         }
+    }
+
+    private void OffAttackAnimation()
+    {
+        _animator.SetBool("UpAttack", false);
+        _animator.SetBool("FrontAttack", false);
+        _animator.SetBool("DownAttack",false);
     }
 }

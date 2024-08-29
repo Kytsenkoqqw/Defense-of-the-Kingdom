@@ -1,23 +1,26 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 
 public class GuardFightState : ObjectState
 {
-    private Transform _objectTransform;
+
+     private Transform _objectTransform;
     private Animator _animator;
     private Transform _enemyTransform;
-    private Transform[] _waypoints; 
+    private Transform[] _waypoints;
     private StateMachine _stateMachine;
-    private PolygonCollider2D _upAttackArea;
-    private PolygonCollider2D _frontAttackArea;
-    private PolygonCollider2D _downAttackArea;
+    private GameObject _upAttackArea;
+    private GameObject _frontAttackArea;
+    private GameObject _downAttackArea;
 
-    public GuardFightState(Transform objectTransform, Animator animator, Transform enemyTransform, Transform[] waypoints, StateMachine stateMachine, 
-        PolygonCollider2D upAttackArea, PolygonCollider2D frontAttackArea, PolygonCollider2D downAttackArea)
+    public GuardFightState(Transform objectTransform, Animator animator, Transform enemyTransform,
+        Transform[] waypoints, StateMachine stateMachine,
+        GameObject upAttackArea, GameObject frontAttackArea, GameObject downAttackArea)
     {
         _objectTransform = objectTransform;
         _animator = animator;
@@ -52,12 +55,14 @@ public class GuardFightState : ObjectState
         if (horizontalDirection > 0)
         {
             // Враг справа, стражник смотрит вправо
-            _objectTransform.localScale = new Vector3(Mathf.Abs(_objectTransform.localScale.x), _objectTransform.localScale.y, _objectTransform.localScale.z);
+            _objectTransform.localScale = new Vector3(Mathf.Abs(_objectTransform.localScale.x),
+                _objectTransform.localScale.y, _objectTransform.localScale.z);
         }
         else if (horizontalDirection < 0)
         {
             // Враг слева, стражник смотрит влево
-            _objectTransform.localScale = new Vector3(-Mathf.Abs(_objectTransform.localScale.x), _objectTransform.localScale.y, _objectTransform.localScale.z);
+            _objectTransform.localScale = new Vector3(-Mathf.Abs(_objectTransform.localScale.x),
+                _objectTransform.localScale.y, _objectTransform.localScale.z);
         }
 
         // Выбор типа атаки на основе вертикальной позиции врага
@@ -78,53 +83,73 @@ public class GuardFightState : ObjectState
         if (!IsEnemyInRange())
         {
             _stateMachine.ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints, _stateMachine));
+            OffAttackAnimation();
             _animator.SetBool("IsMoving", true);
-        }
-        else
-        {
-            GuardAttack();
         }
     }
 
     public override void Exit()
     {
         Debug.Log("Exiting Fight State");
+       
     }
 
-    private void GuardAttack()
+    private void OffAttackAnimation()
     {
-        // Логика атаки
+        _animator.SetBool("UpAttack", false);
+        _animator.SetBool("FrontAttack", false);
+        _animator.SetBool("DownAttack", false);
     }
 
     private bool IsEnemyInRange()
     {
-        return Vector2.Distance(_objectTransform.position, _enemyTransform.position) <= 5f; 
+        return Vector2.Distance(_objectTransform.position, _enemyTransform.position) <= 5f;
     }
 
     private void AttackUp()
     {
-        _stateMachine.SetAttackAreaActive("UpAttack");
         _animator.SetBool("UpAttack", true);
         _animator.SetBool("FrontAttack", false);
         _animator.SetBool("DownAttack", false);
+        _upAttackArea.SetActive(true);
     }
-    
+
     private void FrontAttack()
     {
-        _stateMachine.SetAttackAreaActive("FrontAttack");
         _animator.SetBool("FrontAttack", true);
         _animator.SetBool("DownAttack", false);
         _animator.SetBool("UpAttack", false);
+        _frontAttackArea.SetActive(true);
     }
 
     private void AttackDown()
     {
-        _stateMachine.SetAttackAreaActive("DownAttack");
         _animator.SetBool("DownAttack", true);
         _animator.SetBool("FrontAttack", false);
         _animator.SetBool("UpAttack", false);
+        _downAttackArea.SetActive(true);
     }
-
+    
+    IEnumerator OnAttackArea(GameObject attackArea, float activationDelay, float activeDuration)
+    {
+        yield return new WaitForSeconds(activationDelay);
+        attackArea.SetActive(true);
+        yield return new WaitForSeconds(activeDuration); // Время, на которое активируется область атаки
+        attackArea.SetActive(false);
+    }
     
 
+    /*IEnumerator OnAttackArea(PolygonCollider2D attackArea, float activationDelay, float activeDuration)
+    {
+        if (attackArea == null)
+        {
+            Debug.Log("null");
+            yield break;
+        }
+        yield return new WaitForSeconds(activationDelay);
+        attackArea.enabled = true;
+        yield return new WaitForSeconds(activeDuration); // Время, на которое активируется область атаки
+        attackArea.enabled = false;
+    }*/
+    
 }

@@ -62,4 +62,9 @@ public class StateMachine : MonoBehaviour
                 break;
         }
     }
+    
+    public void StartStateCoroutine(IEnumerator coroutine)
+    {
+        StartCoroutine(coroutine);
+    }
 }

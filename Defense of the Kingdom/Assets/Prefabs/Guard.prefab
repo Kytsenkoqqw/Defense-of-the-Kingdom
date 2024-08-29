@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2752496545006064528}
   - component: {fileID: 564079757936103313}
+  - component: {fileID: 5494604950146771337}
   m_Layer: 0
   m_Name: DownAttackArea
   m_TagString: Untagged
@@ -61,7 +62,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -83,6 +84,19 @@ PolygonCollider2D:
       - {x: 0.6214961, y: 0.53934366}
       - {x: 0.7228372, y: 0.80694956}
   m_UseDelaunayMesh: 0
+--- !u!114 &5494604950146771337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186896785866557152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195b7e7ae9b28ae4f9a06007dc93e0f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 5
 --- !u!1 &1785415572512639952
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,6 +210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1435896071265984765}
   - component: {fileID: 6703547121943493358}
+  - component: {fileID: 483539143319864715}
   m_Layer: 0
   m_Name: UpAttackArea
   m_TagString: Untagged
@@ -247,7 +262,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -271,6 +286,19 @@ PolygonCollider2D:
       - {x: 0.63159907, y: 1.1893702}
       - {x: 0.77470565, y: 1.3982444}
   m_UseDelaunayMesh: 0
+--- !u!114 &483539143319864715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6002747859839107416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195b7e7ae9b28ae4f9a06007dc93e0f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 5
 --- !u!1 &6017494934025312903
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,6 +309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5722593988131303456}
   - component: {fileID: 6982452535382542255}
+  - component: {fileID: 1200072355215229277}
   m_Layer: 0
   m_Name: FrontAttackArea
   m_TagString: Untagged
@@ -332,7 +361,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -355,6 +384,19 @@ PolygonCollider2D:
       - {x: 0.72460806, y: 0.7969021}
       - {x: 0.85769415, y: 1.2530138}
   m_UseDelaunayMesh: 0
+--- !u!114 &1200072355215229277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6017494934025312903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195b7e7ae9b28ae4f9a06007dc93e0f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 5
 --- !u!1 &6237244129765881398
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,7 +704,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -757,9 +799,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85768450bff6834a95906d3c3765406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _upAttackArea: {fileID: 6703547121943493358}
-  _frontAttackArea: {fileID: 6982452535382542255}
-  _downAttackArea: {fileID: 564079757936103313}
+  _upAttackArea: {fileID: 6002747859839107416}
+  _frontAttackArea: {fileID: 6017494934025312903}
+  _downAttackArea: {fileID: 186896785866557152}
   _waypoints:
   - {fileID: 0}
   - {fileID: 0}
