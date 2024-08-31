@@ -5,22 +5,22 @@ using Unity.VisualScripting;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
+using UnityEngine.Rendering.Universal;
 
 public class GuardFightState : ObjectState
 {
-
-     private Transform _objectTransform;
+    private Transform _objectTransform;
     private Animator _animator;
     private Transform _enemyTransform;
     private Transform[] _waypoints;
     private StateMachine _stateMachine;
-    private GameObject _upAttackArea;
-    private GameObject _frontAttackArea;
-    private GameObject _downAttackArea;
+    private PolygonCollider2D _upAttackArea;
+    private PolygonCollider2D _frontAttackArea;
+    private PolygonCollider2D _downAttackArea;
 
     public GuardFightState(Transform objectTransform, Animator animator, Transform enemyTransform,
         Transform[] waypoints, StateMachine stateMachine,
-        GameObject upAttackArea, GameObject frontAttackArea, GameObject downAttackArea)
+        PolygonCollider2D upAttackArea, PolygonCollider2D frontAttackArea, PolygonCollider2D downAttackArea)
     {
         _objectTransform = objectTransform;
         _animator = animator;
@@ -91,7 +91,6 @@ public class GuardFightState : ObjectState
     public override void Exit()
     {
         Debug.Log("Exiting Fight State");
-       
     }
 
     private void OffAttackAnimation()
@@ -111,7 +110,7 @@ public class GuardFightState : ObjectState
         _animator.SetBool("UpAttack", true);
         _animator.SetBool("FrontAttack", false);
         _animator.SetBool("DownAttack", false);
-        _upAttackArea.SetActive(true);
+        _upAttackArea.enabled = true;
     }
 
     private void FrontAttack()
@@ -119,7 +118,7 @@ public class GuardFightState : ObjectState
         _animator.SetBool("FrontAttack", true);
         _animator.SetBool("DownAttack", false);
         _animator.SetBool("UpAttack", false);
-        _frontAttackArea.SetActive(true);
+        _frontAttackArea.enabled = true;
     }
 
     private void AttackDown()
@@ -127,7 +126,7 @@ public class GuardFightState : ObjectState
         _animator.SetBool("DownAttack", true);
         _animator.SetBool("FrontAttack", false);
         _animator.SetBool("UpAttack", false);
-        _downAttackArea.SetActive(true);
+        _downAttackArea.enabled = true;
     }
     
     IEnumerator OnAttackArea(GameObject attackArea, float activationDelay, float activeDuration)
@@ -136,20 +135,7 @@ public class GuardFightState : ObjectState
         attackArea.SetActive(true);
         yield return new WaitForSeconds(activeDuration); // Время, на которое активируется область атаки
         attackArea.SetActive(false);
-    }
+    }  
     
-
-    /*IEnumerator OnAttackArea(PolygonCollider2D attackArea, float activationDelay, float activeDuration)
-    {
-        if (attackArea == null)
-        {
-            Debug.Log("null");
-            yield break;
-        }
-        yield return new WaitForSeconds(activationDelay);
-        attackArea.enabled = true;
-        yield return new WaitForSeconds(activeDuration); // Время, на которое активируется область атаки
-        attackArea.enabled = false;
-    }*/
     
 }

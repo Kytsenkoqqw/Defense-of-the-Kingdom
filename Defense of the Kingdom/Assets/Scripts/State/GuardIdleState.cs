@@ -7,9 +7,9 @@ using UnityEngine.Serialization;
 public class GuardIdleState : ObjectState
 {
     [SerializeField] private Transform[] _waypoints;
-    private GameObject _upAttackArea;
-    private GameObject _frontAttackArea;
-    private GameObject _downAttackArea;
+    private PolygonCollider2D _upAttackArea;
+    private PolygonCollider2D _frontAttackArea;
+    private PolygonCollider2D _downAttackArea;
     private float _moveSpeed = 2f;
     private Transform _objectTransform;
     private Animator _animator;
@@ -26,9 +26,9 @@ public class GuardIdleState : ObjectState
         _objectTransform = transform;
         _animator = animator;
         _waypoints = waypoints;
-        _stateMachine = stateMachine; // Инициализируем ссылку на StateMachine
+        _stateMachine = stateMachine;
 
-        if (waypoints == null || waypoints.Length == 0)
+        if (_waypoints == null || _waypoints.Length == 0)
         {
             Debug.LogError("Waypoints array is null or empty!");
         }

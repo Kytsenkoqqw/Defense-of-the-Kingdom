@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.XR;
+using Zenject;
 
 public class StateMachine : MonoBehaviour
 {
@@ -16,7 +17,8 @@ public class StateMachine : MonoBehaviour
     [SerializeField] private PolygonCollider2D _frontAttackArea;
     [SerializeField] private PolygonCollider2D _downAttackArea;
 
-    [SerializeField] private Transform[] _waypoints;
+    [Inject]
+    private Transform[] _waypoints;
 
     private void Start()
     {

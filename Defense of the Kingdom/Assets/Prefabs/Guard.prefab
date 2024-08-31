@@ -799,9 +799,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85768450bff6834a95906d3c3765406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _upAttackArea: {fileID: 6002747859839107416}
-  _frontAttackArea: {fileID: 6017494934025312903}
-  _downAttackArea: {fileID: 186896785866557152}
+  _upAttackArea: {fileID: 6703547121943493358}
+  _frontAttackArea: {fileID: 6982452535382542255}
+  _downAttackArea: {fileID: 564079757936103313}
   _waypoints:
   - {fileID: 0}
   - {fileID: 0}
