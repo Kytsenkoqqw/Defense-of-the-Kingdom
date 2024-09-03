@@ -9,8 +9,16 @@ using UnityEngine.WSA;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private Button _pauseButton;
+    [SerializeField] private Button _resumeButton;
+    
     [SerializeField] private GameObject _pauseMenu;
     private bool _IsPaused = false;
+
+    private void Start()
+    {
+        _pauseButton.onClick.AddListener(Pause);
+        _resumeButton.onClick.AddListener(Resume);
+    }
 
     public void TogglePauseMenu()
     {

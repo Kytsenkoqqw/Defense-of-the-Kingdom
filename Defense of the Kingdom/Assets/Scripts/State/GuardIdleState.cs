@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Zenject;
+
 
 public class GuardIdleState : ObjectState
 {
@@ -127,7 +129,7 @@ public class GuardIdleState : ObjectState
             {
                 Debug.Log("Enemy detected, switching to FightState");
                 Transform enemyTransform = collider.transform;
-                _stateMachine.ChangeState(new GuardFightState(_objectTransform, _animator, enemyTransform, _waypoints, _stateMachine, _upAttackArea, _frontAttackArea, _downAttackArea));
+                _stateMachine.ChangeState(new GuardFightState(_objectTransform, _animator, enemyTransform, _waypoints, _stateMachine));
                 return; // Прекратить дальнейший поиск после нахождения первого врага
             }
         }

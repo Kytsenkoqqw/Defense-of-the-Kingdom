@@ -6,6 +6,7 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 using UnityEngine.Rendering.Universal;
+using Zenject;
 
 public class GuardFightState : ObjectState
 {
@@ -14,22 +15,15 @@ public class GuardFightState : ObjectState
     private Transform _enemyTransform;
     private Transform[] _waypoints;
     private StateMachine _stateMachine;
-    private PolygonCollider2D _upAttackArea;
-    private PolygonCollider2D _frontAttackArea;
-    private PolygonCollider2D _downAttackArea;
 
     public GuardFightState(Transform objectTransform, Animator animator, Transform enemyTransform,
-        Transform[] waypoints, StateMachine stateMachine,
-        PolygonCollider2D upAttackArea, PolygonCollider2D frontAttackArea, PolygonCollider2D downAttackArea)
+        Transform[] waypoints, StateMachine stateMachine)
     {
         _objectTransform = objectTransform;
         _animator = animator;
         _enemyTransform = enemyTransform;
         _waypoints = waypoints;
         _stateMachine = stateMachine;
-        _upAttackArea = upAttackArea;
-        _frontAttackArea = frontAttackArea;
-        _downAttackArea = downAttackArea;
     }
 
     public override void Enter()
@@ -98,6 +92,7 @@ public class GuardFightState : ObjectState
         _animator.SetBool("UpAttack", false);
         _animator.SetBool("FrontAttack", false);
         _animator.SetBool("DownAttack", false);
+        _stateMachine.SetAttackAreaActive("None"); // Убираем активные коллайдеры
     }
 
     private bool IsEnemyInRange()
@@ -109,33 +104,24 @@ public class GuardFightState : ObjectState
     {
         _animator.SetBool("UpAttack", true);
         _animator.SetBool("FrontAttack", false);
-        _animator.SetBool("DownAttack", false);
-        _upAttackArea.enabled = true;
+        _animator.SetBool("DownAttack",false);
+        _stateMachine.SetAttackAreaActive("UpAttack");
     }
 
     private void FrontAttack()
     {
         _animator.SetBool("FrontAttack", true);
-        _animator.SetBool("DownAttack", false);
         _animator.SetBool("UpAttack", false);
-        _frontAttackArea.enabled = true;
+        _animator.SetBool("DownAttack",false);
+        _stateMachine.SetAttackAreaActive("FrontAttack");
     }
 
     private void AttackDown()
     {
         _animator.SetBool("DownAttack", true);
-        _animator.SetBool("FrontAttack", false);
         _animator.SetBool("UpAttack", false);
-        _downAttackArea.enabled = true;
+        _animator.SetBool("FrontAttack",false);
+        _stateMachine.SetAttackAreaActive("DownAttack");
     }
-    
-    IEnumerator OnAttackArea(GameObject attackArea, float activationDelay, float activeDuration)
-    {
-        yield return new WaitForSeconds(activationDelay);
-        attackArea.SetActive(true);
-        yield return new WaitForSeconds(activeDuration); // Время, на которое активируется область атаки
-        attackArea.SetActive(false);
-    }  
-    
     
 }

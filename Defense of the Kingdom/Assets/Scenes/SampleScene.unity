@@ -1192,6 +1192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pauseButton: {fileID: 1257711973}
+  _resumeButton: {fileID: 1368999646}
   _pauseMenu: {fileID: 384119341}
 --- !u!4 &665580984
 Transform:
@@ -2142,9 +2143,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 665580983}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: TogglePauseMenu
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2236,63 +2237,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1336072132
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7053590401556371146, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
-      propertyPath: m_Name
-      value: Guard (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786329678877884079, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.766688
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786329678877884079, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.5828505
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786329678877884079, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786329678877884079, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786329678877884079, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786329678877884079, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786329678877884079, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786329678877884079, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786329678877884079, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786329678877884079, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
 --- !u!1 &1361404753
 GameObject:
   m_ObjectHideFlags: 0
@@ -2534,9 +2478,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 665580983}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ResumeButton
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8628,7 +8572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143575079677692343, guid: 40b146365dac05f4288d49926bd9226d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8643,6 +8587,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 186896785866557152, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5627001304417843615, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
       propertyPath: _upAttackArea
       value: 
@@ -8671,13 +8619,21 @@ PrefabInstance:
       propertyPath: _waypoints.Array.data[3]
       value: 
       objectReference: {fileID: 429766440}
+    - target: {fileID: 6002747859839107416, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017494934025312903, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7053590401556371146, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
       propertyPath: m_Name
       value: Guard
       objectReference: {fileID: 0}
     - target: {fileID: 7053590401556371146, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7786329678877884079, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8749,4 +8705,3 @@ SceneRoots:
   - {fileID: 761976353}
   - {fileID: 7970035358942703943}
   - {fileID: 1304425087}
-  - {fileID: 1336072132}

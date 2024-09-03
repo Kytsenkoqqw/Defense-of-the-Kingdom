@@ -11,8 +11,7 @@ public class StateMachine : MonoBehaviour
     private ObjectState _currentState;
     private Transform _objectTransform;
     private Animator _animator;
-    private LayerMask _enemyLayer;
-    
+
     [SerializeField] private PolygonCollider2D _upAttackArea;
     [SerializeField] private PolygonCollider2D _frontAttackArea;
     [SerializeField] private PolygonCollider2D _downAttackArea;
@@ -24,6 +23,7 @@ public class StateMachine : MonoBehaviour
     {
         _objectTransform = transform; 
         _animator = GetComponent<Animator>();
+
         // Передайте ссылку на StateMachine
         ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints, this));
     }
@@ -63,10 +63,5 @@ public class StateMachine : MonoBehaviour
                 _downAttackArea.enabled = true;
                 break;
         }
-    }
-    
-    public void StartStateCoroutine(IEnumerator coroutine)
-    {
-        StartCoroutine(coroutine);
     }
 }

@@ -9,7 +9,6 @@ public class DeathGuard : MonoBehaviour
 {
     [SerializeField] private Canvas _hpBar;
     
-    private PlayerController _playerController;
     private Animator _animator;
     private HealthSystem _healthSystem;
 

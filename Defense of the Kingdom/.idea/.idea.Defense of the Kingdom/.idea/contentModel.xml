@@ -949,6 +949,7 @@
           <e p="Guards" t="Include">
             <e p="DeathGuard.cs" t="Include" />
             <e p="GuardAttackArea.cs" t="Include" />
+            <e p="GuardInstaller.cs" t="Include" />
             <e p="WaypointsInstaller.cs" t="Include" />
           </e>
           <e p="Health" t="Include">
