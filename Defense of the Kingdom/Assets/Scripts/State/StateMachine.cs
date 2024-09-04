@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.XR;
@@ -54,14 +55,22 @@ public class StateMachine : MonoBehaviour
         switch (attackType)
         {
             case "UpAttack":
-                _upAttackArea.enabled = true;
+                StartCoroutine(OnOffAttackAreaCollider(_upAttackArea, 0.4f, 1f)); // Увеличенное время активации
                 break;
             case "FrontAttack":
-                _frontAttackArea.enabled = true;
+                StartCoroutine(OnOffAttackAreaCollider(_frontAttackArea, 0.4f, 1f));
                 break;
             case "DownAttack":
-                _downAttackArea.enabled = true;
+                StartCoroutine(OnOffAttackAreaCollider(_downAttackArea, 0.4f, 1f));
                 break;
         }
+    }
+
+    IEnumerator OnOffAttackAreaCollider(PolygonCollider2D attackArea, float delayBeforeActivation, float activeTime)
+    {
+        yield return new WaitForSeconds(delayBeforeActivation); // Ждем перед активацией
+        attackArea.enabled = true;
+        yield return new WaitForSeconds(activeTime); // Время, на которое активируется область атаки
+        attackArea.enabled = false;
     }
 }
