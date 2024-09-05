@@ -6,7 +6,6 @@ using UnityEngine;
 public class MoveEnemyOnGuards : MonoBehaviour
 {
     [SerializeField] private float _speed = 5f;
-    [SerializeField] private int _damage = 10;
 
     private Animator _animator;
     private DeathGuard _deathGuard;
@@ -50,19 +49,6 @@ public class MoveEnemyOnGuards : MonoBehaviour
             if (_speed <= 0)
             {
                 _animator.SetBool("IsMoving", false);
-            }
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.GetComponent<DeathGuard>())
-        {
-            HealthSystem heroHealth = other.gameObject.GetComponent<HealthSystem>();
-            if (heroHealth != null)
-            {
-                // Наносим урон герою
-                heroHealth.TakeDamage(_damage);
             }
         }
     }

@@ -55,13 +55,13 @@ public class StateMachine : MonoBehaviour
         switch (attackType)
         {
             case "UpAttack":
-                StartCoroutine(OnOffAttackAreaCollider(_upAttackArea, 0.4f, 1f)); // Увеличенное время активации
+                StartCoroutine(OnOffAttackAreaCollider(_upAttackArea, 0.4f, 3f)); // Увеличенное время активации
                 break;
             case "FrontAttack":
-                StartCoroutine(OnOffAttackAreaCollider(_frontAttackArea, 0.4f, 1f));
+                StartCoroutine(OnOffAttackAreaCollider(_frontAttackArea, 0.4f, 3f));
                 break;
             case "DownAttack":
-                StartCoroutine(OnOffAttackAreaCollider(_downAttackArea, 0.4f, 1f));
+                StartCoroutine(OnOffAttackAreaCollider(_downAttackArea, 0.4f, 3f));
                 break;
         }
     }

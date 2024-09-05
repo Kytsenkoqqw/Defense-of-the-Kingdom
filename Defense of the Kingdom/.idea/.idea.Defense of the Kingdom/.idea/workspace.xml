@@ -10,9 +10,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0D7024C3-5801-4444-A857-4F8E3E9232D5/cc/457c555c/EditorCompilationInterface.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/TorchGoblinIdleState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/GuardInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPS/FPSCounter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/FightState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/TorchGoblinFightState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" root0="FORCE_HIGHLIGHTING" />
@@ -34,7 +37,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health/HealthUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/ObjectStateManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/FightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/SearchState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/HorizontalAttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" />
@@ -48,17 +50,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemap/RandomGenerationTilemap.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Zenject/WaypointsInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/WaypointsInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardFightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/FightState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardFightState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/TorchGoblinFightState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/TorchGoblinIdleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/TorchGoblinFightState.cs" />
       </list>
     </option>
   </component>
@@ -133,7 +139,9 @@
       <workItem from="1725365584965" duration="2608000" />
       <workItem from="1725373811197" duration="745000" />
       <workItem from="1725388996273" duration="3376000" />
-      <workItem from="1725453174448" duration="3639000" />
+      <workItem from="1725453174448" duration="3714000" />
+      <workItem from="1725465356823" duration="1324000" />
+      <workItem from="1725538716875" duration="5532000" />
     </task>
     <servers />
   </component>
@@ -211,11 +219,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="29" key="GridCell.Tab.3.right/0.0.1920.1050@0.0.1920.1050" timestamp="1725394132257" />
-    <state x="784" y="238" key="RiderGenerateDialog" timestamp="1723897747361">
+    <state x="784" y="238" key="RiderGenerateDialog" timestamp="1725544180394">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="784" y="236" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1723643499421" />
-    <state x="784" y="238" key="RiderGenerateDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1723897747361" />
+    <state x="784" y="238" key="RiderGenerateDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1725544180394" />
     <state x="531" y="236" key="SettingsEditor" timestamp="1725391800214">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

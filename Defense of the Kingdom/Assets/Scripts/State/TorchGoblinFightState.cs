@@ -1,26 +1,22 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditorInternal;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
-using UnityEngine.Rendering.Universal;
-using Zenject;
 
-public class GuardFightState : FightState
+public class TorchGoblinFightState : FightState    
 {
-    public GuardFightState(Transform objectTransform, Animator animator, Transform enemyTransform,
+    public TorchGoblinFightState(Transform objectTransform, Animator animator, Transform enemyTransform,
         Transform[] waypoints, StateMachine stateMachine)
         : base(objectTransform, animator, enemyTransform, waypoints, stateMachine) { }
 
     protected override ObjectState CreateIdleState()
     {
-        return new GuardIdleState(_objectTransform, _animator, _waypoints, _stateMachine);
+        return new TorchGoblinIdleState();
     }
 
     protected override void ActivateAttackArea(string attackType)
     {
+        // Логика активации областей атаки для врагов (можно добавить свою логику)
+        Debug.Log("Enemy attack area activation: " + attackType);
         _stateMachine.SetAttackAreaActive(attackType);
     }
 }
