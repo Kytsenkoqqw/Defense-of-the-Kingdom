@@ -249,7 +249,6 @@ GameObject:
   - component: {fileID: 784765874746528692}
   - component: {fileID: 4725181870607768790}
   - component: {fileID: 4713142823774959443}
-  - component: {fileID: 7633409915092562150}
   m_Layer: 3
   m_Name: TorchGoblin
   m_TagString: Untagged
@@ -468,21 +467,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7633409915092562150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5143575079677692343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c85768450bff6834a95906d3c3765406, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _upAttackArea: {fileID: 8693420367860864821}
-  _frontAttackArea: {fileID: 7986181589632197796}
-  _downAttackArea: {fileID: 8879065460132459301}
 --- !u!1 &7866937553723429783
 GameObject:
   m_ObjectHideFlags: 0

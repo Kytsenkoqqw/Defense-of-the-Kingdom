@@ -960,13 +960,9 @@
             <e p="ShowStartMessage.cs" t="Include" />
           </e>
           <e p="State" t="Include">
-            <e p="FightState.cs" t="Include" />
-            <e p="GuardFightState.cs" t="Include" />
             <e p="GuardIdleState.cs" t="Include" />
             <e p="ObjectState.cs" t="Include" />
-            <e p="StateMachine.cs" t="Include" />
-            <e p="TorchGoblinFightState.cs" t="Include" />
-            <e p="TorchGoblinIdleState.cs" t="Include" />
+            <e p="StateManager.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
