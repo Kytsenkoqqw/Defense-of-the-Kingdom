@@ -947,6 +947,7 @@
             <e p="GameManager.cs" t="Include" />
           </e>
           <e p="Guards" t="Include">
+            <e p="AttackAreasInstaller.cs" t="Include" />
             <e p="DeathGuard.cs" t="Include" />
             <e p="GuardAttackArea.cs" t="Include" />
             <e p="GuardInstaller.cs" t="Include" />
@@ -960,6 +961,7 @@
             <e p="ShowStartMessage.cs" t="Include" />
           </e>
           <e p="State" t="Include">
+            <e p="GuardFightState.cs" t="Include" />
             <e p="GuardIdleState.cs" t="Include" />
             <e p="ObjectState.cs" t="Include" />
             <e p="StateManager.cs" t="Include" />
