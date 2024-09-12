@@ -16,15 +16,17 @@ public class GuardIdleState : ObjectState
     private float _waitTimer = 0f;
     private bool _isWaiting = false; // Флаг ожидания
     private float _detectionRadius = 5f;
-    private MoveEnemyOnGuards _enemyComponent; // Измените имя, если необходимо
+   // private MoveEnemyOnGuards _enemyComponent; // Измените имя, если необходимо
     private StateManager _stateManager; // Ссылка на StateMachine
     
-    public GuardIdleState(Transform transform, Animator animator, Transform[] waypoints, StateManager stateManager)
+
+    public GuardIdleState(Transform transform, Animator animator, Transform[] waypoints, StateManager stateManager, PolygonCollider2D[] attackAreas)
     {
         _objectTransform = transform;
         _animator = animator;
         _waypoints = waypoints;
         _stateManager = stateManager;
+        _attackAreas = attackAreas;
 
         if (_waypoints == null || _waypoints.Length == 0)
         {
@@ -56,7 +58,7 @@ public class GuardIdleState : ObjectState
 
     public override void ExitState()
     {
-        throw new NotImplementedException();
+        Debug.Log("exit IdleState");
     }
 
     private void MoveTowardsCurrentWaypoint()
@@ -116,6 +118,24 @@ public class GuardIdleState : ObjectState
 
     private void CheckForEnemies()
     {
+        if (_objectTransform == null)
+        {
+            Debug.LogError("_objectTransform is null!");
+            return;
+        }
+
+        if (_stateManager == null)
+        {
+            Debug.LogError("_stateManager is null!");
+            return;
+        }
+
+        if (_attackAreas == null || _waypoints == null)
+        {
+            Debug.LogError("_attackAreas or _waypoints is null!");
+            return;
+        }
+
         Collider2D[] colliders = Physics2D.OverlapCircleAll(_objectTransform.position, _detectionRadius);
 
         foreach (Collider2D collider in colliders)
@@ -125,7 +145,7 @@ public class GuardIdleState : ObjectState
                 Debug.Log("Enemy detected, switching to FightState");
                 Transform enemyTransform = collider.transform;
                 _stateManager.ChangeState(new GuardFightState(_objectTransform, _animator, enemyTransform, _waypoints, _stateManager, _attackAreas));
-                return; // Прекратить дальнейший поиск после нахождения первого врага
+                return;
             }
         }
     }

@@ -948,9 +948,12 @@
           </e>
           <e p="Guards" t="Include">
             <e p="AttackAreasInstaller.cs" t="Include" />
+            <e p="BuyingGuard.cs" t="Include" />
+            <e p="ClosedBuyGuardPanel.cs" t="Include" />
             <e p="DeathGuard.cs" t="Include" />
             <e p="GuardAttackArea.cs" t="Include" />
             <e p="GuardInstaller.cs" t="Include" />
+            <e p="OpenGuardShopPanel.cs" t="Include" />
             <e p="WaypointsInstaller.cs" t="Include" />
           </e>
           <e p="Health" t="Include">

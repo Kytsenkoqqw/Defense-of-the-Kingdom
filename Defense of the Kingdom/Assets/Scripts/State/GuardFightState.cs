@@ -33,7 +33,7 @@ public class GuardFightState : ObjectState
         if (_enemyTransform == null)
         {
             Debug.LogWarning("Enemy transform is null, switching to Idle state.");
-            _stateManager.ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints, _stateManager));
+            _stateManager.ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints, _stateManager, _attackAreas));
             return;
         }
 
@@ -69,7 +69,7 @@ public class GuardFightState : ObjectState
         // Проверяем, находится ли враг в радиусе атаки
         if (!IsEnemyInRange())
         {
-            _stateManager.ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints, _stateManager));
+            _stateManager.ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints, _stateManager, _attackAreas));
             OffAttackAnimation();
             _animator.SetBool("IsMoving", true);
         }

@@ -20,9 +20,10 @@ public class StateManager : MonoBehaviour
       {
          _guardTransform = transform;
          _animator = GetComponent<Animator>();
+         _stateManager = GetComponent<StateManager>();
 
          // Передайте ссылку на StateMachine
-         ChangeState(new GuardIdleState(_guardTransform, _animator, _waypoints, _stateManager));
+         ChangeState(new GuardIdleState(_guardTransform, _animator, _waypoints, _stateManager, _attackAreas));
       }
 
       private void Update()
@@ -49,17 +50,29 @@ public class StateManager : MonoBehaviour
             area.enabled = false;
          }
 
-         // Активируйте нужный коллайдер
+         // Проверьте, что индекс не выходит за пределы массива, перед активацией коллайдера
          switch (attackType)
          {
             case "UpAttack":
-               _attackAreas[0].enabled = true; // Замените индекс на нужный
+               if (_attackAreas.Length > 0)
+                  _attackAreas[0].enabled = true;
+               else
+                  Debug.LogError("UpAttack area is not defined!");
                break;
             case "FrontAttack":
-               _attackAreas[1].enabled = true; // Замените индекс на нужный
+               if (_attackAreas.Length > 1)
+                  _attackAreas[1].enabled = true;
+               else
+                  Debug.LogError("FrontAttack area is not defined!");
                break;
             case "DownAttack":
-               _attackAreas[2].enabled = true; // Замените индекс на нужный
+               if (_attackAreas.Length > 2)
+                  _attackAreas[2].enabled = true;
+               else
+                  Debug.LogError("DownAttack area is not defined!");
+               break;
+            default:
+               Debug.LogError("Unknown attack type: " + attackType);
                break;
          }
       }
