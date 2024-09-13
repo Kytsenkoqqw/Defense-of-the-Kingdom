@@ -16,7 +16,6 @@ public class GuardIdleState : ObjectState
     private float _waitTimer = 0f;
     private bool _isWaiting = false; // Флаг ожидания
     private float _detectionRadius = 5f;
-   // private MoveEnemyOnGuards _enemyComponent; // Измените имя, если необходимо
     private StateManager _stateManager; // Ссылка на StateMachine
     
 

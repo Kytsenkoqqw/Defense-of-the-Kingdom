@@ -15,7 +15,7 @@ public class StateManager : MonoBehaviour
 
       [Inject] private Transform[] _waypoints;
       [Inject] private PolygonCollider2D[] _attackAreas;
-
+      
       private void Start()
       {
          _guardTransform = transform;
@@ -50,31 +50,27 @@ public class StateManager : MonoBehaviour
             area.enabled = false;
          }
 
-         // Проверьте, что индекс не выходит за пределы массива, перед активацией коллайдера
+         // Активируйте нужный коллайдер с учетом корутины
          switch (attackType)
          {
             case "UpAttack":
-               if (_attackAreas.Length > 0)
-                  _attackAreas[0].enabled = true;
-               else
-                  Debug.LogError("UpAttack area is not defined!");
+               StartCoroutine(OnOffAttackArea(_attackAreas[0], 0.40f, 0.3f)); // Передаем индекс 0 для верхней атаки
                break;
             case "FrontAttack":
-               if (_attackAreas.Length > 1)
-                  _attackAreas[1].enabled = true;
-               else
-                  Debug.LogError("FrontAttack area is not defined!");
+               StartCoroutine(OnOffAttackArea(_attackAreas[1], 0.40f, 0.3f)); // Передаем индекс 1 для фронтальной атаки
                break;
             case "DownAttack":
-               if (_attackAreas.Length > 2)
-                  _attackAreas[2].enabled = true;
-               else
-                  Debug.LogError("DownAttack area is not defined!");
-               break;
-            default:
-               Debug.LogError("Unknown attack type: " + attackType);
+               StartCoroutine(OnOffAttackArea(_attackAreas[2], 0.40f, 0.3f)); // Передаем индекс 2 для нижней атаки
                break;
          }
+      }
+
+      private IEnumerator OnOffAttackArea(PolygonCollider2D attackArea, float delayBeforeActivation, float activeTime)
+      {
+         yield return new WaitForSeconds(delayBeforeActivation);
+         attackArea.enabled = true;
+         yield return new WaitForSeconds(activeTime);
+         attackArea.enabled = false;
       }
 
 }

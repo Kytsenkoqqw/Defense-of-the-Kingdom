@@ -936,6 +936,13 @@
             <e p="PlayerAttack.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
           </e>
+          <e p="Currensy" t="Include">
+            <e p="Coins.cs" t="Include" />
+            <e p="CoinsUI.cs" t="Include" />
+            <e p="Currensy.cs" t="Include" />
+            <e p="DestroyCurrensy.cs" t="Include" />
+            <e p="TakeCurrensy.cs" t="Include" />
+          </e>
           <e p="Enemy" t="Include">
             <e p="MoveEnemyOnGuards.cs" t="Include" />
             <e p="SpawnEnemy.cs" t="Include" />
