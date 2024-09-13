@@ -1,14 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DeathGuard : MonoBehaviour
+public class DeathEnemy : MonoBehaviour
 {
+    public Action<Vector3> OnEnemyDie;
     [SerializeField] private Canvas _hpBar;
-    
+
     private Animator _animator;
     private HealthSystem _healthSystem;
 
@@ -18,19 +18,23 @@ public class DeathGuard : MonoBehaviour
         _healthSystem = GetComponent<HealthSystem>();
         _healthSystem.OnDeath.AddListener(Die);
     }
-    
+
     private void Die()
     {
-        _animator.SetBool("IsDeath", true);
+        OnEnemyDie?.Invoke(transform.position); // Передаем позицию врага при его смерти
+        _animator.SetBool("IsDeathEnemy", true);
         _hpBar.enabled = false;
-        StartCoroutine(DestroyGuard());
+        StartCoroutine(DestroyEnemy());
     }
 
-    private IEnumerator DestroyGuard()
+    private void OnDisable()
     {
         _healthSystem.OnDeath.RemoveListener(Die);
-        yield return  new WaitForSeconds(4f);
+    }
+
+    private IEnumerator DestroyEnemy()
+    {
+        yield return new WaitForSeconds(4f);
         Destroy(gameObject);
     }
 }
-

@@ -9,28 +9,29 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/AttackAreasInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0D7024C3-5801-4444-A857-4F8E3E9232D5/cc/457c555c/EditorCompilationInterface.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/ClosedBuyGuardPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/GuardInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Currensy/Currensy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/BuyingGuard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPS/FPSCounter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/StateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/DeathEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/OpenGuardShopPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F5B293C7-4049-457C-ABC2-8437C5A76392/f1/39997131/InjectAttribute.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2A1F209B-90D9-4ED0-AA5F-8E746FD13797/8d/2ce07b7a/PolygonCollider2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/GuardFightState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/AttackAreasInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0D7024C3-5801-4444-A857-4F8E3E9232D5/cc/457c555c/EditorCompilationInterface.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPS/FPSCounter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/StateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageTrigger/ShowStartMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttackArea.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/WaypointsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -54,9 +55,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemap/RandomGenerationTilemap.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Zenject/WaypointsInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/TorchGoblinFightState.cs" />
@@ -77,10 +76,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Currensy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/TakeCurrensy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Coins.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/CoinsUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/TakeCurrensy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/DestroyCurrensy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/TakeCurrensy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Coins.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/DeathEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Loot.cs" />
       </list>
     </option>
   </component>
@@ -163,7 +166,7 @@
       <workItem from="1725709029414" duration="8063000" />
       <workItem from="1725798370573" duration="595000" />
       <workItem from="1726140396061" duration="9964000" />
-      <workItem from="1726229064355" duration="3973000" />
+      <workItem from="1726229064355" duration="6989000" />
     </task>
     <servers />
   </component>

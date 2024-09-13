@@ -941,9 +941,11 @@
             <e p="CoinsUI.cs" t="Include" />
             <e p="Currensy.cs" t="Include" />
             <e p="DestroyCurrensy.cs" t="Include" />
+            <e p="Loot.cs" t="Include" />
             <e p="TakeCurrensy.cs" t="Include" />
           </e>
           <e p="Enemy" t="Include">
+            <e p="DeathEnemy.cs" t="Include" />
             <e p="MoveEnemyOnGuards.cs" t="Include" />
             <e p="SpawnEnemy.cs" t="Include" />
           </e>
