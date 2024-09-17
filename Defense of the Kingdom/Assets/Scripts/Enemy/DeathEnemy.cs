@@ -25,10 +25,6 @@ public class DeathEnemy : MonoBehaviour
         _animator.SetBool("IsDeathEnemy", true);
         _hpBar.enabled = false;
         StartCoroutine(DestroyEnemy());
-    }
-
-    private void OnDisable()
-    {
         _healthSystem.OnDeath.RemoveListener(Die);
     }
 
