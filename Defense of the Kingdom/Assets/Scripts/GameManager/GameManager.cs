@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.WSA;
 
@@ -10,6 +11,8 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private Button _pauseButton;
     [SerializeField] private Button _resumeButton;
+    [SerializeField] private Button _restart;
+    
     
     [SerializeField] private GameObject _pauseMenu;
     private bool _IsPaused = false;
@@ -18,6 +21,9 @@ public class GameManager : MonoBehaviour
     {
         _pauseButton.onClick.AddListener(Pause);
         _resumeButton.onClick.AddListener(Resume);
+        _restart.onClick.AddListener(RestartLevel);
+        _pauseMenu.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void TogglePauseMenu()
@@ -50,5 +56,11 @@ public class GameManager : MonoBehaviour
     {
         _pauseMenu.SetActive(false);
         Time.timeScale = 1f;
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(0);
+        _pauseMenu.SetActive(false);
     }
 }

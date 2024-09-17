@@ -9,7 +9,7 @@ namespace Currensy
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.CompareTag("Coin"))
+            if (other.gameObject.GetComponent<DestroyCurrensy>())
             {
                 _coins.AddCurrency(5);
             }

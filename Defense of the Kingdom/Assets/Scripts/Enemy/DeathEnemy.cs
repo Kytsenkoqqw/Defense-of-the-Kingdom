@@ -21,15 +21,15 @@ public class DeathEnemy : MonoBehaviour
 
     private void Die()
     {
-        OnEnemyDie?.Invoke(transform.position); // Передаем позицию врага при его смерти
+        OnEnemyDie?.Invoke(transform.position);
         _animator.SetBool("IsDeathEnemy", true);
         _hpBar.enabled = false;
         StartCoroutine(DestroyEnemy());
-        _healthSystem.OnDeath.RemoveListener(Die);
     }
 
     private IEnumerator DestroyEnemy()
     {
+        _healthSystem.OnDeath.RemoveListener(Die);
         yield return new WaitForSeconds(4f);
         Destroy(gameObject);
     }
