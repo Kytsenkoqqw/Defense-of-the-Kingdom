@@ -24,12 +24,12 @@ public class DeathEnemy : MonoBehaviour
         OnEnemyDie?.Invoke(transform.position);
         _animator.SetBool("IsDeathEnemy", true);
         _hpBar.enabled = false;
+        _healthSystem.OnDeath.RemoveListener(Die);
         StartCoroutine(DestroyEnemy());
     }
 
     private IEnumerator DestroyEnemy()
     {
-        _healthSystem.OnDeath.RemoveListener(Die);
         yield return new WaitForSeconds(4f);
         Destroy(gameObject);
     }

@@ -735,7 +735,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &384119342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2538,6 +2538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lootPrefab: {fileID: 504840620392057173, guid: 65d18d3adcb44854eb8e557fb7a711d0, type: 3}
+  _deathEnemy: {fileID: 1065978196}
 --- !u!4 &1001503927
 Transform:
   m_ObjectHideFlags: 0
@@ -2586,6 +2587,17 @@ Transform:
   - {fileID: 1361404754}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1065978196 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4646893839926205681, guid: 40b146365dac05f4288d49926bd9226d, type: 3}
+  m_PrefabInstance: {fileID: 783372125}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31dca3f77c3702d46818e7df04c69ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1079797414
 GameObject:
   m_ObjectHideFlags: 0
@@ -10008,7 +10020,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2102077173
 MonoBehaviour:
   m_ObjectHideFlags: 0
