@@ -12,6 +12,7 @@ public class StateManager : MonoBehaviour
       private Transform _guardTransform;
       private Animator _animator;
       private StateManager _stateManager;
+      private BuyingGuard _buyingGuard;
 
       [Inject] private Transform[] _waypoints;
       [Inject] private PolygonCollider2D[] _attackAreas;
@@ -40,6 +41,17 @@ public class StateManager : MonoBehaviour
 
          _currentState = newState;
          _currentState.EnterState();
+      }
+      
+      public void InjectDependencies(Transform[] waypoints, PolygonCollider2D[] attackAreas)
+      {
+         _waypoints = waypoints;
+         _attackAreas = attackAreas;
+      }
+      
+      public Animator GetAnimator()
+      {
+         return _animator;
       }
       
       public void SetAttackAreaActive(string attackType)

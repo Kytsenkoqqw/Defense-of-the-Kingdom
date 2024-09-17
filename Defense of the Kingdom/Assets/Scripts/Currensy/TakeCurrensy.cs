@@ -1,4 +1,5 @@
 ﻿using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Currensy
@@ -7,7 +8,7 @@ namespace Currensy
     {
         [SerializeField] private Coins _coins;
 
-        private void OnTriggerEnter2D(Collider2D other)
+        private void OnCollisionEnter2D(Collision2D other)
         {
             if (other.gameObject.GetComponent<DestroyCurrensy>())
             {

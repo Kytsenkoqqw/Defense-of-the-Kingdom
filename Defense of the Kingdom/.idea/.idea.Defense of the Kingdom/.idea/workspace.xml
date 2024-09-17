@@ -55,7 +55,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemap/RandomGenerationTilemap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Zenject/WaypointsInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/TorchGoblinFightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/TorchGoblinIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/TorchGoblinFightState.cs" />
@@ -69,8 +68,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/OpenGuardShopPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/ClosedBuyGuardPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttackArea.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/StateManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/BuyingGuard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Currensy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/TakeCurrensy.cs" />
@@ -78,12 +75,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Coins.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/DestroyCurrensy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/TakeCurrensy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/DeathEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Loot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/DeathEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/TakeCurrensy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/DestroyCurrensy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/BuyingGuard.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/StateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" />
       </list>
     </option>
   </component>
@@ -167,7 +167,8 @@
       <workItem from="1725798370573" duration="595000" />
       <workItem from="1726140396061" duration="9964000" />
       <workItem from="1726229064355" duration="7852000" />
-      <workItem from="1726578194289" duration="5055000" />
+      <workItem from="1726578194289" duration="6647000" />
+      <workItem from="1726602469149" duration="2930000" />
     </task>
     <servers />
   </component>

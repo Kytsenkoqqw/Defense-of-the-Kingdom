@@ -9,10 +9,13 @@ public class MoveEnemyOnGuards : MonoBehaviour
 
     private Animator _animator;
     private DeathGuard _deathGuard;
+    private DeathEnemy _deathEnemy;
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
+        _deathEnemy = GetComponent<DeathEnemy>();
+        _deathEnemy.OnEnemyDie += StopMove;
         FindNewGuard();
     }
 
@@ -25,6 +28,11 @@ public class MoveEnemyOnGuards : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        _deathEnemy.OnEnemyDie -= StopMove;
+    }
+
     private void EnemyMove()
     {
         if (_deathGuard != null)
@@ -35,6 +43,15 @@ public class MoveEnemyOnGuards : MonoBehaviour
 
             // Определяем направление движения
             Vector3 direction = _deathGuard.transform.position - transform.position;
+
+            if (direction.x <= 1 && direction.y <=1)
+            {
+                _speed = 0f;
+            }
+            else
+            {
+                _speed = 2f;
+            }
 
             // Поворачиваем врага в сторону движения
             if (direction.x > 0 && transform.localScale.x < 0)
@@ -87,5 +104,10 @@ public class MoveEnemyOnGuards : MonoBehaviour
         Vector3 newScale = transform.localScale;
         newScale.x *= -1;
         transform.localScale = newScale;
+    }
+
+    private void StopMove(Vector3 position)
+    {
+        _speed = 0f;
     }
 }
