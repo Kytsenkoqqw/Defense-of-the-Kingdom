@@ -8,11 +8,12 @@ namespace Currensy
     {
         [SerializeField] private Coins _coins;
         [SerializeField] private TextMeshProUGUI _coinsText;
-        
-
+    
         private void OnEnable()
         {
             _coins.OnValueChangedEvent += UpdateUI;
+            // Инициализируем UI текущим значением при включении
+            UpdateUI(_coins.value);
         }
 
         private void OnDisable()
@@ -22,7 +23,7 @@ namespace Currensy
 
         private void UpdateUI(int newValue)
         {
-            _coinsText.text = " " + newValue;
+            _coinsText.text = newValue.ToString();
         }
     }
 }

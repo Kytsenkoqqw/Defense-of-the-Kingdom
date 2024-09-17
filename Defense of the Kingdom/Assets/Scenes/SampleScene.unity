@@ -1804,6 +1804,8 @@ MonoBehaviour:
   _guardPrefab: {fileID: 7053590401556371146, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
   _buyButton: {fileID: 699231311}
   _spawnPoint: {fileID: 851359199}
+  _coins: {fileID: 821397411}
+  _priceGuard: 5
 --- !u!1 &761976352
 GameObject:
   m_ObjectHideFlags: 0
