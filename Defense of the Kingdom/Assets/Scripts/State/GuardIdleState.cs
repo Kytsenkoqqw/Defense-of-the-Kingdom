@@ -38,7 +38,7 @@ public class GuardIdleState : ObjectState
         Debug.Log("Entering Idle State");
         OffAttackAnimation();
         MoveToNextWaypoint();
-        //PlayRunAnimation(true); // Включаем анимацию бега
+        PlayRunAnimation(true); // Включаем анимацию бега
     }
 
     public override void UpdateState()

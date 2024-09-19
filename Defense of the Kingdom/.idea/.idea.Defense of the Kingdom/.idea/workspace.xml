@@ -68,7 +68,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/OpenGuardShopPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/ClosedBuyGuardPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttackArea.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Currensy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/TakeCurrensy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
@@ -84,6 +83,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/TakeCurrensy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/CoinsUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/BuyingGuard.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/ChangeColorOnDamage.cs" />
       </list>
     </option>
   </component>
@@ -168,7 +169,8 @@
       <workItem from="1726140396061" duration="9964000" />
       <workItem from="1726229064355" duration="7852000" />
       <workItem from="1726578194289" duration="6647000" />
-      <workItem from="1726602469149" duration="5561000" />
+      <workItem from="1726602469149" duration="6221000" />
+      <workItem from="1726746233031" duration="3229000" />
     </task>
     <servers />
   </component>

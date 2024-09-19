@@ -45,4 +45,6 @@ public class BuyingGuard : MonoBehaviour
     {
         _buyButton.onClick.RemoveListener(BuyGuard);
     }
+    
+    
 }
