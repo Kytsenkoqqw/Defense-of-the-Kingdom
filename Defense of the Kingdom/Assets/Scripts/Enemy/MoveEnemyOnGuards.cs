@@ -44,7 +44,7 @@ public class MoveEnemyOnGuards : MonoBehaviour
             // Определяем направление движения
             Vector3 direction = _deathGuard.transform.position - transform.position;
 
-            if (direction.x <= 1 && direction.y <=1)
+            if (direction.x <= 1 && direction.y <= 1)
             {
                 _speed = 0f;
             }

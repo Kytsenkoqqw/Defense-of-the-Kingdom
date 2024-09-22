@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5494604950146771337}
   m_Layer: 6
   m_Name: DownAttackArea
-  m_TagString: Untagged
+  m_TagString: GuardAttackAreas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 5
-  _damageInterval: 0.1
+  _damageInterval: 0.5
 --- !u!1 &1785415572512639952
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 483539143319864715}
   m_Layer: 6
   m_Name: UpAttackArea
-  m_TagString: Untagged
+  m_TagString: GuardAttackAreas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 5
-  _damageInterval: 0.1
+  _damageInterval: 0.5
 --- !u!1 &6017494934025312903
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 1200072355215229277}
   m_Layer: 6
   m_Name: FrontAttackArea
-  m_TagString: Untagged
+  m_TagString: GuardAttackAreas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 5
-  _damageInterval: 0.1
+  _damageInterval: 0.5
 --- !u!1 &6237244129765881398
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,7 +572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 0bc2894276e02e24aa12c12af59f59ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.67
+      value: 4.33
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 0bc2894276e02e24aa12c12af59f59ae, type: 3}
       propertyPath: m_LocalPosition.y

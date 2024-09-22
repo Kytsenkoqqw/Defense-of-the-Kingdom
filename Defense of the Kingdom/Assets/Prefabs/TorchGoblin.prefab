@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2248963971774034321
 Transform:
   m_ObjectHideFlags: 0
@@ -245,11 +245,11 @@ GameObject:
   - component: {fileID: 7972996805073963531}
   - component: {fileID: 4448198148350532485}
   - component: {fileID: 4191828214745107089}
-  - component: {fileID: 3649723943336043732}
   - component: {fileID: 784765874746528692}
   - component: {fileID: 4725181870607768790}
   - component: {fileID: 4713142823774959443}
   - component: {fileID: 4646893839926205681}
+  - component: {fileID: 8006997543439880422}
   m_Layer: 3
   m_Name: TorchGoblin
   m_TagString: Untagged
@@ -400,19 +400,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3649723943336043732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5143575079677692343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfc2a46d0b8f73447a19d9dcdb9e7cf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 2
 --- !u!114 &784765874746528692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,6 +468,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hpBar: {fileID: 3826065293714938697}
+--- !u!114 &8006997543439880422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5143575079677692343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a61aefc4c2742748c20c26abdc966d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7866937553723429783
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,7 +496,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &9056046840978271755
 Transform:
   m_ObjectHideFlags: 0
@@ -682,7 +681,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5183211668524767227
 Transform:
   m_ObjectHideFlags: 0

@@ -946,6 +946,7 @@
           </e>
           <e p="Enemy" t="Include">
             <e p="DeathEnemy.cs" t="Include" />
+            <e p="EnemyInstaller.cs" t="Include" />
             <e p="MoveEnemyOnGuards.cs" t="Include" />
             <e p="SpawnEnemy.cs" t="Include" />
           </e>
@@ -961,7 +962,6 @@
             <e p="ClosedBuyGuardPanel.cs" t="Include" />
             <e p="DeathGuard.cs" t="Include" />
             <e p="GuardAttackArea.cs" t="Include" />
-            <e p="GuardInstaller.cs" t="Include" />
             <e p="OpenGuardShopPanel.cs" t="Include" />
             <e p="WaypointsInstaller.cs" t="Include" />
           </e>
@@ -973,6 +973,9 @@
             <e p="ShowStartMessage.cs" t="Include" />
           </e>
           <e p="State" t="Include">
+            <e p="EnemyFightState.cs" t="Include" />
+            <e p="EnemyIdleState.cs" t="Include" />
+            <e p="EnemyStateManager.cs" t="Include" />
             <e p="GuardFightState.cs" t="Include" />
             <e p="GuardIdleState.cs" t="Include" />
             <e p="ObjectState.cs" t="Include" />

@@ -15,15 +15,15 @@ public class StateManager : MonoBehaviour
       private BuyingGuard _buyingGuard;
 
       [Inject] private Transform[] _waypoints;
-      [Inject] private PolygonCollider2D[] _attackAreas;
+      [Inject(Id = "GuardAttackAreas")]
+      private PolygonCollider2D[] _attackAreas;
       
-      private void Start()
+      public virtual void Start()
       {
          _guardTransform = transform;
          _animator = GetComponent<Animator>();
          _stateManager = GetComponent<StateManager>();
-
-         // Передайте ссылку на StateMachine
+         
          ChangeState(new GuardIdleState(_guardTransform, _animator, _waypoints, _stateManager, _attackAreas));
       }
 
@@ -56,13 +56,12 @@ public class StateManager : MonoBehaviour
       
       public void SetAttackAreaActive(string attackType)
       {
-         // Деактивируйте все коллайдеры
+
          foreach (var area in _attackAreas)
          {
             area.enabled = false;
          }
-
-         // Активируйте нужный коллайдер с учетом корутины
+         
          switch (attackType)
          {
             case "UpAttack":
@@ -86,4 +85,3 @@ public class StateManager : MonoBehaviour
       }
 
 }
-

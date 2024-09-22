@@ -10,7 +10,7 @@ public class AttackAreasInstaller : MonoInstaller
 
     public override void InstallBindings()
     {
-        Container.Bind<PolygonCollider2D[]>().FromInstance(_attackAreas).AsSingle();
+        Container.Bind<PolygonCollider2D[]>().WithId("GuardAttackAreas").FromInstance(_attackAreas).AsSingle();
     }
 
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using State;
 using UnityEngine;
 using Zenject;
 
@@ -139,7 +140,7 @@ public class GuardIdleState : ObjectState
 
         foreach (Collider2D collider in colliders)
         {
-            if (collider.GetComponent<MoveEnemyOnGuards>() != null)
+            if (collider.GetComponent<EnemyStateManager>() != null)
             {
                 Debug.Log("Enemy detected, switching to FightState");
                 Transform enemyTransform = collider.transform;
@@ -151,9 +152,17 @@ public class GuardIdleState : ObjectState
     
     private void OffAttackAnimation()
     {
-        _animator.SetBool("UpAttack", false);
-        _animator.SetBool("FrontAttack", false);
-        _animator.SetBool("DownAttack",false);
+        if ((_animator != null))
+        {
+            _animator.SetBool("UpAttack", false);
+            _animator.SetBool("FrontAttack", false);
+            _animator.SetBool("DownAttack",false);
+        }
+        else
+        {
+            Debug.Log("Animation is null");
+        }
+       
     }
 
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using State;
 using UnityEngine;
  
 public class AttackArea : MonoBehaviour
@@ -8,7 +9,7 @@ public class AttackArea : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<MoveEnemyOnGuards>())
+        if (other.gameObject.GetComponent<EnemyStateManager>())
         {
             HealthSystem heroHealth = other.gameObject.GetComponent<HealthSystem>();
             if (heroHealth != null)
