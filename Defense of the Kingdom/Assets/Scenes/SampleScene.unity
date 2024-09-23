@@ -2064,7 +2064,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 619689781281711984, guid: 40b146365dac05f4288d49926bd9226d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.3866949
+      value: 3.42
       objectReference: {fileID: 0}
     - target: {fileID: 619689781281711984, guid: 40b146365dac05f4288d49926bd9226d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2102,21 +2102,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3511216050518041919, guid: 40b146365dac05f4288d49926bd9226d, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 5143575079677692343, guid: 40b146365dac05f4288d49926bd9226d, type: 3}
       propertyPath: m_Name
       value: TorchGoblin
-      objectReference: {fileID: 0}
-    - target: {fileID: 7866937553723429783, guid: 40b146365dac05f4288d49926bd9226d, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 9015424903465414052, guid: 40b146365dac05f4288d49926bd9226d, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10063,7 +10051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2102077173
 MonoBehaviour:
   m_ObjectHideFlags: 0

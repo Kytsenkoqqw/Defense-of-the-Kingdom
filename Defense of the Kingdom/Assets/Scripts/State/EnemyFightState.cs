@@ -10,6 +10,7 @@ namespace State
         private Transform _guardTransform;
         private PolygonCollider2D[] _enemyAttackAreas;
         private EnemyStateManager _enemyStateManager;
+        private DeathGuard _deathGuard;
     
 
         public EnemyFightState(Transform torchTransform, Animator animator, Transform guardTransform, EnemyStateManager enemyStateManager, PolygonCollider2D[] enemyAttackAreas)
@@ -20,7 +21,7 @@ namespace State
             _enemyStateManager = enemyStateManager;
             _enemyAttackAreas = enemyAttackAreas;
         }
-        
+
         public override void EnterState()
         {
             Debug.Log("Enter Enemy Fight State");
@@ -31,7 +32,7 @@ namespace State
             if (_guardTransform == null)
             {
                 Debug.LogWarning("Enemy transform is null, switching to Idle state.");
-                _enemyStateManager.ChangeState(new EnemyIdleState(_torchTransform, _animator,  _enemyStateManager, _enemyAttackAreas));
+                _enemyStateManager.ChangeState(new EnemyIdleState(_torchTransform, _deathGuard, _animator,  _enemyStateManager, _enemyAttackAreas));
                 return;
             }
 
@@ -67,7 +68,7 @@ namespace State
             // Проверяем, находится ли враг в радиусе атаки
             if (!IsEnemyInRange())
             {
-                _enemyStateManager.ChangeState(new EnemyIdleState(_guardTransform, _animator, _enemyStateManager, _enemyAttackAreas));
+                _enemyStateManager.ChangeState(new EnemyIdleState(_torchTransform, _deathGuard, _animator, _enemyStateManager, _enemyAttackAreas));
                 OffAttackAnimation();
                 _animator.SetBool("IsMoving", true);
             }
@@ -87,31 +88,31 @@ namespace State
 
         private bool IsEnemyInRange()
         {
-            return Vector2.Distance(_torchTransform.position, _guardTransform.position) <= 5f;
+            return Vector2.Distance(_torchTransform.position, _guardTransform.position) <= 10f;
         }
 
         private void AttackUp()
         {
-            _animator.SetBool("UpAttack", true);
-            _animator.SetBool("FrontAttack", false);
-            _animator.SetBool("DownAttack", false);
-            _enemyStateManager.SetAttackAreaActive("UpAttack");
+            _animator.SetBool("EnemyUpAttack", true);
+            _animator.SetBool("EnemyFrontAttack", false);
+            _animator.SetBool("EnemyDownAttack", false);
+            _enemyStateManager.SetAttackAreaActive("EnemyUpAttack");
         }
 
         private void FrontAttack()
         {
-            _animator.SetBool("FrontAttack", true);
-            _animator.SetBool("DownAttack", false);
-            _animator.SetBool("UpAttack", false);
-            _enemyStateManager.SetAttackAreaActive("FrontAttack");
+            _animator.SetBool("EnemyFrontAttack", true);
+            _animator.SetBool("EnemyDownAttack", false);
+            _animator.SetBool("EnemyUpAttack", false);
+            _enemyStateManager.SetAttackAreaActive("EnemyFrontAttack");
         }
 
         private void AttackDown()
         {
-            _animator.SetBool("DownAttack", true);
-            _animator.SetBool("FrontAttack", false);
-            _animator.SetBool("UpAttack", false);
-            _enemyStateManager.SetAttackAreaActive("DownAttack");
+            _animator.SetBool("EnemyDownAttack", true);
+            _animator.SetBool("EnemyFrontAttack", false);
+            _animator.SetBool("EnemyUpAttack", false);
+            _enemyStateManager.SetAttackAreaActive("EnemyDownAttack");
         }
     }
 }

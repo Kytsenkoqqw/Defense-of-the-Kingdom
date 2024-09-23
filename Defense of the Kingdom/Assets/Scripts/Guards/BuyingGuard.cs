@@ -10,7 +10,8 @@ using Zenject;
 public class BuyingGuard : MonoBehaviour
 {
     [Inject] private Transform[] _waypoints;
-    [Inject] private PolygonCollider2D[] _attackAreas;
+    [Inject(Id = "GuardAttackAreas")]
+    private PolygonCollider2D[] _attackAreas;
     [SerializeField] private GameObject _guardPrefab;
     [SerializeField] private Button _buyButton;
     [SerializeField] private Transform _spawnPoint;

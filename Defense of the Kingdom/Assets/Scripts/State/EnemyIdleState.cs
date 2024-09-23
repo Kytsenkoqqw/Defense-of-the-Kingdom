@@ -3,135 +3,143 @@ using UnityEngine;
 
 namespace State
 {
-    public class EnemyIdleState : ObjectState    
+    public class EnemyIdleState : ObjectState
     {
-        
+
         private Animator _animator;
-        private DeathGuard _deathGuard;
-        private DeathEnemy _deathEnemy;
+        private Transform _torchTransform;
         private Transform _guardTransform;
         private EnemyStateManager _enemyStateManager;
-        private Transform _torchTransform;
         private PolygonCollider2D[] _enemyAttackAreas;
-        [SerializeField] private float _speed = 5f;
-        
-        public EnemyIdleState(Transform transform, Animator animator, EnemyStateManager enemyStateManager, PolygonCollider2D[] enemyAttackAreas)
+        private DeathEnemy _deathEnemy;
+        private DeathGuard _deathGuard;
+        private float _speed = 2f;
+        private bool _isFighting = false;
+
+        public EnemyIdleState(Transform torchTransform,DeathGuard deathGuard, Animator animator, EnemyStateManager enemyStateManager,
+            PolygonCollider2D[] enemyAttackAreas)
         {
-            _guardTransform = transform;
+            _torchTransform = torchTransform;
             _animator = animator;
             _enemyStateManager = enemyStateManager;
             _enemyAttackAreas = enemyAttackAreas;
-        }
-
-        private void Start()
-        {
-            _animator = GetComponent<Animator>();
-            _deathEnemy = GetComponent<DeathEnemy>();
-            _deathEnemy.OnEnemyDie += StopMove;
+            _deathGuard = deathGuard;
         }
 
         public override void EnterState()
         {
+            // Найти ближайшего стражника
             FindNewGuard();
             Debug.Log("Enter Enemy Idle State");
+
+            // Подписываемся на событие смерти врага
+            _deathEnemy = _torchTransform.GetComponent<DeathEnemy>();
+            if (_deathEnemy != null)
+            {
+                _deathEnemy.OnEnemyDie += StopMove;
+            }
         }
 
         public override void UpdateState()
         {
-            if (_deathGuard != null)
+            // Если стражник найден, враг двигается к нему
+             if (_deathGuard != null)
             {
-                EnemyMove();
-                FindNewGuard();
+                if (!_isFighting)
+                {
+                    MoveTowardsGuard();
+                }
+            }
+            else
+            {
+                FindNewGuard(); // Попробовать найти нового стражника
             }
         }
 
         public override void ExitState()
         {
-            Debug.Log("Exit Enemt Idle State");
+            Debug.Log("Exit Enemy Idle State");
+            // Отписываемся от события смерти врага
+            if (_deathEnemy != null)
+            {
+                _deathEnemy.OnEnemyDie -= StopMove;
+            }
         }
-        
-    private void OnDisable()
-    {
-        _deathEnemy.OnEnemyDie -= StopMove;
-    }
 
-    private void EnemyMove()
-    {
-        if (_deathGuard != null)
+        private void MoveTowardsGuard()
         {
-            // Двигаем врага к цели
-            _guardTransform.position = Vector2.MoveTowards(_guardTransform.position, _deathGuard.transform.position, _speed * Time.deltaTime);
+            if (_deathGuard == null)
+            {
+                Debug.LogWarning("DeathGuard is null. Cannot move towards guard.");
+                return; // Прекращаем выполнение метода, если стражник не найден
+            }
+
+            // Двигаем врага к цели (стражнику)
+            _torchTransform.position = Vector2.MoveTowards(_torchTransform.position, _deathGuard.transform.position, _speed * Time.deltaTime);
             _animator.SetBool("IsMoving", true);
 
-            // Определяем направление движения
-            Vector3 direction = _deathGuard.transform.position - _guardTransform.position;
-
-            if (direction.x <= 1 && direction.y <= 1)
+            // Проверка на расстояние до стражника (1 юнит)
+            float distanceToGuard = Vector2.Distance(_torchTransform.position, _deathGuard.transform.position);
+            
+            if (distanceToGuard <= 1f)
             {
                 _speed = 0f;
                 _enemyStateManager.ChangeState(new EnemyFightState(_torchTransform, _animator, _guardTransform, _enemyStateManager, _enemyAttackAreas));
             }
-            else
-            {
-                _speed = 2f;
-            }
 
-            // Поворачиваем врага в сторону движения
-            if (direction.x > 0 && _guardTransform.localScale.x < 0)
+            // Определяем направление и разворачиваем врага, если нужно
+            Vector3 direction = _deathGuard.transform.position - _torchTransform.position;
+            if ((direction.x > 0 && _torchTransform.localScale.x < 0) || (direction.x < 0 && _torchTransform.localScale.x > 0))
             {
                 Flip();
             }
-            else if (direction.x < 0 && _guardTransform.localScale.x > 0)
-            {
-                Flip();
-            }
-
-            if (_speed <= 0)
-            {
-                _animator.SetBool("IsMoving", false);
-            }
         }
-    }
 
-    private void FindNewGuard()
-    {
-        _deathGuard = FindObjectOfType<DeathGuard>();
-        if (_deathGuard != null)
+        private void FindNewGuard()
         {
-            HealthSystem guardHealth = _deathGuard.GetComponent<HealthSystem>();
-            if (guardHealth != null)
+            // Ищем ближайшего стражника на сцене
+            _deathGuard = FindObjectOfType<DeathGuard>();
+            if (_deathGuard != null)
             {
-                guardHealth.OnDeath.AddListener(OnGuardDeath);
+                // Подписываемся на событие смерти стражника
+                HealthSystem guardHealth = _deathGuard.GetComponent<HealthSystem>();
+                if (guardHealth != null)
+                {
+                    guardHealth.OnDeath.AddListener(OnGuardDeath);
+                }
             }
         }
-    }
 
-    private void OnGuardDeath()
-    {
-        if (_deathGuard != null)
+        private void OnGuardDeath()
         {
-            HealthSystem guardHealth = _deathGuard.GetComponent<HealthSystem>();
-            if (guardHealth != null)
+            // Отписываемся от события смерти стражника
+            if (_deathGuard != null)
             {
-                guardHealth.OnDeath.RemoveListener(OnGuardDeath);
+                HealthSystem guardHealth = _deathGuard.GetComponent<HealthSystem>();
+                if (guardHealth != null)
+                {
+                    guardHealth.OnDeath.RemoveListener(OnGuardDeath);
+                }
             }
+
+            // Очищаем текущую цель и ищем нового стражника
+            _deathGuard = null;
+            FindNewGuard();
         }
-        
-        _deathGuard = null;
-        FindNewGuard();
-    }
 
-    private void Flip()
-    {
-        // Меняем знак масштаба по оси X, чтобы развернуть объект
-        Vector3 newScale = _guardTransform.localScale;
-        newScale.x *= -1;
-        _guardTransform.localScale = newScale;
-    }
+        private void Flip()
+        {
+            // Меняем направление врага (инвертируем масштаб по оси X)
+            Vector3 newScale = _torchTransform.localScale;
+            newScale.x *= -1;
+            _torchTransform.localScale = newScale;
+        }
 
-    private void StopMove(Vector3 position)
-    {
-        _speed = 0f;
-    }
+        private void StopMove(Vector3 position)
+        {
+            // Останавливаем врага при его смерти
+            _speed = 0f;
+            _animator.SetBool("IsMoving", false);
+        }
     }
 }

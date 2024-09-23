@@ -8,19 +8,26 @@ namespace State
     public class EnemyStateManager : MonoBehaviour
     {
 
-        private Transform _enemyTransform;
+        private Transform _torchTransform;
         private Animator _animator;
         private ObjectState _currentState;
         private EnemyStateManager _enemyStateManager;
+        private Transform _guardTransform;
+        private DeathGuard _deathGuard;
         [Inject(Id = "EnemyAttackAreas")] private PolygonCollider2D[] _enemyAttackAreas;
         
         private void Start()
         {
-            _enemyTransform = transform;
+            _torchTransform = GetComponent<Transform>();
             _animator = GetComponent<Animator>();
             _enemyStateManager = GetComponent<EnemyStateManager>();
+            _deathGuard = FindObjectOfType<DeathGuard>();
+            if (_deathGuard != null)
+            {
+                _guardTransform = _deathGuard.transform; 
+            }
             
-            ChangeState(new EnemyIdleState(_enemyTransform, _animator, _enemyStateManager, _enemyAttackAreas));
+            ChangeState(new EnemyIdleState(_torchTransform, _deathGuard, _animator, _enemyStateManager, _enemyAttackAreas));
         }
         
         private void Update()
@@ -49,13 +56,13 @@ namespace State
          
             switch (attackType)
             {
-                case "UpAttack":
+                case "EnemyUpAttack":
                     StartCoroutine(OnOffAttackArea(_enemyAttackAreas[0], 0.40f, 0.3f)); // Передаем индекс 0 для верхней атаки
                     break;
-                case "FrontAttack":
+                case "EnemyFrontAttack":
                     StartCoroutine(OnOffAttackArea(_enemyAttackAreas[1], 0.40f, 0.3f)); // Передаем индекс 1 для фронтальной атаки
                     break;
-                case "DownAttack":
+                case "EnemyDownAttack":
                     StartCoroutine(OnOffAttackArea(_enemyAttackAreas[2], 0.40f, 0.3f)); // Передаем индекс 2 для нижней атаки
                     break;
             }
