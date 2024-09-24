@@ -81,9 +81,9 @@ namespace State
         
         private void OffAttackAnimation()
         {
-            _animator.SetBool("UpAttack", false);
-            _animator.SetBool("FrontAttack", false);
-            _animator.SetBool("DownAttack", false);
+            _animator.SetBool("EnemyUpAttack", false);
+            _animator.SetBool("EnemyFrontAttack", false);
+            _animator.SetBool("EnemyDownAttack", false);
         }
 
         private bool IsEnemyInRange()

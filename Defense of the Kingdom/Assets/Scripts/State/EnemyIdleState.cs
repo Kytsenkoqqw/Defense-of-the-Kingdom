@@ -15,6 +15,7 @@ namespace State
         private DeathGuard _deathGuard;
         private float _speed = 2f;
         private bool _isFighting = false;
+        private float _detectionRadius = 1f;
 
         public EnemyIdleState(Transform torchTransform,DeathGuard deathGuard, Animator animator, EnemyStateManager enemyStateManager,
             PolygonCollider2D[] enemyAttackAreas)
@@ -78,13 +79,17 @@ namespace State
             _torchTransform.position = Vector2.MoveTowards(_torchTransform.position, _deathGuard.transform.position, _speed * Time.deltaTime);
             _animator.SetBool("IsMoving", true);
 
-            // Проверка на расстояние до стражника (1 юнит)
-            float distanceToGuard = Vector2.Distance(_torchTransform.position, _deathGuard.transform.position);
-            
-            if (distanceToGuard <= 1f)
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(_torchTransform.position, _detectionRadius);
+
+            foreach (Collider2D collider in colliders)
             {
-                _speed = 0f;
-                _enemyStateManager.ChangeState(new EnemyFightState(_torchTransform, _animator, _guardTransform, _enemyStateManager, _enemyAttackAreas));
+                if (collider.GetComponent<DeathGuard>() != null)
+                {
+                    Debug.Log("Enemy detected, switching to FightState");
+                    Transform _guardTransform = collider.transform;
+                    _enemyStateManager.ChangeState(new EnemyFightState(_torchTransform, _animator, _guardTransform, _enemyStateManager, _enemyAttackAreas));
+                    return;
+                }
             }
 
             // Определяем направление и разворачиваем врага, если нужно

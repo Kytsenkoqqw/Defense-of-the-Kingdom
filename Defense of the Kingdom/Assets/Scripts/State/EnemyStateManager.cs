@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using Zenject;
@@ -15,12 +16,13 @@ namespace State
         private Transform _guardTransform;
         private DeathGuard _deathGuard;
         [Inject(Id = "EnemyAttackAreas")] private PolygonCollider2D[] _enemyAttackAreas;
-        
+
         private void Start()
         {
             _torchTransform = GetComponent<Transform>();
             _animator = GetComponent<Animator>();
             _enemyStateManager = GetComponent<EnemyStateManager>();
+            
             _deathGuard = FindObjectOfType<DeathGuard>();
             if (_deathGuard != null)
             {
@@ -45,7 +47,7 @@ namespace State
             _currentState = newState;
             _currentState.EnterState();
         }
-        
+
         public void SetAttackAreaActive(string attackType)
         {
 
