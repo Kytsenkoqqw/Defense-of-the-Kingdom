@@ -98,6 +98,7 @@ namespace State
             {
                 Flip();
             }
+            
         }
 
         private void FindNewGuard()

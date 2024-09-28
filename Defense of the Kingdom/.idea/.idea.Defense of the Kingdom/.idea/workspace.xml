@@ -70,7 +70,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Loot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/DeathEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/DestroyCurrensy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Coins.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/TakeCurrensy.cs" />
@@ -84,12 +83,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/StateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/BuyingGuard.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyStateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyFightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjectPool/ObjectPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyFightState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyStateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/DeathEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyIdleState.cs" />
       </list>
     </option>
   </component>
@@ -182,7 +182,7 @@
       <workItem from="1727090177439" duration="8243000" />
       <workItem from="1727178312091" duration="2802000" />
       <workItem from="1727355388566" duration="1527000" />
-      <workItem from="1727519739515" duration="728000" />
+      <workItem from="1727519739515" duration="4114000" />
     </task>
     <servers />
   </component>
@@ -288,13 +288,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/State/EnemyStateManager.cs</url>
-          <line>65</line>
+          <line>66</line>
           <properties documentPath="C:\Users\Admin\Documents\GitHub\Defense-of-the-Kingdom\Defense of the Kingdom\Assets\Scripts\State\EnemyStateManager.cs" initialLine="52">
             <startOffsets>
-              <option value="1922" />
+              <option value="1931" />
             </startOffsets>
             <endOffsets>
-              <option value="1961" />
+              <option value="1970" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />

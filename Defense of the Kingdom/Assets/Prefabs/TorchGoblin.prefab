@@ -468,6 +468,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hpBar: {fileID: 3826065293714938697}
+  _objectPool: {fileID: 0}
+  _torhcGoblinPrefab: {fileID: 5143575079677692343}
 --- !u!114 &8006997543439880422
 MonoBehaviour:
   m_ObjectHideFlags: 0

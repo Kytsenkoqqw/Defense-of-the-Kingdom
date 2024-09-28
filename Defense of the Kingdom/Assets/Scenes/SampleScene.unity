@@ -2102,13 +2102,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4646893839926205681, guid: 40b146365dac05f4288d49926bd9226d, type: 3}
+      propertyPath: _objectPool
+      value: 
+      objectReference: {fileID: 1214593565}
     - target: {fileID: 5143575079677692343, guid: 40b146365dac05f4288d49926bd9226d, type: 3}
       propertyPath: m_Name
       value: TorchGoblin
       objectReference: {fileID: 0}
     - target: {fileID: 5143575079677692343, guid: 40b146365dac05f4288d49926bd9226d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

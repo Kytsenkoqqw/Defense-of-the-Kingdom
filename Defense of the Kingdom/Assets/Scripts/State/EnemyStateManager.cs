@@ -16,6 +16,7 @@ namespace State
         private Transform _guardTransform;
         private DeathGuard _deathGuard;
         [Inject(Id = "EnemyAttackAreas")] private PolygonCollider2D[] _enemyAttackAreas;
+        
 
         private void Start()
         {

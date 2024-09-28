@@ -17,27 +17,23 @@ public class SpawnEnemy : MonoBehaviour
 
     private void Start()
     {
-        Spawn();
+        SpawnMultipleEnemies(5);
     }
 
     // Метод для спавна врага
-    private void Spawn()
+    public void SpawnMultipleEnemies(int numberOfEnemies)
     {
-        // Получаем врага из пула
-        GameObject newEnemy = _objectPool.GetEnemy();
+        for (int i = 0; i < numberOfEnemies; i++)
+        {
+            // Получаем врага из пула
+            GameObject newEnemy = _objectPool.GetEnemy();
 
-        // Выбираем случайную точку спавна
-        int spawnIndex = Random.Range(0, _spawnPoints.Length);
-        newEnemy.transform.position = _spawnPoints[spawnIndex].position;
+            // Выбираем случайную точку спавна
+            int spawnIndex = Random.Range(0, _spawnPoints.Length);
+            newEnemy.transform.position = _spawnPoints[spawnIndex].position;
 
-        // Инициализируем врага, если нужно
-        // Например, передаём ему необходимые параметры
-        newEnemy.GetComponent<EnemyStateManager>().Initialize(_enemyAttackAreas);
-    }
-
-    // Когда враг умирает, возвращаем его в пул
-    public void OnEnemyDie(GameObject enemy)
-    {
-        _objectPool.ReturnEnemy(enemy);
+            // Инициализируем врага, если это необходимо
+            newEnemy.GetComponent<EnemyStateManager>().Initialize(_enemyAttackAreas);
+        }
     }
 }
