@@ -2108,7 +2108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143575079677692343, guid: 40b146365dac05f4288d49926bd9226d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2998,6 +2998,52 @@ PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 6703547121943493358, guid: 8885759b714c99449b01b1565d5fc4fb, type: 3}
   m_PrefabInstance: {fileID: 9179326082034558464}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1214593564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1214593566}
+  - component: {fileID: 1214593565}
+  m_Layer: 0
+  m_Name: ObjectPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1214593565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214593564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7267d5beae3790468d29337f27dc2b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 5143575079677692343, guid: 40b146365dac05f4288d49926bd9226d, type: 3}
+  poolSize: 10
+--- !u!4 &1214593566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214593564}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.27962208, y: 0.39586914, z: -0.0035479318}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1233205190
 GameObject:
   m_ObjectHideFlags: 0
@@ -10068,13 +10114,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 747b60f46ede0d343bab5727e9c90155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _commonEnemyPrefab: {fileID: 5143575079677692343, guid: 40b146365dac05f4288d49926bd9226d, type: 3}
-  _spawnPointEnemy:
+  _objectPool: {fileID: 1214593565}
+  _spawnPoints:
   - {fileID: 91262477}
   - {fileID: 564686924}
   - {fileID: 213833519}
   - {fileID: 585428940}
-  _lootManager: {fileID: 1001503926}
 --- !u!4 &2102077174
 Transform:
   m_ObjectHideFlags: 0
@@ -10445,12 +10490,13 @@ SceneRoots:
   - {fileID: 1079797415}
   - {fileID: 2995068111421877457}
   - {fileID: 9179326082034558464}
+  - {fileID: 783372125}
   - {fileID: 70774524}
   - {fileID: 761976353}
-  - {fileID: 783372125}
   - {fileID: 944401822}
   - {fileID: 4000159249654944554}
   - {fileID: 821397412}
   - {fileID: 1908620989}
   - {fileID: 1445556270}
   - {fileID: 1001503927}
+  - {fileID: 1214593566}

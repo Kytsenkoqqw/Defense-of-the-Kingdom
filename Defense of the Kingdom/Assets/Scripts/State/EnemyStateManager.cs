@@ -32,6 +32,11 @@ namespace State
             ChangeState(new EnemyIdleState(_torchTransform, _deathGuard, _animator, _enemyStateManager, _enemyAttackAreas));
         }
         
+        public void Initialize(PolygonCollider2D[] enemyAttackAreas)
+        {
+            _enemyAttackAreas = enemyAttackAreas;
+        }
+        
         private void Update()
         {
             _currentState.UpdateState();

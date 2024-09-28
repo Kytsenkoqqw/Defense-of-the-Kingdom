@@ -972,6 +972,9 @@
           <e p="MessageTrigger" t="Include">
             <e p="ShowStartMessage.cs" t="Include" />
           </e>
+          <e p="ObjectPool" t="Include">
+            <e p="ObjectPool.cs" t="Include" />
+          </e>
           <e p="State" t="Include">
             <e p="EnemyFightState.cs" t="Include" />
             <e p="EnemyIdleState.cs" t="Include" />

@@ -76,7 +76,7 @@ namespace State
 
         public override void ExitState()
         {
-            throw new NotImplementedException();
+            Debug.Log("exit enemy fight state");
         }
         
         private void OffAttackAnimation()

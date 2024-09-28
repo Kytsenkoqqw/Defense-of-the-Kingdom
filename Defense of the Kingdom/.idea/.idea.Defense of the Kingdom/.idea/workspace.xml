@@ -28,6 +28,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/AttackAreasInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0D7024C3-5801-4444-A857-4F8E3E9232D5/cc/457c555c/EditorCompilationInterface.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectPool/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPS/FPSCounter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/StateManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -38,7 +39,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/MessageTrigger/ShowStartMessage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health/HealthUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/ObjectStateManager.cs" />
@@ -84,11 +84,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/StateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/BuyingGuard.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyFightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyIdleState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyStateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ObjectPool/ObjectPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyFightState.cs" />
       </list>
     </option>
   </component>
@@ -116,10 +117,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18184">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="18184" />
+      <option name="pid" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -180,6 +181,8 @@
       <workItem from="1727005685396" duration="5994000" />
       <workItem from="1727090177439" duration="8243000" />
       <workItem from="1727178312091" duration="2802000" />
+      <workItem from="1727355388566" duration="1527000" />
+      <workItem from="1727519739515" duration="728000" />
     </task>
     <servers />
   </component>
@@ -285,13 +288,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/State/EnemyStateManager.cs</url>
-          <line>60</line>
+          <line>65</line>
           <properties documentPath="C:\Users\Admin\Documents\GitHub\Defense-of-the-Kingdom\Defense of the Kingdom\Assets\Scripts\State\EnemyStateManager.cs" initialLine="52">
             <startOffsets>
-              <option value="1774" />
+              <option value="1922" />
             </startOffsets>
             <endOffsets>
-              <option value="1813" />
+              <option value="1961" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
