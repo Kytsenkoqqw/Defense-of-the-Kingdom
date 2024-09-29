@@ -34,6 +34,19 @@ public class SpawnEnemy : MonoBehaviour
 
             // Инициализируем врага, если это необходимо
             newEnemy.GetComponent<EnemyStateManager>().Initialize(_enemyAttackAreas);
+
+            // Найти компонент DeathEnemy и передать его в Loot
+            DeathEnemy deathEnemy = newEnemy.GetComponent<DeathEnemy>();
+            Loot lootComponent = FindObjectOfType<Loot>();
+
+            if (deathEnemy != null && lootComponent != null)
+            {
+                lootComponent.Initialize(deathEnemy); // Подписываем Loot на событие смерти врага
+            }
+            else
+            {
+                Debug.LogError("DeathEnemy или Loot не найдены.");
+            }
         }
     }
 }

@@ -9,8 +9,7 @@ public class DeathEnemy : MonoBehaviour
     public Action<Vector3> OnEnemyDie;
     [SerializeField] private Canvas _hpBar;
     [SerializeField] private ObjectPool _objectPool;
-    [SerializeField] private GameObject _torhcGoblinPrefab;
-    
+
     private Animator _animator;
     private HealthSystem _healthSystem;
 
@@ -34,6 +33,6 @@ public class DeathEnemy : MonoBehaviour
     private IEnumerator DestroyEnemy()
     {
         yield return new WaitForSeconds(4f);
-        _objectPool.ReturnEnemy(_torhcGoblinPrefab);
+        _objectPool.ReturnEnemy(gameObject);
     }
 }

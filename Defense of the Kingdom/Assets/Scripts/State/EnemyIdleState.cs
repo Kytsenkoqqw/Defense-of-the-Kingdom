@@ -15,7 +15,7 @@ namespace State
         private DeathGuard _deathGuard;
         private float _speed = 2f;
         private bool _isFighting = false;
-        private float _detectionRadius = 1f;
+        private float _detectionRadius = 1.7f;
 
         public EnemyIdleState(Transform torchTransform,DeathGuard deathGuard, Animator animator, EnemyStateManager enemyStateManager,
             PolygonCollider2D[] enemyAttackAreas)
@@ -59,12 +59,7 @@ namespace State
 
         public override void ExitState()
         {
-            Debug.Log("Exit Enemy Idle State");
-            // Отписываемся от события смерти врага
-            if (_deathEnemy != null)
-            {
-                _deathEnemy.OnEnemyDie -= StopMove;
-            }
+            _speed = 0f;;
         }
 
         private void MoveTowardsGuard()
