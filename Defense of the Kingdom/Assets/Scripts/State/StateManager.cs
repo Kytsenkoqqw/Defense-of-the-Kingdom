@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using State;
 using UnityEngine;
 using Zenject;
 using Object = System.Object;
@@ -13,6 +14,7 @@ public class StateManager : MonoBehaviour
       private Animator _animator;
       private StateManager _stateManager;
       private BuyingGuard _buyingGuard;
+      private Transform _torchTransform;
 
       [Inject] private Transform[] _waypoints;
       [Inject(Id = "GuardAttackAreas")]
@@ -20,11 +22,12 @@ public class StateManager : MonoBehaviour
       
       public virtual void Start()
       {
+         _torchTransform = FindObjectOfType<Transform>();
          _guardTransform = transform;
          _animator = GetComponent<Animator>();
          _stateManager = GetComponent<StateManager>();
          
-         ChangeState(new GuardIdleState(_guardTransform, _animator, _waypoints, _stateManager, _attackAreas));
+         ChangeState(new GuardIdleState(_guardTransform, _animator, _waypoints, _stateManager, _attackAreas, _torchTransform));
       }
 
       private void Update()

@@ -88,7 +88,7 @@ namespace State
 
         private bool IsEnemyInRange()
         {
-            return Vector2.Distance(_torchTransform.position, _guardTransform.position) <= 10f;
+            return Vector2.Distance(_torchTransform.position, _guardTransform.position) <= 1.7f;
         }
 
         private void AttackUp()

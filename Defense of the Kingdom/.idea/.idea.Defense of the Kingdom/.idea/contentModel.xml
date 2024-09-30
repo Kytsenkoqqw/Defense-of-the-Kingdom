@@ -979,6 +979,7 @@
             <e p="EnemyFightState.cs" t="Include" />
             <e p="EnemyIdleState.cs" t="Include" />
             <e p="EnemyStateManager.cs" t="Include" />
+            <e p="GuardChaseState.cs" t="Include" />
             <e p="GuardFightState.cs" t="Include" />
             <e p="GuardIdleState.cs" t="Include" />
             <e p="ObjectState.cs" t="Include" />

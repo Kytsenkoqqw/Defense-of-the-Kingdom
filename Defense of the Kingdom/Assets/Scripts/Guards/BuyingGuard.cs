@@ -17,6 +17,7 @@ public class BuyingGuard : MonoBehaviour
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private Coins _coins;
     [SerializeField] private int  _priceGuard = 5;
+    private Transform _torchTransform;
 
 
     private void OnEnable()
@@ -37,7 +38,7 @@ public class BuyingGuard : MonoBehaviour
             var stateManager = newGuard.GetComponent<StateManager>();
             stateManager.InjectDependencies(_waypoints, _attackAreas);
             // Включаем начальное состояние IdleState
-            stateManager.ChangeState(new GuardIdleState(stateManager.transform, stateManager.GetAnimator(), _waypoints, stateManager, _attackAreas));
+            stateManager.ChangeState(new GuardIdleState(stateManager.transform, stateManager.GetAnimator(), _waypoints, stateManager, _attackAreas, _torchTransform));
             
         }
     }

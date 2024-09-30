@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using State;
 using UnityEngine;
 
 public class GuardFightState : ObjectState
@@ -10,6 +11,7 @@ public class GuardFightState : ObjectState
     private Transform[] _waypoints;
     private PolygonCollider2D[] _attackAreas;
     private StateManager _stateManager;
+    private Transform _torchTransform;
     
 
     public GuardFightState(Transform objectTransform, Animator animator, Transform enemyTransform,
@@ -33,7 +35,7 @@ public class GuardFightState : ObjectState
         if (_enemyTransform == null)
         {
             Debug.LogWarning("Enemy transform is null, switching to Idle state.");
-            _stateManager.ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints, _stateManager, _attackAreas));
+            _stateManager.ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints, _stateManager, _attackAreas, _torchTransform));
             return;
         }
 
@@ -69,7 +71,7 @@ public class GuardFightState : ObjectState
         // Проверяем, находится ли враг в радиусе атаки
         if (!IsEnemyInRange())
         {
-            _stateManager.ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints, _stateManager, _attackAreas));
+            _stateManager.ChangeState(new GuardChaseState(_objectTransform, _animator,  _torchTransform,  _stateManager));
             OffAttackAnimation();
             _animator.SetBool("IsMoving", true);
         }
@@ -89,7 +91,7 @@ public class GuardFightState : ObjectState
 
     private bool IsEnemyInRange()
     {
-        return Vector2.Distance(_objectTransform.position, _enemyTransform.position) <= 5f;
+        return Vector2.Distance(_objectTransform.position, _enemyTransform.position) <= 1.7f;
     }
 
     private void AttackUp()
