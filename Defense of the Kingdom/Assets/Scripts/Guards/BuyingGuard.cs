@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Currensy;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -17,8 +18,10 @@ public class BuyingGuard : MonoBehaviour
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private Coins _coins;
     [SerializeField] private int  _priceGuard = 5;
+    [SerializeField] private Image _redAlert;
+    
     private Transform _torchTransform;
-
+    
 
     private void OnEnable()
     {
@@ -29,6 +32,7 @@ public class BuyingGuard : MonoBehaviour
     {
         if (_coins.value < 5)
         {
+            _redAlert.DOColor(Color.red, 0.5f).SetLoops(2, LoopType.Yoyo);
             Debug.Log("не хватает золота");
         }
         else
