@@ -540,6 +540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _closedPanelButton: {fileID: 203359509}
   _buyGuardPanel: {fileID: 779701815}
+  _transformClosedPanel: {fileID: 779701818}
 --- !u!114 &203359509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1921,7 +1922,6 @@ GameObject:
   - component: {fileID: 779701818}
   - component: {fileID: 779701817}
   - component: {fileID: 779701816}
-  - component: {fileID: 779701819}
   m_Layer: 5
   m_Name: BuyGuardPanel
   m_TagString: Untagged
@@ -1976,7 +1976,7 @@ RectTransform:
   m_GameObject: {fileID: 779701815}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1869380969}
@@ -1990,18 +1990,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000030517578, y: 0}
   m_SizeDelta: {x: 1000, y: 550}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &779701819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779701815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 927aa23d9725ee548b9ff95dbcc3f546, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &779754439
 GameObject:
   m_ObjectHideFlags: 0
@@ -10081,6 +10069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _BuyGuardButton: {fileID: 1913544289}
   _guardBuyPanel: {fileID: 779701815}
+  _transformOpenPanel: {fileID: 779701818}
 --- !u!114 &1913544289
 MonoBehaviour:
   m_ObjectHideFlags: 0

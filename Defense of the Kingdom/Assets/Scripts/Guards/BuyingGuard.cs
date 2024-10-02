@@ -19,6 +19,7 @@ public class BuyingGuard : MonoBehaviour
     [SerializeField] private Coins _coins;
     [SerializeField] private int  _priceGuard = 5;
     [SerializeField] private Image _redAlert;
+    private bool _yoyTime = false;
     
     private Transform _torchTransform;
     
@@ -30,9 +31,17 @@ public class BuyingGuard : MonoBehaviour
 
     private void BuyGuard()
     {
+        if (_yoyTime)
+            return;
+
         if (_coins.value < 5)
         {
-            _redAlert.DOColor(Color.red, 0.5f).SetLoops(2, LoopType.Yoyo);
+            _yoyTime = true; // Устанавливаем флаг, что анимация началась
+            _redAlert.DOKill(); // Остановка текущей анимации, если она есть
+            _redAlert.DOColor(Color.red, 0.5f).SetLoops(2, LoopType.Yoyo).OnComplete(() => 
+            {
+                _yoyTime = false; // Сбрасываем флаг по завершению анимации
+            });
             Debug.Log("не хватает золота");
         }
         else

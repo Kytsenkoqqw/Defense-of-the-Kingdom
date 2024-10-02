@@ -11,12 +11,13 @@ namespace State
         private Animator _animator;
         private StateManager _stateManager;
         private float _moveSpeed = 3f; // Можно настроить скорость преследования
-        private float _attackRadius = 1.5f; // Радиус атаки
+        private float _attackRadius = 1.2f; // Радиус атаки
         private Transform[] _waypoints;
         private PolygonCollider2D[] _attackAreas;
         private Transform _torchTransform;
 
-        public GuardChaseState(Transform objectTransform, Animator animator, Transform enemyTransform, StateManager stateManager)
+        public GuardChaseState(Transform objectTransform, Animator animator, Transform enemyTransform,
+            StateManager stateManager)
         {
             _objectTransform = objectTransform;
             _animator = animator;
@@ -39,15 +40,14 @@ namespace State
             if (distanceToEnemy <= _attackRadius)
             {
                 Debug.Log("Enemy in attack range. Switching to FightState.");
-                _stateManager.ChangeState(new GuardFightState(_objectTransform, _animator, _enemyTransform, null, _stateManager, null));
+                _stateManager.ChangeState(new GuardFightState(_objectTransform, _animator, _enemyTransform, null,
+                    _stateManager, null));
             }
             else
             {
                 MoveTowardsEnemy();
             }
-            
-            SwitchToIdleState();
-            
+
         }
 
         public override void ExitState()
@@ -72,14 +72,6 @@ namespace State
             }
         }
 
-        private void SwitchToIdleState()
-        {
-            if (_enemyTransform == null)
-            {
-                Debug.Log("Switch to Idle State");
-                _stateManager.ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints,_stateManager, _attackAreas, _torchTransform));
-              
-            }
-        }
     }
+
 }

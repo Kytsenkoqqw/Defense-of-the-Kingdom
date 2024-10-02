@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 
@@ -9,6 +11,8 @@ public class OpenGuardShopPanel : MonoBehaviour
 {
     [SerializeField] private Button _BuyGuardButton;
     [SerializeField] private GameObject _guardBuyPanel;
+    [FormerlySerializedAs("_transformPanel")] [SerializeField] private Transform _transformOpenPanel;
+    
     
 
     private void OnEnable()
@@ -18,6 +22,7 @@ public class OpenGuardShopPanel : MonoBehaviour
 
     public void ShowBuyMenu()
     {
+        _transformOpenPanel.DOScale(new Vector3(1,1,1), 0.5f );
         _guardBuyPanel.SetActive(true);
     }
 }

@@ -64,8 +64,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/State/StateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/WaypointsInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/OpenGuardShopPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/ClosedBuyGuardPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Currensy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/TakeCurrensy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
@@ -88,14 +86,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyFightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/StateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyIdleState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardFightState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardChaseState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/OpenBuyGuardMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/OpenPauseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/RedAlert.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/BuyingGuard.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardChaseState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/OpenGuardShopPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/ClosedBuyGuardPanel.cs" />
       </list>
     </option>
   </component>
@@ -192,7 +192,7 @@
       <workItem from="1727606942219" duration="265000" />
       <workItem from="1727613230826" duration="2894000" />
       <workItem from="1727696568190" duration="6207000" />
-      <workItem from="1727873120262" duration="3879000" />
+      <workItem from="1727873120262" duration="6662000" />
     </task>
     <servers />
   </component>
