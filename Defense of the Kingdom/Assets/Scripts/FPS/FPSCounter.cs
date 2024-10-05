@@ -6,14 +6,19 @@ using UnityEngine.UI;
 
 public class FPSCounter : MonoBehaviour
 {
-    private int avgFrameRate;
     [SerializeField] private TextMeshProUGUI display_Text;
+    private int avgFrameRate;
+    private float timer = 0f;
+    private float updateInterval = 0.5f; // Обновлять FPS каждые 0.5 секунд
 
     public void Update ()
     {
-        float current = 0;
-        current = Time.frameCount / Time.time;
-        avgFrameRate = (int)current;
-        display_Text.text = avgFrameRate.ToString() + " FPS";
+        timer += Time.deltaTime;
+        if (timer >= updateInterval)
+        {
+            avgFrameRate = (int)(1f / Time.deltaTime);
+            display_Text.text = avgFrameRate.ToString() + " FPS";
+            timer = 0f;
+        }
     }
 }

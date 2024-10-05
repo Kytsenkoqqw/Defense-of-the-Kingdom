@@ -50,7 +50,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/MoveGuardOnEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/FightGuard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FPS/FPSCounter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/IdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" />
@@ -92,10 +91,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/OpenPauseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/RedAlert.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/BuyingGuard.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardChaseState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/OpenGuardShopPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/ClosedBuyGuardPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FPS/FPSCounter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
       </list>
     </option>
   </component>
@@ -192,7 +192,8 @@
       <workItem from="1727606942219" duration="265000" />
       <workItem from="1727613230826" duration="2894000" />
       <workItem from="1727696568190" duration="6207000" />
-      <workItem from="1727873120262" duration="6662000" />
+      <workItem from="1727873120262" duration="6781000" />
+      <workItem from="1728129108042" duration="1007000" />
     </task>
     <servers />
   </component>
