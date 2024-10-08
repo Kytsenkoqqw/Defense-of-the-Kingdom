@@ -2180,10 +2180,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TorchGoblin
       objectReference: {fileID: 0}
-    - target: {fileID: 5143575079677692343, guid: 40b146365dac05f4288d49926bd9226d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

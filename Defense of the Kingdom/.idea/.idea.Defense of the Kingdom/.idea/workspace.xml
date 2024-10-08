@@ -44,7 +44,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/FightGuard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/IdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardBehaviour.cs" />
@@ -78,7 +77,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Loot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyFightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/StateManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/OpenBuyGuardMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/OpenPauseMenu.cs" />
@@ -95,6 +93,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardFightState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyIdleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackArea.cs" />
       </list>
     </option>
   </component>
@@ -196,7 +196,7 @@
       <workItem from="1728299841762" duration="558000" />
       <workItem from="1728300430562" duration="7207000" />
       <workItem from="1728386746308" duration="1000" />
-      <workItem from="1728386827255" duration="5079000" />
+      <workItem from="1728386827255" duration="7521000" />
     </task>
     <servers />
   </component>

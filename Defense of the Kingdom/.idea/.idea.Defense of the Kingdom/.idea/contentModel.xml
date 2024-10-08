@@ -966,6 +966,7 @@
           </e>
           <e p="Enemy" t="Include">
             <e p="DeathEnemy.cs" t="Include" />
+            <e p="EnemyAttackArea.cs" t="Include" />
             <e p="EnemyInstaller.cs" t="Include" />
             <e p="EnemyManager.cs" t="Include" />
             <e p="MoveEnemyOnGuards.cs" t="Include" />

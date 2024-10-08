@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2248963971774034321}
   - component: {fileID: 8693420367860864821}
+  - component: {fileID: 8296185842782074639}
   m_Layer: 3
   m_Name: GoblinUpAttackArea
   m_TagString: Untagged
@@ -83,6 +84,20 @@ PolygonCollider2D:
       - {x: 0.3643945, y: 0.9353672}
       - {x: 0.59833395, y: 1.2299653}
   m_UseDelaunayMesh: 0
+--- !u!114 &8296185842782074639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3511216050518041919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8262f4e55ddb4cc5a9e24e1fb713ab2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 3
+  _damageInterval: 0.5
 --- !u!1 &3543358328066462574
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &619689781281711984
 Transform:
   m_ObjectHideFlags: 0
@@ -491,6 +506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9056046840978271755}
   - component: {fileID: 8879065460132459301}
+  - component: {fileID: 4303462744217153255}
   m_Layer: 3
   m_Name: 'GoblinDownAttackArea '
   m_TagString: Untagged
@@ -563,6 +579,20 @@ PolygonCollider2D:
       - {x: 0.36439455, y: 0.38279808}
       - {x: 0.5395468, y: 0.8074127}
   m_UseDelaunayMesh: 0
+--- !u!114 &4303462744217153255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7866937553723429783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8262f4e55ddb4cc5a9e24e1fb713ab2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 3
+  _damageInterval: 0.5
 --- !u!1 &8799089823471901015
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,6 +706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5183211668524767227}
   - component: {fileID: 7986181589632197796}
+  - component: {fileID: 6322012316249192453}
   m_Layer: 3
   m_Name: 'GoblinFrontAttackArea '
   m_TagString: Untagged
@@ -749,3 +780,17 @@ PolygonCollider2D:
       - {x: 0.5642706, y: 0.66450024}
       - {x: 0.7276656, y: 1.0024369}
   m_UseDelaunayMesh: 0
+--- !u!114 &6322012316249192453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9015424903465414052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8262f4e55ddb4cc5a9e24e1fb713ab2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 3
+  _damageInterval: 0.5

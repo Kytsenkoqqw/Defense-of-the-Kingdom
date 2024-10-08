@@ -59,7 +59,7 @@ namespace State
 
         public override void ExitState()
         {
-            _speed = 0f;;
+            _deathEnemy.OnEnemyDie -= StopMove;
         }
 
         private void MoveTowardsGuard()
