@@ -11,5 +11,12 @@ public class CameraFollow : MonoBehaviour
     private void LateUpdate()
     {
         transform.position = _target.position + _offset;
+
+        if (Input.GetMouseButton(1))
+        {
+            transform.position = Input.mousePosition + _offset;
+        }
     }
+    
+    
 }

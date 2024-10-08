@@ -137,14 +137,14 @@ public class GuardIdleState : ObjectState
                 if (distanceToEnemy > 1.5f && distanceToEnemy <= _detectionRadius)
                 {
                     Debug.Log("Enemy detected. Switching to ChaseState.");
-                    _stateManager.ChangeState(new GuardChaseState(_objectTransform, _animator, enemyTransform, _stateManager));
+                    _stateManager.ChangeState(new GuardChaseState(_objectTransform, _animator, _waypoints, enemyTransform, _stateManager, _attackAreas));
                     return;
                 }
             }
         }
     }
     
-    private void MoveTowardsEnemy(Transform enemyTransform)
+    /*private void MoveTowardsEnemy(Transform enemyTransform)
     {
         Vector2 direction = (enemyTransform.position - _objectTransform.position).normalized;
         _objectTransform.Translate(direction * _moveSpeed * Time.deltaTime);
@@ -153,7 +153,7 @@ public class GuardIdleState : ObjectState
         _objectTransform.localScale = new Vector3(Mathf.Sign(direction.x), 1, 1);
     
         PlayRunAnimation(true); // Включаем анимацию бега
-    }
+    }*/
     
 
     private void OffAttackAnimation()

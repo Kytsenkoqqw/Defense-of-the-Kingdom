@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using State;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class GuardFightState : ObjectState
 {
@@ -12,7 +14,8 @@ public class GuardFightState : ObjectState
     private PolygonCollider2D[] _attackAreas;
     private StateManager _stateManager;
     private Transform _torchTransform;
-    
+    private bool _hasSwitchedToIdle;
+
 
     public GuardFightState(Transform objectTransform, Animator animator, Transform enemyTransform,
         Transform[] waypoints, StateManager stateManager, PolygonCollider2D[] attackAreas)
@@ -23,21 +26,23 @@ public class GuardFightState : ObjectState
         _waypoints = waypoints;
         _stateManager = stateManager;
         _attackAreas = attackAreas;
+        _hasSwitchedToIdle = false;
     }
 
     public override void EnterState()
     {
         Debug.Log("Entering Fight State");
+        EnemyManager.Instance.OnAllEnemiesDeactivated += SwitchToIdleState;
     }
 
     public override void UpdateState()
     {
-        if (_enemyTransform == null)
+        /*if (_enemyTransform == null)
         {
             Debug.LogWarning("Enemy transform is null, switching to Idle state.");
             _stateManager.ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints, _stateManager, _attackAreas, _torchTransform));
             return;
-        }
+        }*/
 
         Vector2 direction = _enemyTransform.position - _objectTransform.position;
 
@@ -71,7 +76,7 @@ public class GuardFightState : ObjectState
         // Проверяем, находится ли враг в радиусе атаки
         if (!IsEnemyInRange())
         {
-            _stateManager.ChangeState(new GuardChaseState(_objectTransform, _animator,  _torchTransform,  _stateManager));
+            _stateManager.ChangeState(new GuardChaseState(_objectTransform, _animator, _waypoints, _enemyTransform, _stateManager, _attackAreas));
             OffAttackAnimation();
             _animator.SetBool("IsMoving", true);
         }
@@ -80,6 +85,17 @@ public class GuardFightState : ObjectState
     public override void ExitState()
     {
         Debug.Log("Exiting Fight State");
+        EnemyManager.Instance.OnAllEnemiesDeactivated -= SwitchToIdleState;
+    }
+
+    public void SwitchToIdleState()
+    {
+        if (!_hasSwitchedToIdle) // Проверяем, был ли метод вызван ранее
+        {
+            Debug.Log("Switch to Idle State");
+            _hasSwitchedToIdle = true; // Устанавливаем флаг, чтобы метод больше не вызывался
+            _stateManager.ChangeState(new GuardIdleState(_objectTransform, _animator, _waypoints, _stateManager, _attackAreas, _torchTransform));
+        }
     }
 
     private void OffAttackAnimation()

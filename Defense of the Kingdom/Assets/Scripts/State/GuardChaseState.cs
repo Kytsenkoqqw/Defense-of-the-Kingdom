@@ -16,13 +16,14 @@ namespace State
         private PolygonCollider2D[] _attackAreas;
         private Transform _torchTransform;
 
-        public GuardChaseState(Transform objectTransform, Animator animator, Transform enemyTransform,
-            StateManager stateManager)
+        public GuardChaseState(Transform objectTransform, Animator animator, Transform[] waypoints, Transform enemyTransform, StateManager stateManager, PolygonCollider2D[] attackAreas)
         {
             _objectTransform = objectTransform;
             _animator = animator;
             _enemyTransform = enemyTransform;
             _stateManager = stateManager;
+            _waypoints = waypoints;
+            _attackAreas = attackAreas;
         }
 
         public override void EnterState()
@@ -40,8 +41,7 @@ namespace State
             if (distanceToEnemy <= _attackRadius)
             {
                 Debug.Log("Enemy in attack range. Switching to FightState.");
-                _stateManager.ChangeState(new GuardFightState(_objectTransform, _animator, _enemyTransform, null,
-                    _stateManager, null));
+                _stateManager.ChangeState(new GuardFightState(_objectTransform, _animator, _enemyTransform, _waypoints, _stateManager, _attackAreas));
             }
             else
             {

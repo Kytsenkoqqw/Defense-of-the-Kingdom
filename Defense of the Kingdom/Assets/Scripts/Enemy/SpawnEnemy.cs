@@ -11,13 +11,13 @@ using Random = UnityEngine.Random;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    [SerializeField] private ObjectPool _objectPool;  // Ссылка на пул объектов
+    [SerializeField] private ObjectPool _objectPool; // Ссылка на пул объектов
     [SerializeField] private Transform[] _spawnPoints; // Точки спавна
     [Inject(Id = "EnemyAttackAreas")] private PolygonCollider2D[] _enemyAttackAreas;
 
     private void Start()
     {
-        SpawnMultipleEnemies(5);
+        SpawnMultipleEnemies(1);
     }
 
     // Метод для спавна врага
@@ -27,6 +27,9 @@ public class SpawnEnemy : MonoBehaviour
         {
             // Получаем врага из пула
             GameObject newEnemy = _objectPool.GetEnemy();
+
+            // Регистрируем врага
+            EnemyManager.Instance.RegisterEnemy(newEnemy);
 
             // Выбираем случайную точку спавна
             int spawnIndex = Random.Range(0, _spawnPoints.Length);
