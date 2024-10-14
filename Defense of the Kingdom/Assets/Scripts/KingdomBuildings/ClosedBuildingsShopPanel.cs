@@ -18,8 +18,9 @@ namespace DoTween
 
         private void ClosedBuildingsPanel()
         {
-            transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+            _transformBuildingsPanel.DOScale(new Vector3(0, 0, 0), 0.5f);
             _buildingsPanel.SetActive(false);
         }
+        
     }
 }

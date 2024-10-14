@@ -21,4 +21,5 @@ public class ClosedBuyGuardPanel : MonoBehaviour
         _transformClosedPanel.DOScale(new Vector3(0, 0, 0), 0.5f);
         _buyGuardPanel.SetActive(false);
     }
+    
 }

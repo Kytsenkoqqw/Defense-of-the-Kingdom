@@ -44,7 +44,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tilemap/RandomGenerationTilemap.cs" />
@@ -80,7 +79,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/RedAlert.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/BuyingGuard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/OpenGuardShopPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/ClosedBuyGuardPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FPS/FPSCounter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/FreeCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraFollow.cs" />
@@ -95,6 +93,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/OpenPauseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/OpenBuildingsShopPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/KingdomBuildings/ClosedBuildingsPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/ClosedBuyGuardPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/KingdomBuildings/ClosedBuildingsShopPanel.cs" />
       </list>
     </option>
   </component>
@@ -197,7 +197,7 @@
       <workItem from="1728300430562" duration="7207000" />
       <workItem from="1728386746308" duration="1000" />
       <workItem from="1728386827255" duration="8118000" />
-      <workItem from="1728905371053" duration="3076000" />
+      <workItem from="1728905371053" duration="5054000" />
     </task>
     <servers />
   </component>
