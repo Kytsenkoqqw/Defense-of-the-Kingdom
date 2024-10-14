@@ -961,6 +961,7 @@
             <e p="TakeCurrensy.cs" t="Include" />
           </e>
           <e p="DoTween" t="Include">
+            <e p="OpenBuildingsShopPanel.cs" t="Include" />
             <e p="OpenBuyGuardMenu.cs" t="Include" />
             <e p="OpenPauseMenu.cs" t="Include" />
           </e>
