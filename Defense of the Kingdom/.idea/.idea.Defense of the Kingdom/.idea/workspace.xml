@@ -23,7 +23,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/WaypointsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2D8783C7-AF04-4231-8483-A199A473C55B/4a/79ed663c/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DoTween/OpenBuyGuardMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/OpenBuyGuardMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/CanvasScaler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82A2FD07-3EE4-4992-8E16-1903460426D7/a5/55f99c34/DOTweenComponent.cs" root0="SKIP_HIGHLIGHTING" />
@@ -44,7 +44,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/IdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttack.cs" />
@@ -95,6 +94,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/OpenPauseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/OpenBuildingsShopPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/KingdomBuildings/ClosedBuildingsPanel.cs" />
       </list>
     </option>
   </component>
@@ -197,7 +197,7 @@
       <workItem from="1728300430562" duration="7207000" />
       <workItem from="1728386746308" duration="1000" />
       <workItem from="1728386827255" duration="8118000" />
-      <workItem from="1728905371053" duration="1833000" />
+      <workItem from="1728905371053" duration="3076000" />
     </task>
     <servers />
   </component>
