@@ -944,6 +944,9 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Buildings" t="Include">
+            <e p="BuyingPawn.cs" t="Include" />
+          </e>
           <e p="Camera" t="Include">
             <e p="CameraFollow.cs" t="Include" />
           </e>
