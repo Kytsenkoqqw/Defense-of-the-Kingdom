@@ -1,5 +1,6 @@
 ﻿using System;
 using Currensy;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,9 @@ namespace Buildings
         [SerializeField] private Transform _pawnSpawnPoint;
         [SerializeField] private int _pricePawn = 3;
         [SerializeField] private  Coins _coins;
+        [SerializeField] private Image _pawnRedAlert;
+        private bool _yoyTime;
+        
 
         private void OnEnable()
         {
@@ -20,9 +24,19 @@ namespace Buildings
 
         private void PawnBuy()
         {
+            if (_yoyTime)
+                return;
+         
+            
             if (_coins.value < 3)
             {
-                Debug.Log("nema zolota");
+                _yoyTime = true; // Устанавливаем флаг, что анимация началась
+                _pawnRedAlert.DOKill(); // Остановка текущей анимации, если она есть
+                _pawnRedAlert.DOColor(Color.red, 0.5f).SetLoops(2, LoopType.Yoyo).OnComplete(() => 
+                {
+                    _yoyTime = false; // Сбрасываем флаг по завершению анимации
+                });
+                Debug.Log("не хватает золота");
             }
             else
             {

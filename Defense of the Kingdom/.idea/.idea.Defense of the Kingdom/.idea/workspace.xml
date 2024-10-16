@@ -10,6 +10,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@14.0.11/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingTower.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/GuardFightState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPS/FPSCounter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/BuyingGuard.cs" root0="FORCE_HIGHLIGHTING" />
@@ -21,6 +22,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/AttackAreasInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/ClosedBuyGuardPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/WaypointsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buildings/TowerPlacement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2D8783C7-AF04-4231-8483-A199A473C55B/4a/79ed663c/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/OpenBuyGuardMenu.cs" root0="FORCE_HIGHLIGHTING" />
@@ -31,6 +33,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/Raycasters/BaseRaycaster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2D8783C7-AF04-4231-8483-A199A473C55B/e4/af45c96e/Debug.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buildings/BuildableTilemapEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/DeathEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectPool/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
@@ -44,11 +47,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tilemap/RandomGenerationTilemap.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Zenject/WaypointsInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/TorchGoblinFightState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/TorchGoblinIdleState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/TorchGoblinFightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/FightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/StateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" />
@@ -79,7 +77,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/OpenGuardShopPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FPS/FPSCounter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/FreeCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/DeathEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardChaseState.cs" />
@@ -95,6 +92,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/KingdomBuildings/ClosedBuildingsShopPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyPawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingPawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/DrawGrid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuildableTilemap.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuildableTilemapEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraFollow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingTower.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/TowerPlacement.cs" />
       </list>
     </option>
   </component>
@@ -198,7 +201,8 @@
       <workItem from="1728386746308" duration="1000" />
       <workItem from="1728386827255" duration="8118000" />
       <workItem from="1728905371053" duration="5601000" />
-      <workItem from="1728992313822" duration="2003000" />
+      <workItem from="1728992313822" duration="2675000" />
+      <workItem from="1729076963074" duration="7501000" />
     </task>
     <servers />
   </component>
