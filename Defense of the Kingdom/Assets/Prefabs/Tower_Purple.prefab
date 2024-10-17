@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4965119000343938546}
   - component: {fileID: 449111365188366950}
   - component: {fileID: 4832851252016973214}
-  - component: {fileID: -4352712473211600762}
+  - component: {fileID: -6986784561847163925}
   m_Layer: 0
   m_Name: Tower_Purple
   m_TagString: Untagged
@@ -162,7 +162,7 @@ PolygonCollider2D:
       - {x: 0.36633146, y: -0.77053356}
       - {x: 0.42810676, y: -0.6195278}
   m_UseDelaunayMesh: 0
---- !u!114 &-4352712473211600762
+--- !u!114 &-6986784561847163925
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,11 +171,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4391623054429110600}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a8fef7e529c30247a14cf4c65d9a638, type: 3}
+  m_Script: {fileID: 11500000, guid: 9749f3a2d743480bb5b6719f975cc178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  _towerPrefab: {fileID: 4391623054429110600}
-  _coins: {fileID: 0}

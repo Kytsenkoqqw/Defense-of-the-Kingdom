@@ -3,43 +3,60 @@ using System.Collections;
 using System.Collections.Generic;
 using Currensy;
 using DG.Tweening;
+using DoTween;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class BuyingTower : MonoBehaviour
 {
+    public static BuyingTower Instance { get; private set; }
+    public Action TowerSpawn;
     [SerializeField] private Button _buyTowerButton;
-    [SerializeField] private GameObject _towerPlacementPrefab; // замените на префаб TowerPlacement
+    [SerializeField] private GameObject _towerPlacementPrefab; // Префаб башни с логикой размещения
     [SerializeField] private Coins _coins;
     [SerializeField] private Image _towerRedAlert;
-    private int _towerPrice = 10;
+    [SerializeField] private GameObject _buildingPanel; // Панель с кнопкой покупки
 
+    private int _towerPrice = 10;
     private bool _yoyTime;
+    public GameObject SpawnedTower { get;  set; }
+    private bool _isPlacingTower;
+
+    public void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
 
     private void OnEnable()
     {
         _buyTowerButton.onClick.AddListener(BuyTower);
     }
 
-    private void BuyTower()
+    public void BuyTower()
     {
         if (_yoyTime)
             return;
 
         if (_coins.value < _towerPrice)
         {
-            _yoyTime = true; // устанавливаем флаг, что анимация началась
-            _towerRedAlert.DOKill(); // остановка текущей анимации, если она есть
+            _yoyTime = true;
+            _towerRedAlert.DOKill();
             _towerRedAlert.DOColor(Color.red, 0.5f).SetLoops(2, LoopType.Yoyo).OnComplete(() =>
             {
-                _yoyTime = false; // сбрасываем флаг по завершению анимации
+                _yoyTime = false;
             });
-            Debug.Log("не хватает золота");
+            Debug.Log("Не хватает золота");
         }
         else
         {
             _coins.SpendCurrency(_towerPrice);
-            Instantiate(_towerPlacementPrefab, Vector2.zero, Quaternion.identity); // создаем объект для размещения башни
+            SpawnedTower = Instantiate(_towerPlacementPrefab); // Спавним башню
+            TowerSpawn?.Invoke();
+
         }
     }
 
