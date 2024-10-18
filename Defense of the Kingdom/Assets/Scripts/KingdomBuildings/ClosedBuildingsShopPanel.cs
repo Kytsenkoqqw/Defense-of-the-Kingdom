@@ -7,20 +7,20 @@ namespace DoTween
 {
     public class ClosedBuildingsShopPanel : MonoBehaviour
     {
-        private BuyingTower _buyingTower;
+        private BuyingBuilding _buyingBuilding;
         [SerializeField] private GameObject _buildingsPanel;
         [SerializeField] private Button _closedBuildingsButton;
         [SerializeField] private Transform _transformBuildingsPanel;
 
         private void Awake()
         {
-            _buyingTower = FindObjectOfType<BuyingTower>();
+            _buyingBuilding = FindObjectOfType<BuyingBuilding>();
         }
         
         private void OnEnable()
         {
             _closedBuildingsButton.onClick.AddListener(ClosedBuildingsPanel);
-            _buyingTower.TowerSpawn += ClosedBuildingsPanel;
+            _buyingBuilding.BuildingSpawn += ClosedBuildingsPanel;
         }
         
         private void ClosedBuildingsPanel()
@@ -31,7 +31,7 @@ namespace DoTween
 
         private void OnDisable()
         {
-            _buyingTower.TowerSpawn -= ClosedBuildingsPanel;
+            _buyingBuilding.BuildingSpawn -= ClosedBuildingsPanel;
         }
     }
 }
