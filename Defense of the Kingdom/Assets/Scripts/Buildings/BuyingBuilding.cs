@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Buildings;
 using Currensy;
 using DG.Tweening;
 using DoTween;
@@ -10,59 +11,57 @@ using UnityEngine.UI;
 
 public class BuyingBuilding : MonoBehaviour
 {
-    public static BuyingBuilding Instance { get; private set; }
-    public Action BuildingSpawn;
-  //  [SerializeField] private Button _buyTowerButton;
-    [SerializeField] private GameObject _towerPrefab;
-    [SerializeField] private int  _towerPrice;
-    [SerializeField] private GameObject _housePrefab;
-    [SerializeField] private int _housePrice;
+    [SerializeField] private Transform _transformBuyingPanel;
+    [SerializeField] private GameObject _buyingPanel;
+    [SerializeField] private GameObject _buildingPrefab;
     [SerializeField] private Coins _coins;
+    [SerializeField] private int _buildingPrice;
     [SerializeField] private Image _redAlert;
-
-    //  [SerializeField] private int _buildingPrice;
+    private PlacementBuilding _placementManager; // Скрипт для управления перемещением зданий
     private bool _yoyTime;
-    public GameObject SpawnedBuilding { get; set; }
-    private bool _isPlacingBuildibg;
-    
-    public void Awake()
+
+    private void Awake()
     {
-        if (Instance == null)
+        _placementManager = FindObjectOfType<PlacementBuilding>();
+    }
+
+    public void BuyBuildings()
+    {
+        if (_coins.value < _buildingPrice)
         {
-            Instance = this;
+            RedAlert();
+            Debug.Log("nema zolota");
+        }
+        else
+        {
+            OffBuyingPanel();
+            GameObject building = Instantiate(_buildingPrefab);    
+            _coins.SpendCurrency(_buildingPrice);
+            
+            // Передаём объект в систему перемещения
+            _placementManager.StartPlacingBuilding(building);
         }
     }
 
-    public void BuyingTower()
+    private void RedAlert()
     {
-        RedAlert(_towerPrice);
-        
-        _coins.SpendCurrency(_towerPrice);
-        SpawnedBuilding = Instantiate(_towerPrefab); 
-        BuildingSpawn?.Invoke();
-        
-    }
+        if (_yoyTime)
+            return;
 
-    public void BuyingHouse()
-    {
-        RedAlert(_housePrice);
-        _coins.SpendCurrency(_housePrice);
-        SpawnedBuilding = Instantiate(_housePrefab);
-        BuildingSpawn?.Invoke();
-    }
-
-    private void RedAlert(int price)
-    {
-        if (_coins.value < price)
+        if (_coins.value < _buildingPrice)
         {
-            if (_yoyTime) return;
-
             _yoyTime = true;
             _redAlert.DOKill();
             _redAlert.DOColor(Color.red, 0.5f).SetLoops(2, LoopType.Yoyo).OnComplete(() => { _yoyTime = false; });
             Debug.Log("Не хватает золота");
-        } 
+        }
     }
-    
+
+    private void OffBuyingPanel()
+    {
+        _transformBuyingPanel.DOScale(new Vector3(0,0,0), 0.5f);
+        _buyingPanel.SetActive(false);
+    }
+
 }
 

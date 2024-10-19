@@ -9,65 +9,47 @@ namespace Buildings
     public class PlacementBuilding : MonoBehaviour
     {
         [SerializeField] private LayerMask _groundLayer;
-        [SerializeField] private int  _buildingPrice;
-         private Coins _coins;
+        private GameObject _currentBuilding;  // Храним текущее здание, которое двигаем за мышью
+        private bool _isPlacingBuilding = false;
 
-         private void OnEnable()
-         {
-             _coins = FindObjectOfType<Coins>();
-         }
-
-         private void Update()
+        private void Update()
         {
-            // Проверяем, есть ли здание для размещения
-            if (BuyingBuilding.Instance != null && BuyingBuilding.Instance.SpawnedBuilding != null)
+            if (_isPlacingBuilding)
             {
                 MoveBuildingToMousePosition();
-                PlaceBuilding();
-                ExitBuildingPlacement(_buildingPrice);
+
+                // Проверяем, если нажата правая кнопка мыши, то фиксируем здание
+                if (Input.GetMouseButtonDown(1))  // Правая кнопка мыши
+                {
+                    PlaceBuilding();
+                }
             }
         }
 
-        public  void MoveBuildingToMousePosition()
+        // Начало перемещения здания за мышью
+        public void StartPlacingBuilding(GameObject building)
+        {
+            _currentBuilding = building;
+            _isPlacingBuilding = true;
+        }
+
+        // Метод для перемещения здания за мышью
+        private void MoveBuildingToMousePosition()
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = 0; // Устанавливаем z в 0 для 2D
-            BuyingBuilding.Instance.SpawnedBuilding.transform.position = mousePosition; // Передвигаем любое здание
-        }
 
-        public  void PlaceBuilding()
-        {
-            if (Input.GetMouseButtonDown(1) && BuyingBuilding.Instance.SpawnedBuilding != null) // ПКМ для размещения здания
+            if (_currentBuilding != null)
             {
-                // Проверяем, находится ли мышь над слоем Ground
-                Vector2 mousePosition2D = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero, Mathf.Infinity, _groundLayer);
-
-                if (hit.collider != null)
-                {
-                    // Устанавливаем здание на место клика
-                    GameObject placedBuilding = BuyingBuilding.Instance.SpawnedBuilding; 
-                    placedBuilding.transform.position = hit.point;
-
-                    // После установки отключаем перемещение здания
-                    BuyingBuilding.Instance.SpawnedBuilding = null;
-
-                    Debug.Log("Здание установлено на слое Ground!");
-                }
-                else
-                {
-                    Debug.Log("Невозможно установить здание. Не на слое Ground.");
-                }
+                _currentBuilding.transform.position = mousePosition;
             }
         }
 
-        private void ExitBuildingPlacement(int price)
+        // Метод для завершения перемещения и "установки" здания
+        private void PlaceBuilding()
         {
-            if (Input.GetKey(KeyCode.Escape))
-            {
-                Destroy(BuyingBuilding.Instance.SpawnedBuilding); // Отменяем установку здания
-                _coins.AddCurrency(price);
-            }
+            _isPlacingBuilding = false;
+            _currentBuilding = null;
         }
     }
 }

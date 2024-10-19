@@ -682,7 +682,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 196722331}
         m_TargetAssemblyTypeName: BuyingBuilding, Assembly-CSharp
-        m_MethodName: BuyingHouse
+        m_MethodName: BuyBuildings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -742,11 +742,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19da5102ca6a4ac4ab150c4bf1060ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _towerPrefab: {fileID: 4391623054429110600, guid: 6821d327a44c71044ae1d14902d0c490, type: 3}
-  _towerPrice: 10
-  _housePrefab: {fileID: 65296360366410443, guid: 5493a56838cc88449b9279f352f37a54, type: 3}
-  _housePrice: 15
+  _transformBuyingPanel: {fileID: 1330382141}
+  _buyingPanel: {fileID: 1330382140}
+  _buildingPrefab: {fileID: 65296360366410443, guid: 5493a56838cc88449b9279f352f37a54, type: 3}
   _coins: {fileID: 821397411}
+  _buildingPrice: 15
   _redAlert: {fileID: 273012329}
 --- !u!1 &213833518
 GameObject:
@@ -1914,7 +1914,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 551189930}
         m_TargetAssemblyTypeName: BuyingBuilding, Assembly-CSharp
-        m_MethodName: BuyingTower
+        m_MethodName: BuyBuildings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1974,11 +1974,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19da5102ca6a4ac4ab150c4bf1060ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _towerPrefab: {fileID: 4391623054429110600, guid: 6821d327a44c71044ae1d14902d0c490, type: 3}
-  _towerPrice: 10
-  _housePrefab: {fileID: 65296360366410443, guid: 5493a56838cc88449b9279f352f37a54, type: 3}
-  _housePrice: 15
+  _transformBuyingPanel: {fileID: 1330382141}
+  _buyingPanel: {fileID: 1330382140}
+  _buildingPrefab: {fileID: 4391623054429110600, guid: 6821d327a44c71044ae1d14902d0c490, type: 3}
   _coins: {fileID: 821397411}
+  _buildingPrice: 10
   _redAlert: {fileID: 1735294093}
 --- !u!1 &564686923
 GameObject:
@@ -3882,7 +3882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296d5a7809a5454ba347e8fe71c00ff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  value: 100
 --- !u!4 &821397412
 Transform:
   m_ObjectHideFlags: 0
