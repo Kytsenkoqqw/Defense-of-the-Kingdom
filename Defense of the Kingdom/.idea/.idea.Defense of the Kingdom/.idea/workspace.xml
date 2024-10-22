@@ -23,6 +23,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttackArea.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/OpenGuardShopPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/AttackAreasInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buildings/BuildingConstructionGrid.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/ClosedBuyGuardPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/WaypointsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2D8783C7-AF04-4231-8483-A199A473C55B/4a/79ed663c/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
@@ -49,8 +50,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Currensy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/TakeCurrensy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/DestroyCurrensy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Coins.cs" />
@@ -100,6 +99,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/KingdomBuildings/ClosedBuildingsShopPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/PlacementBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingBuilding.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/CustomWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuildingConstructionGrid.cs" />
       </list>
     </option>
   </component>
@@ -207,7 +208,8 @@
       <workItem from="1729076963074" duration="7923000" />
       <workItem from="1729164030228" duration="11970000" />
       <workItem from="1729256447845" duration="7443000" />
-      <workItem from="1729340974485" duration="5382000" />
+      <workItem from="1729340974485" duration="5427000" />
+      <workItem from="1729596358894" duration="2737000" />
     </task>
     <servers />
   </component>

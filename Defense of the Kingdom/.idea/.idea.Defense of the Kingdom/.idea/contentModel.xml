@@ -947,6 +947,7 @@
           <e p="Buildings" t="Include">
             <e p="BuildableTilemap.cs" t="Include" />
             <e p="BuildableTilemapEditor.cs" t="Include" />
+            <e p="BuildingConstructionGrid.cs" t="Include" />
             <e p="BuyingBuilding.cs" t="Include" />
             <e p="BuyingPawn.cs" t="Include" />
             <e p="PlacementBuilding.cs" t="Include" />
