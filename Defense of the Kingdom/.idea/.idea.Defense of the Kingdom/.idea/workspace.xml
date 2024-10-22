@@ -34,6 +34,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82A2FD07-3EE4-4992-8E16-1903460426D7/a5/55f99c34/DOTweenComponent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Currensy/Currensy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/Raycasters/BaseRaycaster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tree/TreeFelling.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2D8783C7-AF04-4231-8483-A199A473C55B/e4/af45c96e/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buildings/BuildableTilemapEditor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -50,8 +51,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/DeathGuard.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/DestroyCurrensy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Coins.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/TakeCurrensy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/CoinsUI.cs" />
@@ -63,9 +62,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjectPool/ObjectPool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyStateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Loot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyFightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/StateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/OpenBuyGuardMenu.cs" />
@@ -101,6 +98,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/CustomWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuildingConstructionGrid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tree/TreeFelling.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyStateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyBreakBuildingState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyFightState.cs" />
       </list>
     </option>
   </component>
@@ -209,7 +210,7 @@
       <workItem from="1729164030228" duration="11970000" />
       <workItem from="1729256447845" duration="7443000" />
       <workItem from="1729340974485" duration="5427000" />
-      <workItem from="1729596358894" duration="2737000" />
+      <workItem from="1729596358894" duration="5324000" />
     </task>
     <servers />
   </component>
@@ -308,10 +309,10 @@
     </state>
     <state width="1877" height="374" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1729267008186" />
     <state width="1877" height="303" key="GridCell.Tab.3.right/0.0.1920.1050@0.0.1920.1050" timestamp="1727704309731" />
-    <state x="784" y="238" key="RiderGenerateDialog" timestamp="1727706271750">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="784" y="236" key="RiderGenerateDialog" timestamp="1729604268458">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="784" y="236" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1723643499421" />
+    <state x="784" y="236" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1729604268458" />
     <state x="784" y="238" key="RiderGenerateDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1727706271750" />
     <state x="531" y="234" key="SettingsEditor" timestamp="1728300404469">
       <screen x="0" y="0" width="1920" height="1040" />

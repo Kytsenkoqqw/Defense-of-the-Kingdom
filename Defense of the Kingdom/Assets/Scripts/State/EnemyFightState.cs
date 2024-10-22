@@ -11,6 +11,7 @@ namespace State
         private PolygonCollider2D[] _enemyAttackAreas;
         private EnemyStateManager _enemyStateManager;
         private DeathGuard _deathGuard;
+        private Transform _towerTransform;
     
 
         public EnemyFightState(Transform torchTransform, Animator animator, Transform guardTransform, EnemyStateManager enemyStateManager, PolygonCollider2D[] enemyAttackAreas)
@@ -31,8 +32,9 @@ namespace State
         {
             if (_guardTransform == null)
             {
+                OffAttackAnimation();
                 Debug.LogWarning("Enemy transform is null, switching to Idle state.");
-                _enemyStateManager.ChangeState(new EnemyIdleState(_torchTransform, _deathGuard, _animator,  _enemyStateManager, _enemyAttackAreas));
+                _enemyStateManager.ChangeState(new EnemyBreakBuildingState(_torchTransform, _guardTransform, _animator, _towerTransform, _enemyStateManager, _enemyAttackAreas));
                 return;
             }
 

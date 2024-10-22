@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6986784561847163925}
   m_Layer: 0
   m_Name: Tower_Purple
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,5 +177,3 @@ MonoBehaviour:
   _groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  _buildingPrice: 10
-  _coins: {fileID: 0}

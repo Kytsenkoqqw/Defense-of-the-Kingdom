@@ -14,6 +14,7 @@ namespace State
         private ObjectState _currentState;
         private EnemyStateManager _enemyStateManager;
         private Transform _guardTransform;
+        private Transform _towerTransform;
         private DeathGuard _deathGuard;
         [Inject(Id = "EnemyAttackAreas")] private PolygonCollider2D[] _enemyAttackAreas;
         
