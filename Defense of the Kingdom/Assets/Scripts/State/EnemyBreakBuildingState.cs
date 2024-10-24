@@ -80,6 +80,7 @@ namespace State
                 float distance = Vector2.Distance(_torchTransform.position, tower.transform.position);
                 if (distance < nearestDistance)
                 {
+                    _enemyStateManager.ChangeState(new EnemyFightState(_torchTransform, _animator, _guardTransform, _enemyStateManager, _enemyAttackAreas));
                     nearestDistance = distance;
                     nearestTower = tower;
                 }
@@ -101,11 +102,30 @@ namespace State
         {
             if (_towerTransform != null)
             {
-                // Расчет направления к башне
-                Vector2 direction = (_towerTransform.position - _torchTransform.position).normalized;
-                _torchTransform.position += (Vector3) direction * _moveSpeed * Time.deltaTime;
+                float distanceToTower = Vector2.Distance(_torchTransform.position, _towerTransform.position);
 
-                // Дополнительная логика, если нужно, например, анимация движения
+                // Если расстояние до вышки больше 1, продолжаем движение
+                if (distanceToTower > 2.0f)
+                {
+                    Vector2 direction = (_towerTransform.position - _torchTransform.position).normalized;
+                    _torchTransform.position += (Vector3)direction * _moveSpeed * Time.deltaTime;
+
+                    // Поворачиваем врага в сторону башни
+                    if (direction.x > 0)
+                    {
+                        _torchTransform.localScale = new Vector3(Mathf.Abs(_torchTransform.localScale.x), _torchTransform.localScale.y, _torchTransform.localScale.z);
+                    }
+                    else if (direction.x < 0)
+                    {
+                        _torchTransform.localScale = new Vector3(-Mathf.Abs(_torchTransform.localScale.x), _torchTransform.localScale.y, _torchTransform.localScale.z);
+                    }
+                }
+                else
+                {
+                    // Останавливаем врага и включаем анимацию атаки
+                    //   _animator.SetBool("IsAttacking", true);
+                    Debug.Log("Enemy is close to the tower, starting attack.");
+                }
             }
         }
     }

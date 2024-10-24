@@ -18,7 +18,7 @@ public class GuardIdleState : ObjectState
     private float _waitTime = 2f; // Время ожидания на точке
     private float _waitTimer = 0f;
     private bool _isWaiting = false; // Флаг ожидания
-    private float _detectionRadius = 2f;
+    private float _detectionRadius = 15f;
     private StateManager _stateManager; // Ссылка на StateMachine
     private Transform _torchTransform;
     

@@ -11,7 +11,7 @@ namespace Enemy
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.GetComponent<DeathGuard>())
+            if (other.gameObject.GetComponent<DeathGuard>() && other.gameObject.GetComponent<DestroyTower>())
             {
                 HealthSystem heroHealth = other.gameObject.GetComponent<HealthSystem>();
                 if (heroHealth != null && Time.time - _lastDamageTime >= _damageInterval)

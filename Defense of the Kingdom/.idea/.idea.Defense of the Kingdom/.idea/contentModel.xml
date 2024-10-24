@@ -950,6 +950,7 @@
             <e p="BuildingConstructionGrid.cs" t="Include" />
             <e p="BuyingBuilding.cs" t="Include" />
             <e p="BuyingPawn.cs" t="Include" />
+            <e p="DestroyTower.cs" t="Include" />
             <e p="PlacementBuilding.cs" t="Include" />
           </e>
           <e p="Camera" t="Include">
