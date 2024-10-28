@@ -80,7 +80,7 @@ namespace State
                 float distance = Vector2.Distance(_torchTransform.position, tower.transform.position);
                 if (distance < nearestDistance)
                 {
-                    _enemyStateManager.ChangeState(new EnemyFightState(_torchTransform, _animator, _guardTransform, _enemyStateManager, _enemyAttackAreas));
+                    _enemyStateManager.ChangeState(new EnemyFightState(_torchTransform, _towerTransform,_animator, _guardTransform, _enemyStateManager, _enemyAttackAreas));
                     nearestDistance = distance;
                     nearestTower = tower;
                 }
@@ -105,7 +105,7 @@ namespace State
                 float distanceToTower = Vector2.Distance(_torchTransform.position, _towerTransform.position);
 
                 // Если расстояние до вышки больше 1, продолжаем движение
-                if (distanceToTower > 2.0f)
+                if (distanceToTower > 0.5f)
                 {
                     Vector2 direction = (_towerTransform.position - _torchTransform.position).normalized;
                     _torchTransform.position += (Vector3)direction * _moveSpeed * Time.deltaTime;
@@ -125,6 +125,7 @@ namespace State
                     // Останавливаем врага и включаем анимацию атаки
                     //   _animator.SetBool("IsAttacking", true);
                     Debug.Log("Enemy is close to the tower, starting attack.");
+                    _enemyStateManager.ChangeState(new EnemyFightState(_torchTransform, _towerTransform,_animator, _guardTransform, _enemyStateManager, _enemyAttackAreas));
                 }
             }
         }

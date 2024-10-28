@@ -5,22 +5,24 @@ namespace State
 {
     public class EnemyIdleState : ObjectState
     {
-
         private Animator _animator;
         private Transform _torchTransform;
         private Transform _guardTransform;
+        private Transform _towerTransform;
         private EnemyStateManager _enemyStateManager;
         private PolygonCollider2D[] _enemyAttackAreas;
         private DeathEnemy _deathEnemy;
         private DeathGuard _deathGuard;
+        private DestroyTower _destroyTower;
         private float _speed = 2f;
         private bool _isFighting = false;
         private float _detectionRadius = 1.7f;
 
-        public EnemyIdleState(Transform torchTransform,DeathGuard deathGuard, Animator animator, EnemyStateManager enemyStateManager,
+        public EnemyIdleState(Transform torchTransform,Transform towerTransform,DeathGuard deathGuard, Animator animator, EnemyStateManager enemyStateManager,
             PolygonCollider2D[] enemyAttackAreas)
         {
             _torchTransform = torchTransform;
+            _towerTransform = towerTransform;
             _animator = animator;
             _enemyStateManager = enemyStateManager;
             _enemyAttackAreas = enemyAttackAreas;
@@ -31,6 +33,7 @@ namespace State
         {
             // Найти ближайшего стражника
             FindNewGuard();
+            FindNewTower();
             Debug.Log("Enter Enemy Idle State");
 
             // Подписываемся на событие смерти врага
@@ -49,11 +52,13 @@ namespace State
                 if (!_isFighting)
                 {
                     MoveTowardsGuard();
+                    MoveTowardsTower();
                 }
             }
             else
             {
                 FindNewGuard(); // Попробовать найти нового стражника
+                FindNewTower();
             }
         }
 
@@ -82,7 +87,7 @@ namespace State
                 {
                     Debug.Log("Enemy detected, switching to FightState");
                     Transform _guardTransform = collider.transform;
-                    _enemyStateManager.ChangeState(new EnemyFightState(_torchTransform, _animator, _guardTransform, _enemyStateManager, _enemyAttackAreas));
+                    _enemyStateManager.ChangeState(new EnemyFightState(_torchTransform,_towerTransform, _animator, _guardTransform, _enemyStateManager, _enemyAttackAreas));
                     return;
                 }
             }
@@ -93,7 +98,40 @@ namespace State
             {
                 Flip();
             }
-            
+        }
+
+        private void MoveTowardsTower()
+        {
+            if (_destroyTower == null)
+            {
+                Debug.LogWarning("DestroyTower is null. Cannot move towards tower.");
+                return; // Прекращаем выполнение метода, если стражник не найден
+            }
+
+            // Двигаем врага к цели (стражнику)
+            _torchTransform.position = Vector2.MoveTowards(_torchTransform.position, _towerTransform.transform.position, _speed * Time.deltaTime);
+            _animator.SetBool("IsMoving", true);
+
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(_torchTransform.position, _detectionRadius);
+
+            foreach (Collider2D collider in colliders)
+            {
+                if (collider.GetComponent<DestroyTower>() != null)
+                {
+                    Debug.Log("Enemy detected, switching to FightState");
+                    Transform _towerTransform = collider.transform;
+                    _enemyStateManager.ChangeState(new EnemyFightState(_torchTransform,_towerTransform, _animator, _guardTransform, _enemyStateManager, _enemyAttackAreas));
+                    return;
+                }
+            }
+
+            // Определяем направление и разворачиваем врага, если нужно
+            Vector3 direction = _towerTransform.transform.position - _torchTransform.position;
+            if ((direction.x > 0 && _torchTransform.localScale.x < 0) ||
+                (direction.x < 0 && _torchTransform.localScale.x > 0))
+            {
+                Flip();
+            }
         }
 
         private void FindNewGuard()
@@ -107,6 +145,20 @@ namespace State
                 if (guardHealth != null)
                 {
                     guardHealth.OnDeath.AddListener(OnGuardDeath);
+                }
+            }
+        }
+
+        private void FindNewTower()
+        {
+            _destroyTower = FindObjectOfType<DestroyTower>();
+            if (_destroyTower != null)
+            {
+                HealthSystem towerHealth = _destroyTower.GetComponent<HealthSystem>();
+                if (towerHealth != null)
+                {
+                    Debug.Log("search new tower");
+                    towerHealth.OnDeath.AddListener(OnGuardDeath);
                 }
             }
         }

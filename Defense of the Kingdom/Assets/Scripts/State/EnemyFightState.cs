@@ -14,13 +14,14 @@ namespace State
         private Transform _towerTransform;
     
 
-        public EnemyFightState(Transform torchTransform, Animator animator, Transform guardTransform, EnemyStateManager enemyStateManager, PolygonCollider2D[] enemyAttackAreas)
+        public EnemyFightState(Transform torchTransform,Transform towerTransform, Animator animator, Transform guardTransform, EnemyStateManager enemyStateManager, PolygonCollider2D[] enemyAttackAreas)
         {
             _torchTransform = torchTransform;
             _animator = animator;
             _guardTransform = guardTransform;
             _enemyStateManager = enemyStateManager;
             _enemyAttackAreas = enemyAttackAreas;
+            _towerTransform = towerTransform;
         }
 
         public override void EnterState()
@@ -70,7 +71,7 @@ namespace State
             // Проверяем, находится ли враг в радиусе атаки
             if (!IsEnemyInRange())
             {
-                _enemyStateManager.ChangeState(new EnemyIdleState(_torchTransform, _deathGuard, _animator, _enemyStateManager, _enemyAttackAreas));
+                _enemyStateManager.ChangeState(new EnemyIdleState(_torchTransform, _towerTransform,_deathGuard, _animator, _enemyStateManager, _enemyAttackAreas));
                 OffAttackAnimation();
                 _animator.SetBool("IsMoving", true);
             }

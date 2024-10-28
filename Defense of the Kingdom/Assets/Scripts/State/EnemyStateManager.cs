@@ -31,7 +31,7 @@ namespace State
                 _guardTransform = _deathGuard.transform; 
             }
             
-            ChangeState(new EnemyIdleState(_torchTransform, _deathGuard, _animator, _enemyStateManager, _enemyAttackAreas));
+            ChangeState(new EnemyIdleState(_torchTransform, _towerTransform, _deathGuard, _animator, _enemyStateManager, _enemyAttackAreas));
         }
         
         public void Initialize(PolygonCollider2D[] enemyAttackAreas)

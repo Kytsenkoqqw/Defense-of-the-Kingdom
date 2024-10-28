@@ -40,6 +40,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2D8783C7-AF04-4231-8483-A199A473C55B/e4/af45c96e/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buildings/BuildableTilemapEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pawn/SelectPawnAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/DeathEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectPool/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,7 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/TakeCurrensy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/CoinsUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/ChangeColorOnDamage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardInstaller.cs" />
@@ -95,14 +95,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/CustomWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuildingConstructionGrid.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tree/TreeFelling.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyStateManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/DestroyTower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackArea.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyBreakBuildingState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyStateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyFightState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyBreakBuildingState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyIdleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/SelectPawnAction.cs" />
       </list>
     </option>
   </component>
@@ -212,7 +213,8 @@
       <workItem from="1729256447845" duration="7443000" />
       <workItem from="1729340974485" duration="5427000" />
       <workItem from="1729596358894" duration="7798000" />
-      <workItem from="1729741330792" duration="6950000" />
+      <workItem from="1729741330792" duration="9660000" />
+      <workItem from="1730108834853" duration="4076000" />
     </task>
     <servers />
   </component>

@@ -1008,6 +1008,9 @@
           <e p="ObjectPool" t="Include">
             <e p="ObjectPool.cs" t="Include" />
           </e>
+          <e p="Pawn" t="Include">
+            <e p="SelectPawnAction.cs" t="Include" />
+          </e>
           <e p="State" t="Include">
             <e p="EnemyBreakBuildingState.cs" t="Include" />
             <e p="EnemyFightState.cs" t="Include" />
