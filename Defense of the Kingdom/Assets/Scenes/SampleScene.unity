@@ -12676,6 +12676,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Pawn_Purple '
       objectReference: {fileID: 0}
+    - target: {fileID: 8840836544533140753, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840836544533140753, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840836544533140753, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840836544533140753, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
