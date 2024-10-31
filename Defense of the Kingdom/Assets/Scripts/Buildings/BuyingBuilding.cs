@@ -36,7 +36,7 @@ public class BuyingBuilding : MonoBehaviour
         {
             OffBuyingPanel();
             GameObject building = Instantiate(_buildingPrefab);    
-            _coins.SpendCurrency(_buildingPrice);
+            //_coins.SpendCurrency(_buildingPrice);
             
             // Передаём объект в систему перемещения
             _placementManager.StartPlacingBuilding(building);

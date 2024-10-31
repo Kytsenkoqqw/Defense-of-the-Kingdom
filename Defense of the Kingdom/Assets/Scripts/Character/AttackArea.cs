@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using State;
@@ -7,15 +8,13 @@ public class AttackArea : MonoBehaviour
 {
     [SerializeField] private int _damage = 5;
     
-    private void OnTriggerEnter2D(Collider2D other)
+
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<DestroyTower>())
+        if (other.gameObject.TryGetComponent<DestroyTower>(out var destroyTower) && other.TryGetComponent<HealthSystem>(out var heroHealth))
         {
-            HealthSystem heroHealth = other.gameObject.GetComponent<HealthSystem>();
-            if (heroHealth != null)
-            {
-                heroHealth.TakeDamage(_damage);
-            }
+            Debug.Log("bam");
+            heroHealth.TakeDamage(_damage);
         }
     }
 }

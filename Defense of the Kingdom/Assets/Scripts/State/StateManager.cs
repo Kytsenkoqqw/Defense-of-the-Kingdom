@@ -12,7 +12,7 @@ public class StateManager : MonoBehaviour
       private ObjectState _currentState;
       private Transform _guardTransform;
       private Animator _animator;
-      private StateManager _stateManager;
+   
       private BuyingGuard _buyingGuard;
       private Transform _torchTransform;
 
@@ -25,9 +25,9 @@ public class StateManager : MonoBehaviour
          _torchTransform = FindObjectOfType<Transform>();
          _guardTransform = transform;
          _animator = GetComponent<Animator>();
-         _stateManager = GetComponent<StateManager>();
+       
          
-         ChangeState(new GuardIdleState(_guardTransform, _animator, _waypoints, _stateManager, _attackAreas, _torchTransform));
+         ChangeState(new GuardIdleState(_guardTransform, _animator, _waypoints, this, _attackAreas, _torchTransform));
       }
 
       private void Update()

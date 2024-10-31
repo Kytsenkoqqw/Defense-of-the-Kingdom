@@ -54,7 +54,7 @@ namespace Buildings
         {
             _isPlacingBuilding = false;
             _currentBuilding = null;
-            //_coins.SpendCurrency(_buyingBuilding._buildingPrice);
+            _coins.SpendCurrency(_buyingBuilding._buildingPrice);
         }
 
         private void CancelPlaceBuilding()
@@ -62,7 +62,7 @@ namespace Buildings
             if (Input.GetKeyUp(KeyCode.Escape))
             {
                 Destroy(_currentBuilding);
-                _coins.AddCurrency(_buyingBuilding._buildingPrice);
+               // _coins.AddCurrency(_buyingBuilding._buildingPrice);
             }
         }
     }

@@ -12,7 +12,6 @@ namespace State
         private Transform _torchTransform;
         private Animator _animator;
         private ObjectState _currentState;
-        private EnemyStateManager _enemyStateManager;
         private Transform _guardTransform;
         private Transform _towerTransform;
         private DeathGuard _deathGuard;
@@ -23,7 +22,7 @@ namespace State
         {
             _torchTransform = GetComponent<Transform>();
             _animator = GetComponent<Animator>();
-            _enemyStateManager = GetComponent<EnemyStateManager>();
+           
             
             _deathGuard = FindObjectOfType<DeathGuard>();
             if (_deathGuard != null)
@@ -31,7 +30,7 @@ namespace State
                 _guardTransform = _deathGuard.transform; 
             }
             
-            ChangeState(new EnemyIdleState(_torchTransform, _towerTransform, _deathGuard, _animator, _enemyStateManager, _enemyAttackAreas));
+            ChangeState(new EnemyIdleState(_torchTransform, _towerTransform, _deathGuard, _animator, this, _enemyAttackAreas));
         }
         
         public void Initialize(PolygonCollider2D[] enemyAttackAreas)

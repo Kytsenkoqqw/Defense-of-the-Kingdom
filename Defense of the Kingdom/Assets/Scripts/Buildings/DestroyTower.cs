@@ -18,12 +18,13 @@ public class DestroyTower : MonoBehaviour, IBurningBuilding
             {
                 obj.SetActive(false);
             } 
-        }
+        } 
     }
 
     private void Update()
     {
         BurningBuilding();
+        StopBurningBuilding();
     }
     
     public void BurningBuilding()
@@ -40,9 +41,9 @@ public class DestroyTower : MonoBehaviour, IBurningBuilding
         }
     }
 
-    public void StopBurningBuilding()
+    public void StopBurningBuilding( )
     {
-        if (_healthSystem.currentHealth > _healthSystem.maxHealth / 2)
+        if (_healthSystem.currentHealth > _healthSystem.maxHealth / 2) 
         {
             foreach (GameObject obj in _flame)
             {

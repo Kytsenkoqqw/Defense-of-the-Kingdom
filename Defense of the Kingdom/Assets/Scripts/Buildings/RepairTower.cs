@@ -15,6 +15,7 @@ namespace Buildings
         {
             _repairButton.onClick.AddListener(RepairBuilding);
             _repairButton.gameObject.SetActive(false);
+           
         }
 
         private void OnMouseDown()
