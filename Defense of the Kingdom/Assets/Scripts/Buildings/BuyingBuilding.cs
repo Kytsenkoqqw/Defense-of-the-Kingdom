@@ -15,7 +15,7 @@ public class BuyingBuilding : MonoBehaviour
     [SerializeField] private GameObject _buyingPanel;
     [SerializeField] private GameObject _buildingPrefab;
     [SerializeField] private Coins _coins;
-    [SerializeField] private int _buildingPrice;
+    [SerializeField] public int _buildingPrice;
     [SerializeField] private Image _redAlert;
     private PlacementBuilding _placementManager; // Скрипт для управления перемещением зданий
     private bool _yoyTime;

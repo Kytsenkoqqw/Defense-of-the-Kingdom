@@ -2,6 +2,7 @@
 using System.Security.Cryptography;
 using Currensy;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 namespace Buildings
@@ -11,6 +12,9 @@ namespace Buildings
         [SerializeField] private LayerMask _groundLayer;
         private GameObject _currentBuilding;  // Храним текущее здание, которое двигаем за мышью
         private bool _isPlacingBuilding = false;
+        [SerializeField] private BuyingBuilding _buyingBuilding;
+        [SerializeField] private Coins _coins;
+        
 
         private void Update()
         {
@@ -23,6 +27,7 @@ namespace Buildings
                 {
                     PlaceBuilding();
                 }
+                CancelPlaceBuilding();
             }
         }
 
@@ -50,6 +55,16 @@ namespace Buildings
         {
             _isPlacingBuilding = false;
             _currentBuilding = null;
+            //_coins.SpendCurrency(_buyingBuilding._buildingPrice);
+        }
+
+        private void CancelPlaceBuilding()
+        {
+            if (Input.GetKeyUp(KeyCode.Escape))
+            {
+                Destroy(_currentBuilding);
+                _coins.AddCurrency(_buyingBuilding._buildingPrice);
+            }
         }
     }
 }

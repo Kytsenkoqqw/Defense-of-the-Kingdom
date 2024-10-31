@@ -10,22 +10,29 @@ public class SelectPawnAction : MonoBehaviour
     [SerializeField] private Transform _transformChoisePanel;
     [SerializeField] private Transform _buildButton;
     [SerializeField] private Transform _repairButton;
+    [SerializeField] private Outline _outline;
+
+
+    private void Start()
+    {
+        _outline.enabled = false;
+    }
 
     private void OnMouseDown()
     {
         _choisePanel.SetActive(true);
-        _transformChoisePanel.DOScale(new Vector3(0.01f, 0.01f, 0), 0.5f);
+        _transformChoisePanel.DOScale(new Vector3(0.01f, 0.01f, 0), 0.5f).SetEase(Ease.InOutQuad);
         _repairButton.DOLocalMoveX(35, 0.5f);
         _buildButton.DOLocalMoveX(-35, 0.5f);
     }
 
+    private void OnMouseEnter()
+    {
+        _outline.enabled = true;
+    }
+
     private void OnMouseExit()
     {
-        _transformChoisePanel.DOScale(new Vector3(0, 0, 0), 0.5f).OnComplete(() =>
-        {
-            _choisePanel.SetActive(false);
-        });
-        _repairButton.DOMoveX(0, 0.5f);
-        _buildButton.DOMoveX(0, 0.5f);
+        _outline.enabled = false;
     }
 }
