@@ -964,7 +964,9 @@
             <e p="BuyingPawn.cs" t="Include" />
             <e p="DestroyTower.cs" t="Include" />
             <e p="IBurningBuilding.cs" t="Include" />
+            <e p="IRepairBuilding.cs" t="Include" />
             <e p="PlacementBuilding.cs" t="Include" />
+            <e p="RepairTower.cs" t="Include" />
           </e>
           <e p="Camera" t="Include">
             <e p="CameraFollow.cs" t="Include" />

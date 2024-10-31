@@ -3,5 +3,6 @@
     public interface IBurningBuilding
     {
         void BurningBuilding();
+        void StopBurningBuilding();
     }
 }

@@ -39,4 +39,18 @@ public class DestroyTower : MonoBehaviour, IBurningBuilding
             }
         }
     }
+
+    public void StopBurningBuilding()
+    {
+        if (_healthSystem.currentHealth > _healthSystem.maxHealth / 2)
+        {
+            foreach (GameObject obj in _flame)
+            {
+                if (obj != null) 
+                {
+                    obj.SetActive(false);
+                }
+            }
+        }
+    }
 }

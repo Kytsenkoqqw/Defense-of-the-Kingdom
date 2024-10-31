@@ -53,8 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/AttackAreasInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyInstaller.cs" />
@@ -103,6 +101,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/PlacementBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/IBurningBuilding.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/IRepairBuilding.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/RepairTower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/DestroyTower.cs" />
       </list>
     </option>
@@ -217,7 +217,7 @@
       <workItem from="1730108834853" duration="6266000" />
       <workItem from="1730283060305" duration="741000" />
       <workItem from="1730372257050" duration="9003000" />
-      <workItem from="1730397663413" duration="3304000" />
+      <workItem from="1730397663413" duration="4534000" />
     </task>
     <servers />
   </component>
