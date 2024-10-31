@@ -9,7 +9,6 @@ namespace Buildings
 {
     public class PlacementBuilding : MonoBehaviour
     {
-        [SerializeField] private LayerMask _groundLayer;
         private GameObject _currentBuilding;  // Храним текущее здание, которое двигаем за мышью
         private bool _isPlacingBuilding = false;
         [SerializeField] private BuyingBuilding _buyingBuilding;
