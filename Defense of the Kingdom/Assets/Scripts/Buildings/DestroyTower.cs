@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Buildings;
 using TMPro;
 using UnityEngine;
@@ -25,6 +26,7 @@ public class DestroyTower : MonoBehaviour, IBurningBuilding
     {
         BurningBuilding();
         StopBurningBuilding();
+        TowerDestroy();
     }
     
     public void BurningBuilding()
@@ -52,6 +54,14 @@ public class DestroyTower : MonoBehaviour, IBurningBuilding
                     obj.SetActive(false);
                 }
             }
+        }
+    }
+
+    private void TowerDestroy()
+    {
+        if (_healthSystem.currentHealth <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }

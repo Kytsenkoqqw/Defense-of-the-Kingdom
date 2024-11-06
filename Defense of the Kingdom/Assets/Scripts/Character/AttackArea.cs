@@ -11,7 +11,7 @@ public class AttackArea : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.TryGetComponent<DestroyTower>(out var destroyTower) && other.TryGetComponent<HealthSystem>(out var heroHealth))
+        if (other.gameObject.TryGetComponent<HealthSystem>(out var destroyTower) && other.TryGetComponent<HealthSystem>(out var heroHealth))
         {
             Debug.Log("bam");
             heroHealth.TakeDamage(_damage);

@@ -962,6 +962,7 @@
             <e p="BuildingConstructionGrid.cs" t="Include" />
             <e p="BuyingBuilding.cs" t="Include" />
             <e p="BuyingPawn.cs" t="Include" />
+            <e p="DestroyHouse.cs" t="Include" />
             <e p="DestroyTower.cs" t="Include" />
             <e p="IBurningBuilding.cs" t="Include" />
             <e p="IRepairBuilding.cs" t="Include" />

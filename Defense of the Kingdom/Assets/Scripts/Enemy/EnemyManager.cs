@@ -52,7 +52,7 @@ public class EnemyManager : MonoBehaviour
     {
         foreach (GameObject enemy in _enemies)
         {
-            if (enemy.activeSelf)
+            if (enemy != null && enemy.activeSelf)
             {
                 return; // Если хоть один враг активен, возвращаемся
             }
