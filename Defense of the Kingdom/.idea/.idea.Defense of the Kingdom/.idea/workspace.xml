@@ -87,7 +87,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/CustomWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuildingConstructionGrid.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tree/TreeFelling.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyFightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyBreakBuildingState.cs" />
@@ -96,14 +95,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/IRepairBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/StateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyStateManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingBuilding.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/PlacementBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/RepairTower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/IBurningBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/DestroyTower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyIdleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingBuilding.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/PlacementBuilding.cs" />
       </list>
     </option>
   </component>
@@ -219,7 +219,7 @@
       <workItem from="1730372257050" duration="9003000" />
       <workItem from="1730397663413" duration="4697000" />
       <workItem from="1730403275415" duration="3294000" />
-      <workItem from="1730896548736" duration="2194000" />
+      <workItem from="1730896548736" duration="5250000" />
     </task>
     <servers />
   </component>

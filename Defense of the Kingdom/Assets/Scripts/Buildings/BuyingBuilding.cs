@@ -11,13 +11,16 @@ using UnityEngine.UI;
 
 public class BuyingBuilding : MonoBehaviour
 {
+    public int _buildingPrice;
     [SerializeField] private Transform _transformBuyingPanel;
     [SerializeField] private GameObject _buyingPanel;
-    [SerializeField] private GameObject _buildingPrefab;
+    [SerializeField] private GameObject _housePrefab;
+    [SerializeField] private GameObject _towerPrefab;
     [SerializeField] private Coins _coins;
-    [SerializeField] public int _buildingPrice;
+    [SerializeField] public int _towerPrice;
+    [SerializeField] private int _housePrice;
     [SerializeField] private Image _redAlert;
-    private PlacementBuilding _placementManager; // Скрипт для управления перемещением зданий
+    private PlacementBuilding _placementManager; 
     private bool _yoyTime;
 
     private void Awake()
@@ -25,21 +28,36 @@ public class BuyingBuilding : MonoBehaviour
         _placementManager = FindObjectOfType<PlacementBuilding>();
     }
 
-    public void BuyBuildings()
+    public void BuyHouse()
     {
-        if (_coins.value < _buildingPrice)
+        if (_coins.value < _housePrice)
         {
             RedAlert();
-            Debug.Log("nema zolota");
+            Debug.Log("Nema Zolota");
         }
         else
         {
             OffBuyingPanel();
-            GameObject building = Instantiate(_buildingPrefab);    
-            //_coins.SpendCurrency(_buildingPrice);
-            
-            // Передаём объект в систему перемещения
-            _placementManager.StartPlacingBuilding(building);
+            GameObject house = Instantiate(_housePrefab);
+            _buildingPrice = _housePrice;
+            _placementManager.StartPlacingBuilding(house, _housePrice);
+        }
+        
+    }
+
+    public void BuyTower()
+    {
+        if (_coins.value < _towerPrice)
+        {
+            RedAlert();
+            Debug.Log("Nema Zolota");
+        }
+        else
+        {
+            OffBuyingPanel();
+            GameObject tower = Instantiate(_towerPrefab);
+            _buildingPrice = _towerPrice;
+            _placementManager.StartPlacingBuilding(tower, _towerPrice);
         }
     }
 
@@ -48,7 +66,7 @@ public class BuyingBuilding : MonoBehaviour
         if (_yoyTime)
             return;
 
-        if (_coins.value < _buildingPrice)
+        if (_coins.value < _towerPrice && _coins.value < _housePrice)
         {
             _yoyTime = true;
             _redAlert.DOKill();

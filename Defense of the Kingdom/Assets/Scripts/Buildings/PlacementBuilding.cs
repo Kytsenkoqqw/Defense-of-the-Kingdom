@@ -13,8 +13,8 @@ namespace Buildings
         private bool _isPlacingBuilding = false;
         [SerializeField] private BuyingBuilding _buyingBuilding;
         [SerializeField] private Coins _coins;
+        private int _currentBuildingPrice; 
         
-
         private void Update()
         {
             if (_isPlacingBuilding)
@@ -31,10 +31,11 @@ namespace Buildings
         }
 
         // Начало перемещения здания за мышью
-        public void StartPlacingBuilding(GameObject building)
+        public void StartPlacingBuilding(GameObject building, int buildingPrice)
         {
             _currentBuilding = building;
             _isPlacingBuilding = true;
+            _currentBuildingPrice = buildingPrice;
         }
 
         // Метод для перемещения здания за мышью
@@ -54,7 +55,7 @@ namespace Buildings
         {
             _isPlacingBuilding = false;
             _currentBuilding = null;
-            _coins.SpendCurrency(_buyingBuilding._buildingPrice);
+            _coins.SpendCurrency(_currentBuildingPrice);
         }
 
         private void CancelPlaceBuilding()
@@ -62,7 +63,6 @@ namespace Buildings
             if (Input.GetKeyUp(KeyCode.Escape))
             {
                 Destroy(_currentBuilding);
-               // _coins.AddCurrency(_buyingBuilding._buildingPrice);
             }
         }
     }

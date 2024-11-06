@@ -358,8 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9749f3a2d743480bb5b6719f975cc178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _buyingBuilding: {fileID: 0}
-  _coins: {fileID: 0}
+  _coins: {fileID: 6498725901869337816, guid: 0b1f612f29eaeaf499e14cc0976c1a43, type: 3}
 --- !u!114 &4237227521880920999
 MonoBehaviour:
   m_ObjectHideFlags: 0
