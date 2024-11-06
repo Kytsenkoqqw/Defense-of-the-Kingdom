@@ -33,7 +33,6 @@ namespace State
         {
             // Найти ближайшего стражника
             FindNewGuard();
-            FindNewTower();
             Debug.Log("Enter Enemy Idle State");
 
             // Подписываемся на событие смерти врага
@@ -52,13 +51,11 @@ namespace State
                 if (!_isFighting)
                 {
                     MoveTowardsGuard();
-                    MoveTowardsTower();
                 }
             }
             else
             {
                 FindNewGuard(); // Попробовать найти нового стражника
-                FindNewTower();
             }
         }
 
@@ -100,39 +97,7 @@ namespace State
             }
         }
 
-        private void MoveTowardsTower()
-        {
-            if (_destroyTower == null)
-            {
-                Debug.LogWarning("DestroyTower is null. Cannot move towards tower.");
-                return; // Прекращаем выполнение метода, если стражник не найден
-            }
-
-            // Двигаем врага к цели (стражнику)
-            _torchTransform.position = Vector2.MoveTowards(_torchTransform.position, _towerTransform.transform.position, _speed * Time.deltaTime);
-            _animator.SetBool("IsMoving", true);
-
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(_torchTransform.position, _detectionRadius);
-
-            foreach (Collider2D collider in colliders)
-            {
-                if (collider.GetComponent<DestroyTower>() != null)
-                {
-                    Debug.Log("Enemy detected, switching to FightState");
-                    Transform _towerTransform = collider.transform;
-                    _enemyStateManager.ChangeState(new EnemyFightState(_torchTransform,_towerTransform, _animator, _guardTransform, _enemyStateManager, _enemyAttackAreas));
-                    return;
-                }
-            }
-
-            // Определяем направление и разворачиваем врага, если нужно
-            Vector3 direction = _towerTransform.transform.position - _torchTransform.position;
-            if ((direction.x > 0 && _torchTransform.localScale.x < 0) ||
-                (direction.x < 0 && _torchTransform.localScale.x > 0))
-            {
-                Flip();
-            }
-        }
+      
 
         private void FindNewGuard()
         {
@@ -145,20 +110,6 @@ namespace State
                 if (guardHealth != null)
                 {
                     guardHealth.OnDeath.AddListener(OnGuardDeath);
-                }
-            }
-        }
-
-        private void FindNewTower()
-        {
-            _destroyTower = FindObjectOfType<DestroyTower>();
-            if (_destroyTower != null)
-            {
-                HealthSystem towerHealth = _destroyTower.GetComponent<HealthSystem>();
-                if (towerHealth != null)
-                {
-                    Debug.Log("search new tower");
-                    towerHealth.OnDeath.AddListener(OnGuardDeath);
                 }
             }
         }
