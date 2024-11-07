@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class TreeFelling : MonoBehaviour
 {
     [SerializeField] private GameObject _treeButton;
+    [SerializeField] private Transform _treeTransform;
     [SerializeField] private GameObject _loot;
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -25,7 +26,8 @@ public class TreeFelling : MonoBehaviour
     private IEnumerator FellingTree()
     {
         yield return new WaitForSeconds(3f);
-        Instantiate(_loot);
+        Instantiate(_loot,_treeTransform.position, Quaternion.identity);
+      
         Destroy(gameObject);
     }
 }
