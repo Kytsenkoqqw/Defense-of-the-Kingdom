@@ -1,48 +1,45 @@
 ﻿using System;
 using System.Collections;
+using Currensy;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Buildings
 {
     public class RepairTower : MonoBehaviour, IRepairBuilding
-    {
-        public int woodCount  => 5;
+    { 
+        private Wood _wood;
         [SerializeField] private Button _repairButton;
         [SerializeField] private HealthSystem _healthSystem;
-        
 
-        private void Start()
+        private void Awake()
+        {
+            _wood = FindObjectOfType<Wood>();
+        }
+
+        private void OnEnable()
         {
             _repairButton.onClick.AddListener(RepairBuilding);
-            _repairButton.gameObject.SetActive(false);
-           
         }
+
 
         private void OnMouseDown()
         {
             _repairButton.gameObject.SetActive(true);
         }
-        
 
         public void RepairBuilding()
         {
-            StartCoroutine(Repair());
-        }
-
-        private IEnumerator Repair()
-        {
-            if (woodCount >= 2)
+            if (_wood.value < 2)
             {
-                yield return new WaitForSeconds(3);
-                _healthSystem.Heal(60);
+                Debug.Log("Wood " + _wood.value);
+                Debug.Log("nema drov");
             }
             else
             {
-                Debug.Log("nema drov");
+                _healthSystem.Heal(60);
+                _wood.SpendCurrency(2);
             }
-            
-            
         }
 
         private void OnDisable()

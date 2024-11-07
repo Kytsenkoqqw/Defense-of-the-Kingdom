@@ -17,17 +17,17 @@ namespace Currensy
         private void OnEnable()
         {
             _coins.OnValueChangedEvent += UpdateCoinsUI;
-            _wood.OnValueChangedEvent += UpdateGemsUI;
+            _wood.OnValueChangedEvent += UpdateWoodUI;
 
             // Инициализируем UI текущими значениями при включении
             UpdateCoinsUI(_coins.value);
-            UpdateGemsUI(_wood.value);
+            UpdateWoodUI(_wood.value);
         }
 
         private void OnDisable()
         {
             _coins.OnValueChangedEvent -= UpdateCoinsUI;
-            _wood.OnValueChangedEvent -= UpdateGemsUI;
+            _wood.OnValueChangedEvent -= UpdateWoodUI;
         }
 
         private void UpdateCoinsUI(int newValue)
@@ -35,7 +35,7 @@ namespace Currensy
             _coinsText.text = newValue.ToString();
         }
 
-        private void UpdateGemsUI(int newValue)
+        private void UpdateWoodUI(int newValue)
         {
             _woodText.text = newValue.ToString();
         }

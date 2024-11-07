@@ -16,15 +16,16 @@ public class BuyingBuilding : MonoBehaviour
     [SerializeField] private GameObject _buyingPanel;
     [SerializeField] private GameObject _housePrefab;
     [SerializeField] private GameObject _towerPrefab;
-    [SerializeField] private Coins _coins;
     [SerializeField] public int _towerPrice;
     [SerializeField] private int _housePrice;
     [SerializeField] private Image _redAlert;
+    private Coins _coins;
     private PlacementBuilding _placementManager; 
     private bool _yoyTime;
 
     private void Awake()
     {
+        _coins = FindObjectOfType<Coins>();
         _placementManager = FindObjectOfType<PlacementBuilding>();
     }
 
@@ -33,7 +34,6 @@ public class BuyingBuilding : MonoBehaviour
         if (_coins.value < _housePrice)
         {
             RedAlert();
-            Debug.Log("Nema Zolota");
         }
         else
         {
