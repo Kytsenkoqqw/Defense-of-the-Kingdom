@@ -53,11 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ObjectPool/ObjectPool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Loot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/OpenBuyGuardMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/RedAlert.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/BuyingGuard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/OpenGuardShopPanel.cs" />
@@ -89,10 +84,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyBreakBuildingState.cs" />
         <option value="$PROJECT_DIR$/Assets/Material/Outline.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/SelectPawnAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/IRepairBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/StateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyStateManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/RepairTower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Health/HealthSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/IBurningBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyIdleState.cs" />
@@ -104,6 +97,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/DestroyHouse.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tree/TreeFelling.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/IRepairBuilding.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/RepairTower.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Wood.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/CoinsUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/DestoryWood.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/TakeWood.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/DestroyWood.cs" />
       </list>
     </option>
   </component>
@@ -220,7 +220,7 @@
       <workItem from="1730397663413" duration="4697000" />
       <workItem from="1730403275415" duration="3294000" />
       <workItem from="1730896548736" duration="8272000" />
-      <workItem from="1730985234336" duration="1082000" />
+      <workItem from="1730985234336" duration="3103000" />
     </task>
     <servers />
   </component>
@@ -319,10 +319,10 @@
     </state>
     <state width="1877" height="374" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1730915773260" />
     <state width="1877" height="303" key="GridCell.Tab.3.right/0.0.1920.1050@0.0.1920.1050" timestamp="1727704309731" />
-    <state x="784" y="236" key="RiderGenerateDialog" timestamp="1730907198239">
+    <state x="784" y="236" key="RiderGenerateDialog" timestamp="1730987480667">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="784" y="236" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1730907198239" />
+    <state x="784" y="236" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1730987480667" />
     <state x="784" y="238" key="RiderGenerateDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1727706271750" />
     <state x="531" y="234" key="SettingsEditor" timestamp="1728300404469">
       <screen x="0" y="0" width="1920" height="1040" />

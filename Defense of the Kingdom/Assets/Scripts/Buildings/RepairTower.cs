@@ -7,6 +7,7 @@ namespace Buildings
 {
     public class RepairTower : MonoBehaviour, IRepairBuilding
     {
+        public int woodCount  => 5;
         [SerializeField] private Button _repairButton;
         [SerializeField] private HealthSystem _healthSystem;
         
@@ -22,7 +23,7 @@ namespace Buildings
         {
             _repairButton.gameObject.SetActive(true);
         }
-
+        
 
         public void RepairBuilding()
         {
@@ -31,8 +32,16 @@ namespace Buildings
 
         private IEnumerator Repair()
         {
-            yield return new WaitForSeconds(3);
-            _healthSystem.Heal(60);
+            if (woodCount >= 2)
+            {
+                yield return new WaitForSeconds(3);
+                _healthSystem.Heal(60);
+            }
+            else
+            {
+                Debug.Log("nema drov");
+            }
+            
             
         }
 
