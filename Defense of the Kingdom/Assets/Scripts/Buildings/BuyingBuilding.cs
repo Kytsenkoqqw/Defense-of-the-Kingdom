@@ -18,7 +18,9 @@ public class BuyingBuilding : MonoBehaviour
     [SerializeField] private GameObject _towerPrefab;
     [SerializeField] public int _towerPrice;
     [SerializeField] private int _housePrice;
-    [SerializeField] private Image _redAlert;
+    [SerializeField] private Image _houseRedAlert;
+    [SerializeField] private Image _towerRedAlert;
+    
     private Coins _coins;
     private PlacementBuilding _placementManager; 
     private bool _yoyTime;
@@ -33,7 +35,7 @@ public class BuyingBuilding : MonoBehaviour
     {
         if (_coins.value < _housePrice)
         {
-            RedAlert();
+            RedAlert(_houseRedAlert);
         }
         else
         {
@@ -49,7 +51,7 @@ public class BuyingBuilding : MonoBehaviour
     {
         if (_coins.value < _towerPrice)
         {
-            RedAlert();
+            RedAlert(_towerRedAlert);
             Debug.Log("Nema Zolota");
         }
         else
@@ -61,16 +63,16 @@ public class BuyingBuilding : MonoBehaviour
         }
     }
 
-    private void RedAlert()
+    private void RedAlert(Image redAlert)
     {
         if (_yoyTime)
             return;
 
-        if (_coins.value < _towerPrice && _coins.value < _housePrice)
+        if (_coins.value < _towerPrice || _coins.value < _housePrice)
         {
             _yoyTime = true;
-            _redAlert.DOKill();
-            _redAlert.DOColor(Color.red, 0.5f).SetLoops(2, LoopType.Yoyo).OnComplete(() => { _yoyTime = false; });
+            redAlert.DOKill();
+            redAlert.DOColor(Color.red, 0.5f).SetLoops(2, LoopType.Yoyo).OnComplete(() => { _yoyTime = false; });
             Debug.Log("Не хватает золота");
         }
     }

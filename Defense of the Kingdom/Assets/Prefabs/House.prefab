@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1786215040973297877}
   - component: {fileID: 211619203780414226}
   m_Layer: 9
-  m_Name: Shop
+  m_Name: House
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSystem: {fileID: 1786215040973297877}
-  healthBarImage: {fileID: 0}
+  healthBarImage: {fileID: 1125078183843615566}
 --- !u!1 &3345760104040429206
 GameObject:
   m_ObjectHideFlags: 0
