@@ -7,6 +7,24 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Kalkatos" t="Include">
+          <e p="DottedArrow" t="Include">
+            <e p="Documentation" t="Include">
+              <e p="Changelog.txt" t="Include" />
+            </e>
+            <e p="Example" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Card.cs" t="Include" />
+                <e p="CombatManager.cs" t="Include" />
+                <e p="King.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="ActivateOnMousePress.cs" t="Include" />
+              <e p="Arrow.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DoTween" t="Include">
@@ -1028,6 +1046,7 @@
             <e p="ObjectPool.cs" t="Include" />
           </e>
           <e p="Pawn" t="Include">
+            <e p="DragArrow.cs" t="Include" />
             <e p="SelectPawnAction.cs" t="Include" />
           </e>
           <e p="State" t="Include">
