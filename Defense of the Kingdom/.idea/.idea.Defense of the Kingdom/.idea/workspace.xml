@@ -103,8 +103,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/CoinsUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/RepairTower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingBuilding.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/SelectPawnAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/DragArrow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/SelectPawnAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Kalkatos/DottedArrow/Scripts/Arrow.cs" />
       </list>
     </option>
@@ -226,7 +226,8 @@
       <workItem from="1731013888419" duration="1551000" />
       <workItem from="1731069932859" duration="3944000" />
       <workItem from="1731078452870" duration="1710000" />
-      <workItem from="1731330043521" duration="3896000" />
+      <workItem from="1731330043521" duration="4150000" />
+      <workItem from="1731418978336" duration="1901000" />
     </task>
     <servers />
   </component>

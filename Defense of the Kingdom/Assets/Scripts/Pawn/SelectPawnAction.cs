@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class SelectPawnAction : MonoBehaviour
 {
-    /*[SerializeField] private GameObject _choisePanel;
+    [SerializeField] private GameObject _choisePanel;
     [SerializeField] private Transform _transformChoisePanel;
     [SerializeField] private Transform _buildButton;
     [SerializeField] private Transform _repairButton;
@@ -34,5 +34,5 @@ public class SelectPawnAction : MonoBehaviour
     private void OnMouseExit()
     {
         _outline.enabled = false;
-    }*/
+    }
 }

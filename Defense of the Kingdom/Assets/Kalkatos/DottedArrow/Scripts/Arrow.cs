@@ -35,12 +35,25 @@ namespace Kalkatos.DottedArrow
 		{
 			if (origin == null)
 				return;
-			Vector2 originPosOnScreen = mainCamera.WorldToScreenPoint(origin.position);
-			myRect.anchoredPosition = new Vector2(originPosOnScreen.x - Screen.width / 2, originPosOnScreen.y - Screen.height / 2) / canvas.scaleFactor;
-			Vector2 differenceToMouse = Input.mousePosition - (Vector3)originPosOnScreen;
+    
+			// Преобразование мировых координат origin в локальные координаты Canvas
+			Vector2 originLocalPosition = canvas.transform.InverseTransformPoint(origin.position);
+    
+			// Установка позиции стрелки относительно локальных координат origin
+			myRect.anchoredPosition = originLocalPosition;
+
+			// Преобразование позиции мыши в локальные координаты на Canvas
+			Vector2 mouseLocalPosition = canvas.transform.InverseTransformPoint(mainCamera.ScreenToWorldPoint(Input.mousePosition));
+    
+			// Расчёт направления от origin к мыши
+			Vector2 differenceToMouse = mouseLocalPosition - originLocalPosition;
 			differenceToMouse.Scale(new Vector2(1f / myRect.localScale.x, 1f / myRect.localScale.y));
+    
+			// Направление стрелки на указатель мыши
 			transform.up = differenceToMouse;
-			baseRect.anchorMax = new Vector2(baseRect.anchorMax.x, differenceToMouse.magnitude / canvas.scaleFactor / baseHeight);
+
+			// Установка длины стрелки в зависимости от расстояния до мыши
+			baseRect.anchorMax = new Vector2(baseRect.anchorMax.x, differenceToMouse.magnitude * myRect.localScale.x / baseHeight);
 		}
 
 		private void SetActive (bool b)
