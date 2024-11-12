@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Kalkatos.DottedArrow
 {
@@ -6,13 +7,20 @@ namespace Kalkatos.DottedArrow
 	{
 		[SerializeField] private Transform origin;
 		[SerializeField] private Arrow arrow;
-
-		private void Update ()
+		[SerializeField] private SelectPawnAction _selectPawnAction;
+		
+		public void OnArrowCursor ()
 		{
-			if (Input.GetMouseButtonDown(0))
-				arrow.SetupAndActivate(origin);
-			else if (Input.GetMouseButtonUp(0))
+			arrow.SetupAndActivate(origin);
+			_selectPawnAction.ClosedPawnPanel();
+		}
+
+		private void Update()
+		{
+			if (Input.GetMouseButtonDown(1))
+			{
 				arrow.Deactivate();
+			}
 		}
 	}
 }

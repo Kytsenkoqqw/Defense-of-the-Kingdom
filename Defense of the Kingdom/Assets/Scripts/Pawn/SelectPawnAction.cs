@@ -26,6 +26,14 @@ public class SelectPawnAction : MonoBehaviour
         _buildButton.DOLocalMoveX(-35, 0.5f);
     }
 
+    public void ClosedPawnPanel()
+    {
+        _transformChoisePanel.DOScale(new Vector3(0, 0, 0), 0.5f).SetEase(Ease.InOutQuad);
+        _repairButton.DOLocalMoveX(0, 0.5f);
+        _buildButton.DOLocalMoveX(0, 0.5f);
+        _choisePanel.SetActive(false);
+    }
+
     private void OnMouseEnter()
     {
         _outline.enabled = true;

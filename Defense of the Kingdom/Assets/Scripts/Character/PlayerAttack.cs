@@ -2,12 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private GameObject _attackArea;
     private Animator _animator;
-
 
     private void Start()
     {
@@ -22,7 +22,8 @@ public class PlayerAttack : MonoBehaviour
 
     private void FrontAttack()
     {
-        if (Input.GetMouseButtonDown(0))
+        // Проверка, чтобы атака выполнялась только если курсор не над UI элементом
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             StartCoroutine(OnAttackArea());
             _animator.SetTrigger("Fight");
