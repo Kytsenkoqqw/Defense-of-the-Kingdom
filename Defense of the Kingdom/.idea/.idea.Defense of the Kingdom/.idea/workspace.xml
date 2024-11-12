@@ -11,7 +11,6 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@14.0.11/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingBuilding.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pawn/DragArrow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/GuardFightState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPS/FPSCounter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
@@ -48,6 +47,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/MoveEnemyOnGuards.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageTrigger/ShowStartMessage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pawn/PawnRepairBuilding.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/StateManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Image.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" root0="FORCE_HIGHLIGHTING" />
@@ -55,8 +55,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/FreeCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/DeathEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardChaseState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardFightState.cs" />
@@ -104,8 +102,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/DragArrow.cs" />
         <option value="$PROJECT_DIR$/Assets/Kalkatos/DottedArrow/Scripts/Arrow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/RepairBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/SelectPawnAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Kalkatos/DottedArrow/Scripts/ActivateOnMousePress.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/PawnRepairBuilding.cs" />
       </list>
     </option>
   </component>
@@ -227,7 +227,8 @@
       <workItem from="1731069932859" duration="3944000" />
       <workItem from="1731078452870" duration="1710000" />
       <workItem from="1731330043521" duration="4150000" />
-      <workItem from="1731418978336" duration="3857000" />
+      <workItem from="1731418978336" duration="4786000" />
+      <workItem from="1731426064309" duration="4025000" />
     </task>
     <servers />
   </component>

@@ -1046,7 +1046,7 @@
             <e p="ObjectPool.cs" t="Include" />
           </e>
           <e p="Pawn" t="Include">
-            <e p="DragArrow.cs" t="Include" />
+            <e p="PawnRepairBuilding.cs" t="Include" />
             <e p="SelectPawnAction.cs" t="Include" />
           </e>
           <e p="State" t="Include">
