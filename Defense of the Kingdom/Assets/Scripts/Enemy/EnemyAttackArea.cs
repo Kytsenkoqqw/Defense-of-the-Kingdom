@@ -9,7 +9,7 @@ namespace Enemy
 
         private float _lastDamageTime = 0f;
 
-        private void OnTriggerEnter2D(Collider2D other)
+        private void OnTriggerStay2D(Collider2D other)
         {
             if (other.gameObject.GetComponent<DeathGuard>() && other.gameObject.GetComponent<DestroyTower>())
             {

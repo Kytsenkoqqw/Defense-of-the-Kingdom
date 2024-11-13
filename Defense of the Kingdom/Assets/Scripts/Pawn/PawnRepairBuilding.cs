@@ -2,14 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PawnRepairBuilding : MonoBehaviour
 {
+    public UnityEvent StartPawnMove;
     [SerializeField] private LayerMask interactableLayer; // Укажите слой объекта для фильтрации Raycast
     [SerializeField] private Transform[] _buildings; // Массив объектов для перемещения
     [SerializeField] private float _pawnSpeed = 2f; // Скорость движения объекта
-
+    
     private Transform targetBuilding = null; // Текущая цель для перемещения
     private bool isMoving = false; // Флаг, который показывает, что нужно двигаться
 
@@ -47,6 +50,7 @@ public class PawnRepairBuilding : MonoBehaviour
         // Если есть цель, начинаем движение
         if (isMoving && targetBuilding != null)
         {
+            StartPawnMove?.Invoke();
             // Двигаем объект к выбранному зданию
             transform.position = Vector2.MoveTowards(transform.position, targetBuilding.position, _pawnSpeed * Time.deltaTime);
 

@@ -21,6 +21,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Selectable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttackArea.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buildings/BlinkEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/OpenGuardShopPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guards/AttackAreasInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buildings/BuildingConstructionGrid.cs" root0="FORCE_HIGHLIGHTING" />
@@ -55,9 +56,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SpawnEnemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardChaseState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardFightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/OpenPauseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/OpenBuildingsShopPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/KingdomBuildings/ClosedBuildingsPanel.cs" />
@@ -75,7 +73,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/KingdomBuildings/ClosedBuildingsShopPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/CustomWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuildingConstructionGrid.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyFightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyBreakBuildingState.cs" />
         <option value="$PROJECT_DIR$/Assets/Material/Outline.shader" />
@@ -104,8 +101,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/RepairBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/SelectPawnAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Kalkatos/DottedArrow/Scripts/ActivateOnMousePress.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttackArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/PawnRepairBuilding.cs" />
+        <option value="$PROJECT_DIR$/Assets/OutlineEffect/OutlineEffect/OutlineEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Kalkatos/DottedArrow/Scripts/ActivateOnMousePress.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BlinkEffect.cs" />
       </list>
     </option>
   </component>
@@ -228,7 +229,8 @@
       <workItem from="1731078452870" duration="1710000" />
       <workItem from="1731330043521" duration="4150000" />
       <workItem from="1731418978336" duration="4786000" />
-      <workItem from="1731426064309" duration="4025000" />
+      <workItem from="1731426064309" duration="4619000" />
+      <workItem from="1731506657685" duration="4405000" />
     </task>
     <servers />
   </component>
@@ -341,10 +343,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="953" y="0" width="974" height="1057" key="dock-window-1/0.0.1920.1050@0.0.1920.1050" timestamp="1727098357837" />
-    <state x="538" y="330" width="672" height="678" key="search.everywhere.popup" timestamp="1730400692294">
+    <state x="538" y="330" width="672" height="678" key="search.everywhere.popup" timestamp="1731507425065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="538" y="330" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1730400692294" />
+    <state x="538" y="330" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1731507425065" />
     <state x="540" y="344" width="672" height="685" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1726838470634" />
   </component>
 </project>
