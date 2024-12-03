@@ -574,10 +574,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartBlink:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5027814182921609619}
+        m_TargetAssemblyTypeName: BlinkEffect, Assembly-CSharp
+        m_MethodName: StartBlinking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   startColor: {r: 1, g: 1, b: 1, a: 1}
   blinkColor: {r: 0.9811321, g: 0.926903, b: 0.5970096, a: 1}
-  blinkSpeed: 0.5
+  blinkSpeed: 5
 --- !u!1 &7873919185015482438
 GameObject:
   m_ObjectHideFlags: 0

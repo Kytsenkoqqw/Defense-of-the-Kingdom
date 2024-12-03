@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Kalkatos.DottedArrow
 {
@@ -10,17 +11,16 @@ namespace Kalkatos.DottedArrow
 		[SerializeField] private SelectPawnAction _selectPawnAction;
 		[SerializeField] private PawnRepairBuilding _pawnRepairBuilding;
 		[SerializeField] private BlinkEffect _blinkEffect;
-		
 
 		private void OnEnable()
 		{
 			_pawnRepairBuilding.StartPawnMove.AddListener(OffArrow);
-			_blinkEffect.StartBlink.AddListener(OnArrowCursor);
 		}
 
-		public void OnArrowCursor ()
+		public void OnArrowCursor()
 		{
 			arrow.SetupAndActivate(origin);
+			_blinkEffect.StartBlinking(); // Включаем мерцание
 			_selectPawnAction.ClosedPawnPanel();
 		}
 
@@ -28,18 +28,19 @@ namespace Kalkatos.DottedArrow
 		{
 			if (Input.GetMouseButtonDown(1))
 			{
-				arrow.Deactivate();
+				OffArrow();
 			}
 		}
 
 		private void OnDisable()
 		{
 			_pawnRepairBuilding.StartPawnMove.RemoveListener(OffArrow);
-			_blinkEffect.StartBlink.RemoveListener(OnArrowCursor);
 		}
 
 		private void OffArrow()
 		{
+			Debug.Log("OffArrow");
+			_blinkEffect.StopBlinking(); // Останавливаем мерцание
 			arrow.Deactivate();
 		}
 	}

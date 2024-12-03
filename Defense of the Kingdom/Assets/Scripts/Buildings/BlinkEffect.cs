@@ -6,13 +6,12 @@ using UnityEngine.Events;
 
 public class BlinkEffect : MonoBehaviour
 {
-    public UnityEvent StartBlink;
     [SerializeField] private Color startColor = Color.white;  
     [SerializeField] private Color blinkColor = Color.red;    
     [SerializeField] private float blinkSpeed = 2f;           
 
     private Renderer objectRenderer;
-    private bool isBlinking;
+    public bool isBlinking;
 
     private void Start()
     {
@@ -24,21 +23,26 @@ public class BlinkEffect : MonoBehaviour
             enabled = false;
             return;
         }
+       // StartBlinking();
 
         objectRenderer.material.color = startColor;
-        StartBlinking();
     }
 
     private void Update()
     {
-        
+        if (isBlinking)
+        {
+            Debug.Log("Blink ");
+            StartBlinkEffect();
+        }
+       
+     
     }
 
-    private void StartBlinkEffect()
+    public void StartBlinkEffect()
     {
         if (isBlinking)
         {
-            StartBlink?.Invoke();
             // Плавно изменяем цвет между startColor и blinkColor
             float t = (Mathf.Sin(Time.time * blinkSpeed) + 1) / 2; // От 0 до 1
             objectRenderer.material.color = Color.Lerp(startColor, blinkColor, t);
@@ -47,6 +51,7 @@ public class BlinkEffect : MonoBehaviour
 
     public void StartBlinking()
     {
+        Debug.Log("Start Blinking");
         isBlinking = true;
     }
 

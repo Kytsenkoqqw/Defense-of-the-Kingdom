@@ -9534,6 +9534,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3873169321844454877, guid: 6dc72a6158fc3de4d96b22e22c623178, type: 3}
   m_PrefabInstance: {fileID: 1014203102}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &458598318 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5027814182921609619, guid: 6821d327a44c71044ae1d14902d0c490, type: 3}
+  m_PrefabInstance: {fileID: 1966455300}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a90b4afd0d5679a4c9385913ec114648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &461526091 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3873169321844454877, guid: 6dc72a6158fc3de4d96b22e22c623178, type: 3}
@@ -9674,6 +9685,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc72a6158fc3de4d96b22e22c623178, type: 3}
+--- !u!114 &505064282 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5685178019907275018, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+  m_PrefabInstance: {fileID: 765240536}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &510724699
 GameObject:
   m_ObjectHideFlags: 0
@@ -11674,6 +11696,54 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Pawn_Purple '
       objectReference: {fileID: 0}
+    - target: {fileID: 3216478657515424326, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+      propertyPath: _rapairPawnButton
+      value: 
+      objectReference: {fileID: 505064282}
+    - target: {fileID: 5685178019907275018, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685178019907275018, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685178019907275018, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 810852171}
+    - target: {fileID: 5685178019907275018, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 458598318}
+    - target: {fileID: 5685178019907275018, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685178019907275018, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnArrowCursor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685178019907275018, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: StartBlinking
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685178019907275018, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Kalkatos.DottedArrow.ActivateOnMousePress, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685178019907275018, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: BlinkEffect, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685178019907275018, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685178019907275018, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12113,6 +12183,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2715693801346431736, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
   m_PrefabInstance: {fileID: 765240536}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &810852171 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3216478657515424326, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
+  m_PrefabInstance: {fileID: 765240536}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d5f6b2d50f585a42986912525bd84cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &815852526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20012,6 +20093,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1464178917501850043, guid: 6821d327a44c71044ae1d14902d0c490, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4391623054429110600, guid: 6821d327a44c71044ae1d14902d0c490, type: 3}
       propertyPath: m_Name
       value: Tower_Purple
@@ -20054,6 +20139,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4965119000343938546, guid: 6821d327a44c71044ae1d14902d0c490, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5027814182921609619, guid: 6821d327a44c71044ae1d14902d0c490, type: 3}
+      propertyPath: blinkSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129982551015444492, guid: 6821d327a44c71044ae1d14902d0c490, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853935175834969244, guid: 6821d327a44c71044ae1d14902d0c490, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
