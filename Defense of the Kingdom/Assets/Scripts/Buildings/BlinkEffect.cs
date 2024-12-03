@@ -1,63 +1,60 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Kalkatos.DottedArrow;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class BlinkEffect : MonoBehaviour
 {
-    [SerializeField] private Color startColor = Color.white;  
-    [SerializeField] private Color blinkColor = Color.red;    
-    [SerializeField] private float blinkSpeed = 2f;           
-
+    [SerializeField] private Arrow _arrow;
+    
+    [SerializeField] private Color color1 = Color.red;  
+    [SerializeField] private Color color2 = Color.blue; 
+    [SerializeField] private float duration = 2.0f;
     private Renderer objectRenderer;
-    public bool isBlinking;
+    private bool _isBlinking;
+
+    private void OnEnable()
+    {
+        _arrow.OnArrow += StartBlinking;
+        _arrow.OffArrow += StopBlinking;
+    }
 
     private void Start()
     {
         objectRenderer = GetComponent<Renderer>();
-
-        if (objectRenderer == null)
-        {
-            Debug.LogError("На объекте отсутствует компонент Renderer.");
-            enabled = false;
-            return;
-        }
-       // StartBlinking();
-
-        objectRenderer.material.color = startColor;
     }
 
     private void Update()
     {
-        if (isBlinking)
+        if (_isBlinking)
         {
-            Debug.Log("Blink ");
-            StartBlinkEffect();
+           Blinking();
         }
-       
-     
     }
 
-    public void StartBlinkEffect()
+    private void OnDisable()
     {
-        if (isBlinking)
-        {
-            // Плавно изменяем цвет между startColor и blinkColor
-            float t = (Mathf.Sin(Time.time * blinkSpeed) + 1) / 2; // От 0 до 1
-            objectRenderer.material.color = Color.Lerp(startColor, blinkColor, t);
-        }
+        _arrow.OnArrow -= StartBlinking;
+        _arrow.OffArrow -= StopBlinking;
     }
 
     public void StartBlinking()
     {
-        Debug.Log("Start Blinking");
-        isBlinking = true;
+        _isBlinking = true;
     }
 
     public void StopBlinking()
     {
-        isBlinking = false;
-        objectRenderer.material.color = startColor; // Возвращаем объекту начальный цвет
+        _isBlinking = false;
+        objectRenderer.material.color = color1;
     }
+
+    private void Blinking()
+    {
+        float lerpTime = Mathf.PingPong(Time.time / duration, 1.0f);
+        objectRenderer.material.color = Color.Lerp(color1, color2, lerpTime);
+    }
+    
 }

@@ -93,7 +93,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/RepairTower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/DragArrow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Kalkatos/DottedArrow/Scripts/Arrow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/RepairBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/SelectPawnAction.cs" />
@@ -103,6 +102,7 @@
         <option value="$PROJECT_DIR$/Assets/OutlineEffect/OutlineEffect/OutlineEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BlinkEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Kalkatos/DottedArrow/Scripts/ActivateOnMousePress.cs" />
+        <option value="$PROJECT_DIR$/Assets/Kalkatos/DottedArrow/Scripts/Arrow.cs" />
       </list>
     </option>
   </component>
@@ -227,7 +227,8 @@
       <workItem from="1731418978336" duration="4786000" />
       <workItem from="1731426064309" duration="4619000" />
       <workItem from="1731506657685" duration="4405000" />
-      <workItem from="1733231560832" duration="6341000" />
+      <workItem from="1733231560832" duration="7507000" />
+      <workItem from="1733248421393" duration="3684000" />
     </task>
     <servers />
   </component>

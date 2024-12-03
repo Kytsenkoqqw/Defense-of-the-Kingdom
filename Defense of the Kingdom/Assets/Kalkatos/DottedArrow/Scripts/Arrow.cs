@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Kalkatos.DottedArrow
@@ -6,10 +7,14 @@ namespace Kalkatos.DottedArrow
     {
 		public Transform Origin { get { return origin; } set { origin = value; } }
 
+		public Action OnArrow;
+		public Action OffArrow;
 		[SerializeField] private float baseHeight;
 		[SerializeField] private RectTransform baseRect;
 		[SerializeField] private Transform origin;
 		[SerializeField] private bool startsActive;
+		
+		
 
 		private RectTransform myRect;
 		private Canvas canvas;
@@ -56,16 +61,25 @@ namespace Kalkatos.DottedArrow
 			baseRect.anchorMax = new Vector2(baseRect.anchorMax.x, differenceToMouse.magnitude * myRect.localScale.x / baseHeight);
 		}
 
-		private void SetActive (bool b)
+		public void SetActive (bool b)
 		{
 			isActive = b;
 			if (b)
+			{
+				OnArrow?.Invoke();
 				Setup();
+			}
 			baseRect.gameObject.SetActive(b);
 		}
 
 		public void Activate () => SetActive(true);
-		public void Deactivate () => SetActive(false);
+
+		public void Deactivate()
+		{
+			OffArrow?.Invoke();
+			SetActive(false);
+		}
+
 		public void SetupAndActivate (Transform origin)
 		{
 			Origin = origin;

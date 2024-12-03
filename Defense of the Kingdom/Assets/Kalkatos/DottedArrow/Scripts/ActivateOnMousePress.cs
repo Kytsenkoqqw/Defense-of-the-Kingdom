@@ -6,11 +6,11 @@ namespace Kalkatos.DottedArrow
 {
 	public class ActivateOnMousePress : MonoBehaviour
 	{
+		
 		[SerializeField] private Transform origin;
 		[SerializeField] private Arrow arrow;
 		[SerializeField] private SelectPawnAction _selectPawnAction;
 		[SerializeField] private PawnRepairBuilding _pawnRepairBuilding;
-		[SerializeField] private BlinkEffect _blinkEffect;
 
 		private void OnEnable()
 		{
@@ -20,7 +20,7 @@ namespace Kalkatos.DottedArrow
 		public void OnArrowCursor()
 		{
 			arrow.SetupAndActivate(origin);
-			_blinkEffect.StartBlinking(); // Включаем мерцание
+			
 			_selectPawnAction.ClosedPawnPanel();
 		}
 
@@ -28,6 +28,7 @@ namespace Kalkatos.DottedArrow
 		{
 			if (Input.GetMouseButtonDown(1))
 			{
+				Debug.Log("ArrowUpdate");
 				OffArrow();
 			}
 		}
@@ -40,7 +41,6 @@ namespace Kalkatos.DottedArrow
 		private void OffArrow()
 		{
 			Debug.Log("OffArrow");
-			_blinkEffect.StopBlinking(); // Останавливаем мерцание
 			arrow.Deactivate();
 		}
 	}
