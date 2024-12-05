@@ -20,7 +20,6 @@ namespace Kalkatos.DottedArrow
 		public void OnArrowCursor()
 		{
 			arrow.SetupAndActivate(origin);
-			
 			_selectPawnAction.ClosedPawnPanel();
 		}
 

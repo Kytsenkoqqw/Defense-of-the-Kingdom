@@ -66,13 +66,17 @@ namespace Kalkatos.DottedArrow
 			isActive = b;
 			if (b)
 			{
-				OnArrow?.Invoke();
+				//OnArrow?.Invoke();
 				Setup();
 			}
 			baseRect.gameObject.SetActive(b);
 		}
 
-		public void Activate () => SetActive(true);
+		public void Activate()
+		{
+			OnArrow?.Invoke();
+			SetActive(true);
+		}
 
 		public void Deactivate()
 		{

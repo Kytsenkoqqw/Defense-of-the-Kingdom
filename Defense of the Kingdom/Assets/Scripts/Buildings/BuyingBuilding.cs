@@ -5,6 +5,7 @@ using Buildings;
 using Currensy;
 using DG.Tweening;
 using DoTween;
+using Kalkatos.DottedArrow;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -20,7 +21,9 @@ public class BuyingBuilding : MonoBehaviour
     [SerializeField] private int _housePrice;
     [SerializeField] private Image _houseRedAlert;
     [SerializeField] private Image _towerRedAlert;
+    [SerializeField] private Arrow _arrow;
     
+
     private Coins _coins;
     private PlacementBuilding _placementManager; 
     private bool _yoyTime;
@@ -52,7 +55,6 @@ public class BuyingBuilding : MonoBehaviour
         if (_coins.value < _towerPrice)
         {
             RedAlert(_towerRedAlert);
-            Debug.Log("Nema Zolota");
         }
         else
         {
