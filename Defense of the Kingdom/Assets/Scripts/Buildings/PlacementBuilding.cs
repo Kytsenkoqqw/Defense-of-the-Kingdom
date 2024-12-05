@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 using Currensy;
+using Kalkatos.DottedArrow;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -9,6 +10,7 @@ namespace Buildings
 {
     public class PlacementBuilding : MonoBehaviour
     {
+
         private GameObject _currentBuilding;  // Храним текущее здание, которое двигаем за мышью
         private bool _isPlacingBuilding = false;
         [SerializeField] private BuyingBuilding _buyingBuilding;
@@ -36,6 +38,7 @@ namespace Buildings
             _currentBuilding = building;
             _isPlacingBuilding = true;
             _currentBuildingPrice = buildingPrice;
+            Debug.Log($"Начата установка здания, цена: {_currentBuildingPrice}");
         }
 
         // Метод для перемещения здания за мышью
@@ -54,8 +57,18 @@ namespace Buildings
         private void PlaceBuilding()
         {
             _isPlacingBuilding = false;
+
+            if (_coins.value >= _currentBuildingPrice)
+            {
+                _coins.SpendCurrency(_currentBuildingPrice);
+                Debug.Log($"Здание установлено, списано: {_currentBuildingPrice}");
+            }
+            else
+            {
+                Debug.LogError("Недостаточно средств для списания при установке здания.");
+            }
+
             _currentBuilding = null;
-            _coins.SpendCurrency(_currentBuildingPrice);
         }
 
         private void CancelPlaceBuilding()

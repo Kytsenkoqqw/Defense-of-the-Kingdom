@@ -494,6 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9749f3a2d743480bb5b6719f975cc178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _arrow: {fileID: 3048876536887601082, guid: 95ce149ec03da544da6f2509ea9f1b04, type: 3}
   _buyingBuilding: {fileID: 1835734798261109840, guid: 572ca75099cee444f8914604be0cfc0c, type: 3}
   _coins: {fileID: 6498725901869337816, guid: 0b1f612f29eaeaf499e14cc0976c1a43, type: 3}
 --- !u!114 &4237227521880920999
@@ -573,10 +574,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _arrow: {fileID: 3048876536887601082, guid: 95ce149ec03da544da6f2509ea9f1b04, type: 3}
+  _buyingBuilding: {fileID: 1835734798261109840, guid: 572ca75099cee444f8914604be0cfc0c, type: 3}
   color1: {r: 1, g: 1, b: 1, a: 1}
   color2: {r: 0.990566, g: 0.8992984, b: 0.5653702, a: 1}
   duration: 0.8
-  _isBlinking: 0
 --- !u!1 &7873919185015482438
 GameObject:
   m_ObjectHideFlags: 0

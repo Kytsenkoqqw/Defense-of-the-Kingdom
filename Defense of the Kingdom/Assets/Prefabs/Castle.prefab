@@ -173,10 +173,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _arrow: {fileID: 3048876536887601082, guid: 95ce149ec03da544da6f2509ea9f1b04, type: 3}
+  _buyingBuilding: {fileID: 2835077312177853312, guid: 08ea1054fb379b546a8fb0ef8d7cddb5, type: 3}
   color1: {r: 1, g: 1, b: 1, a: 1}
   color2: {r: 1, g: 0.97326505, b: 0.5330188, a: 1}
   duration: 0.8
-  _isBlinking: 0
 --- !u!1 &5163237952773499506
 GameObject:
   m_ObjectHideFlags: 0

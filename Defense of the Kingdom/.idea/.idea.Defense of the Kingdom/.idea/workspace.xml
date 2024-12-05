@@ -78,7 +78,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/IBurningBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/PlacementBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/DestroyTower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/DestroyHouse.cs" />
@@ -101,8 +100,9 @@
         <option value="$PROJECT_DIR$/Assets/OutlineEffect/OutlineEffect/OutlineEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Kalkatos/DottedArrow/Scripts/ActivateOnMousePress.cs" />
         <option value="$PROJECT_DIR$/Assets/Kalkatos/DottedArrow/Scripts/Arrow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingBuilding.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/PlacementBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BlinkEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingBuilding.cs" />
       </list>
     </option>
   </component>
@@ -231,7 +231,8 @@
       <workItem from="1733248421393" duration="4482000" />
       <workItem from="1733325565606" duration="945000" />
       <workItem from="1733403892649" duration="2442000" />
-      <workItem from="1733407937468" duration="3228000" />
+      <workItem from="1733407937468" duration="3298000" />
+      <workItem from="1733429837412" duration="4255000" />
     </task>
     <servers />
   </component>

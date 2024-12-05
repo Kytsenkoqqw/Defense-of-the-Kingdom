@@ -155,6 +155,8 @@ MonoBehaviour:
   _housePrice: 15
   _houseRedAlert: {fileID: 0}
   _towerRedAlert: {fileID: 0}
+  _arrow: {fileID: 3048876536887601082, guid: 95ce149ec03da544da6f2509ea9f1b04, type: 3}
+  _blinkEffect: {fileID: 5027814182921609619, guid: 6821d327a44c71044ae1d14902d0c490, type: 3}
 --- !u!1 &4255852834655986333
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,7 +34,7 @@ public class BlinkEffect : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         _arrow.OnArrow -= StartBlinking;
         _arrow.OffArrow -= StopBlinking;

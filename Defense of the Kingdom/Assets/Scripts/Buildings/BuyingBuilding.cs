@@ -12,6 +12,7 @@ using UnityEngine.UI;
 
 public class BuyingBuilding : MonoBehaviour
 {
+    public Action BuyBuildings;
     public int _buildingPrice;
     [SerializeField] private Transform _transformBuyingPanel;
     [SerializeField] private GameObject _buyingPanel;
@@ -21,8 +22,8 @@ public class BuyingBuilding : MonoBehaviour
     [SerializeField] private int _housePrice;
     [SerializeField] private Image _houseRedAlert;
     [SerializeField] private Image _towerRedAlert;
-    [SerializeField] private Arrow _arrow;
-    
+
+
 
     private Coins _coins;
     private PlacementBuilding _placementManager; 
@@ -33,6 +34,8 @@ public class BuyingBuilding : MonoBehaviour
         _coins = FindObjectOfType<Coins>();
         _placementManager = FindObjectOfType<PlacementBuilding>();
     }
+    
+    
 
     public void BuyHouse()
     {
@@ -44,6 +47,15 @@ public class BuyingBuilding : MonoBehaviour
         {
             OffBuyingPanel();
             GameObject house = Instantiate(_housePrefab);
+            var houseBlink = house.GetComponent<BlinkEffect>();
+            if (houseBlink != null)
+            {
+                // Подписываем здание на события стрелки
+                Arrow arrow = FindObjectOfType<Arrow>();
+                arrow.OnArrow += houseBlink.StartBlinking;
+                arrow.OffArrow += houseBlink.StopBlinking;
+            }
+            BuyBuildings?.Invoke();
             _buildingPrice = _housePrice;
             _placementManager.StartPlacingBuilding(house, _housePrice);
         }
@@ -60,6 +72,14 @@ public class BuyingBuilding : MonoBehaviour
         {
             OffBuyingPanel();
             GameObject tower = Instantiate(_towerPrefab);
+            var towerBlink = tower.GetComponent<BlinkEffect>();
+            if (towerBlink != null)
+            {
+                Arrow arrow = FindObjectOfType<Arrow>();
+                arrow.OnArrow += towerBlink.StartBlinking;
+                arrow.OffArrow += towerBlink.StopBlinking;
+            }
+            BuyBuildings?.Invoke();
             _buildingPrice = _towerPrice;
             _placementManager.StartPlacingBuilding(tower, _towerPrice);
         }
