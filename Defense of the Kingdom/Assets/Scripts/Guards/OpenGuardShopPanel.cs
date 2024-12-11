@@ -22,7 +22,7 @@ public class OpenGuardShopPanel : MonoBehaviour
 
     public void ShowBuyMenu()
     {
-        _transformOpenPanel.DOScale(new Vector3(1,1,1), 0.5f );
+        _transformOpenPanel.DOScale(new Vector3(1,1,1), 1f ).SetEase(Ease.OutBounce);
         _guardBuyPanel.SetActive(true);
     }
 }

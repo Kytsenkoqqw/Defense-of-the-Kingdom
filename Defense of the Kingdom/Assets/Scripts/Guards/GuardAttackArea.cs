@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using State;
 using UnityEngine;
 
@@ -8,7 +9,6 @@ public class GuardAttackArea : MonoBehaviour
 {
     [SerializeField] private int _damage = 5;
     [SerializeField] private float _damageInterval = 25f; // Интервал между нанесением урона
-
     private float _lastDamageTime = 0f;
 
     private void OnTriggerStay2D(Collider2D other)

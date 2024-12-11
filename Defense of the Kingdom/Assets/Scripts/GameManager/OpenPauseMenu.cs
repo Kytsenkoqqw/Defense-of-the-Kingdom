@@ -8,7 +8,7 @@ public class OpenPauseMenu : MonoBehaviour
 {
    private void OnEnable()
    {
-      transform.DOScale(new Vector3(1, 1, 0), 0.5f).SetUpdate(true);
+      transform.DOScale(new Vector3(1, 1, 0), 1f).SetUpdate(true).SetEase(Ease.OutBounce);
    }
 
    private void OnDisable()

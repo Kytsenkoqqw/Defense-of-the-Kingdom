@@ -18,7 +18,13 @@ namespace DoTween
 
         private void ShowBuildingsPanel()
         {
-            _transformBuildingsPanel.DOScale(new Vector3(1, 1, 1), 0.5f);
+            // так делается секвенция
+            Sequence animation = DOTween.Sequence();
+
+            animation
+                .Append(_transformBuildingsPanel.DOScale(new Vector3(1, 1, 1), 1f)).SetEase(Ease.OutBounce);
+
+
             _buildingsPanel.SetActive(true);
         }
     }

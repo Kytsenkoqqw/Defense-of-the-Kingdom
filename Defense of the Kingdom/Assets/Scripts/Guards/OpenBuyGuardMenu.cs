@@ -8,7 +8,7 @@ public class OpenBuyGuardMenu : MonoBehaviour
 {
    private void OnEnable()
    {
-      transform.DOScale(new Vector3(1, 1, 0), 0.5f);
+      transform.DOScale(new Vector3(1, 1, 0), 1f).SetEase(Ease.OutBounce);
    }
 
    private void OnDisable()

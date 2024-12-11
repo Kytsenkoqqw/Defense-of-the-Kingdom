@@ -52,9 +52,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/OpenPauseMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DoTween/OpenBuildingsShopPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/KingdomBuildings/ClosedBuildingsPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/ClosedBuyGuardPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyPawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingPawn.cs" />
@@ -94,7 +91,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/RepairBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/SelectPawnAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/PawnRepairBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/OutlineEffect/OutlineEffect/OutlineEffect.cs" />
@@ -103,6 +99,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/PlacementBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BlinkEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingBuilding.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttackArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/OpenBuyGuardMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/OpenGuardShopPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/KingdomBuildings/OpenBuildingsShopPanel.cs" />
       </list>
     </option>
   </component>
@@ -233,6 +233,7 @@
       <workItem from="1733403892649" duration="2442000" />
       <workItem from="1733407937468" duration="3298000" />
       <workItem from="1733429837412" duration="4255000" />
+      <workItem from="1733932524483" duration="3571000" />
     </task>
     <servers />
   </component>
