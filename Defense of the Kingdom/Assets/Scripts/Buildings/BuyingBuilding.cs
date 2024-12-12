@@ -104,6 +104,5 @@ public class BuyingBuilding : MonoBehaviour
         _transformBuyingPanel.DOScale(new Vector3(0,0,0), 0.5f);
         _buyingPanel.SetActive(false);
     }
-
 }
 

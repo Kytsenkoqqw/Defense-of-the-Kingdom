@@ -126,8 +126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHeight: 3
   baseRect: {fileID: 3048876537427583485}
-  origin: {fileID: 0}
+  origin: {fileID: 2715693801346431736, guid: e67e49b0d176b514d9b77811dc3e1903, type: 3}
   startsActive: 0
+  _buyingPawn: {fileID: 6025875862486346194, guid: fb6193fc788ffda46a2992f98d5576d0, type: 3}
 --- !u!1 &3048876537427583486
 GameObject:
   m_ObjectHideFlags: 0

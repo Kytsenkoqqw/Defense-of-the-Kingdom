@@ -1,4 +1,5 @@
 using System;
+using Buildings;
 using UnityEngine;
 
 namespace Kalkatos.DottedArrow
@@ -13,8 +14,6 @@ namespace Kalkatos.DottedArrow
 		[SerializeField] private RectTransform baseRect;
 		[SerializeField] private Transform origin;
 		[SerializeField] private bool startsActive;
-		
-		
 
 		private RectTransform myRect;
 		private Canvas canvas;

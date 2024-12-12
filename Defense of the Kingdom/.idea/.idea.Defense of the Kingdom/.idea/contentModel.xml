@@ -1064,6 +1064,7 @@
           <e p="MessageTrigger" t="Include">
             <e p="ShowStartMessage.cs" t="Include" />
           </e>
+          <e p="MoveSheep.cs" t="Include" />
           <e p="ObjectPool" t="Include">
             <e p="ObjectPool.cs" t="Include" />
           </e>

@@ -1,6 +1,7 @@
 ﻿using System;
 using Currensy;
 using DG.Tweening;
+using Kalkatos.DottedArrow;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,9 +15,9 @@ namespace Buildings
         [SerializeField] private int _pricePawn = 3;
         [SerializeField] private  Coins _coins;
         [SerializeField] private Image _pawnRedAlert;
+
         private bool _yoyTime;
         
-
         private void OnEnable()
         {
             _buyPawnButton.onClick.AddListener(PawnBuy);
@@ -40,8 +41,16 @@ namespace Buildings
             }
             else
             {
-                _coins.SpendCurrency(_pricePawn);
+                _coins.SpendCurrency(_pricePawn); 
                 Instantiate(_pawnPrefab, _pawnSpawnPoint.position, Quaternion.identity);
+                BlinkEffect blinkEffect = FindObjectOfType<BlinkEffect>();
+
+                Arrow arrow = FindObjectOfType<Arrow>();
+                if (arrow != null && blinkEffect != null)
+                {
+                    arrow.OnArrow += blinkEffect.StartBlinking;
+                    arrow.OffArrow += blinkEffect.StopBlinking;
+                }
             }
            
         }

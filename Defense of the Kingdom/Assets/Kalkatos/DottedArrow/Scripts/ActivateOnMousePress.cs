@@ -27,7 +27,6 @@ namespace Kalkatos.DottedArrow
 		{
 			if (Input.GetMouseButtonDown(1))
 			{
-				Debug.Log("ArrowUpdate");
 				OffArrow();
 			}
 		}

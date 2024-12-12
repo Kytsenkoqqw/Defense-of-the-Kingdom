@@ -40,7 +40,7 @@ public class PawnRepairBuilding : MonoBehaviour
             // Запускаем движение, если была нажата кнопка
             if (Input.GetMouseButtonDown(0)) 
             {
-                isMoving = true; // Устанавливаем флаг для начала движения
+                isMoving = true;
             }
         }
     }

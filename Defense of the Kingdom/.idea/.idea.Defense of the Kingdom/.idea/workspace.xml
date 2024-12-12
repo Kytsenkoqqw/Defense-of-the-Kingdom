@@ -22,6 +22,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/ObjectState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/GuardIdleState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buildings/BlinkEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MoveSheep.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@14.0.11/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingBuilding.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/State/GuardFightState.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,9 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Guards/ClosedBuyGuardPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyPawn.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingPawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/DrawGrid.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuildableTilemap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuildableTilemapEditor.cs" />
@@ -92,17 +90,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/RepairBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/SelectPawnAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackArea.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/PawnRepairBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/OutlineEffect/OutlineEffect/OutlineEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Kalkatos/DottedArrow/Scripts/ActivateOnMousePress.cs" />
-        <option value="$PROJECT_DIR$/Assets/Kalkatos/DottedArrow/Scripts/Arrow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/PlacementBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BlinkEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/GuardAttackArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/KingdomBuildings/OpenBuildingsShopPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/OpenBuyGuardMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Guards/OpenGuardShopPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/KingdomBuildings/OpenBuildingsShopPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/OpenPauseMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Pawn/PawnRepairBuilding.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingBuilding.cs" />
+        <option value="$PROJECT_DIR$/Assets/Kalkatos/DottedArrow/Scripts/ActivateOnMousePress.cs" />
+        <option value="$PROJECT_DIR$/Assets/Kalkatos/DottedArrow/Scripts/Arrow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/BuyingPawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MoveSheep.cs" />
       </list>
     </option>
   </component>
@@ -233,7 +234,8 @@
       <workItem from="1733403892649" duration="2442000" />
       <workItem from="1733407937468" duration="3298000" />
       <workItem from="1733429837412" duration="4255000" />
-      <workItem from="1733932524483" duration="3571000" />
+      <workItem from="1733932524483" duration="4360000" />
+      <workItem from="1734006499920" duration="6817000" />
     </task>
     <servers />
   </component>
