@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Buildings;
 using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -9,12 +10,18 @@ using UnityEngine.Events;
 public class PawnRepairBuilding : MonoBehaviour
 {
     public UnityEvent StartPawnMove;
+    private RepairBuilding _repairBuilding;
     [SerializeField] private LayerMask interactableLayer; // Укажите слой объекта для фильтрации Raycast
     [SerializeField] private Transform[] _buildings; // Массив объектов для перемещения
     [SerializeField] private float _pawnSpeed = 2f; // Скорость движения объекта
     
     private Transform targetBuilding = null; // Текущая цель для перемещения
     private bool isMoving = false; // Флаг, который показывает, что нужно двигаться
+
+    private void Awake()
+    {
+        _repairBuilding = FindObjectOfType<RepairBuilding>();
+    }
 
     private void Update()
     {
@@ -45,7 +52,7 @@ public class PawnRepairBuilding : MonoBehaviour
         }
     }
 
-    private void MoveToTarget()
+    public void MoveToTarget()
     {
         // Если есть цель, начинаем движение
         if (isMoving && targetBuilding != null)
@@ -60,7 +67,10 @@ public class PawnRepairBuilding : MonoBehaviour
                 Debug.Log("Достигнуто здание: " + targetBuilding.name);
                 isMoving = false; // Сбрасываем флаг после достижения цели
                 targetBuilding = null; // Сбрасываем цель
+                StartCoroutine(_repairBuilding.RepairBuildings());
             }
         }
     }
+
+   
 }

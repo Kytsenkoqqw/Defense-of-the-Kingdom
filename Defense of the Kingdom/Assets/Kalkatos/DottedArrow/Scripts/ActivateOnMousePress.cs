@@ -11,6 +11,7 @@ namespace Kalkatos.DottedArrow
 		[SerializeField] private Arrow arrow;
 		[SerializeField] private SelectPawnAction _selectPawnAction;
 		[SerializeField] private PawnRepairBuilding _pawnRepairBuilding;
+		
 
 		private void OnEnable()
 		{

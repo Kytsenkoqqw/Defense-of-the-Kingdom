@@ -1007,7 +1007,7 @@
             <e p="IBurningBuilding.cs" t="Include" />
             <e p="IRepairBuilding.cs" t="Include" />
             <e p="PlacementBuilding.cs" t="Include" />
-            <e p="RepairTower.cs" t="Include" />
+            <e p="RepairBuilding.cs" t="Include" />
           </e>
           <e p="Camera" t="Include">
             <e p="CameraFollow.cs" t="Include" />
@@ -1064,7 +1064,6 @@
           <e p="MessageTrigger" t="Include">
             <e p="ShowStartMessage.cs" t="Include" />
           </e>
-          <e p="MoveSheep.cs" t="Include" />
           <e p="ObjectPool" t="Include">
             <e p="ObjectPool.cs" t="Include" />
           </e>
