@@ -39,7 +39,7 @@ namespace Kalkatos.DottedArrow
 
 		private void OffArrow()
 		{
-			Debug.Log("OffArrow");
+			//Debug.Log("OffArrow");
 			arrow.Deactivate();
 		}
 	}

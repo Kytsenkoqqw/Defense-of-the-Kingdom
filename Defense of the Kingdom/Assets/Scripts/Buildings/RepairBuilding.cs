@@ -8,9 +8,14 @@ namespace Buildings
 {
     public class RepairBuilding : MonoBehaviour
     { 
-        [SerializeField] private Wood _wood;
+        private Wood _wood;
         [SerializeField] private HealthSystem _healthSystem;
-        
+
+
+        private void Awake()
+        {
+            _wood = FindObjectOfType<Wood>();
+        }
 
         public IEnumerator RepairBuildings()
         {

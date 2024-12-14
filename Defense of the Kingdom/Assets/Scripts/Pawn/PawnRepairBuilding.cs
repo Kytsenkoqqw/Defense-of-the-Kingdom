@@ -15,7 +15,7 @@ public class PawnRepairBuilding : MonoBehaviour
     [SerializeField] private Transform[] _buildings; // Массив объектов для перемещения
     [SerializeField] private float _pawnSpeed = 2f; // Скорость движения объекта
     
-    private Transform targetBuilding = null; // Текущая цель для перемещения
+    public Transform targetBuilding = null; // Текущая цель для перемещения
     private bool isMoving = false; // Флаг, который показывает, что нужно двигаться
 
     private void Awake()
@@ -52,7 +52,7 @@ public class PawnRepairBuilding : MonoBehaviour
         }
     }
 
-    public void MoveToTarget()
+    private void MoveToTarget()
     {
         // Если есть цель, начинаем движение
         if (isMoving && targetBuilding != null)
@@ -65,10 +65,22 @@ public class PawnRepairBuilding : MonoBehaviour
             if (Vector2.Distance(transform.position, targetBuilding.position) < 0.1f)
             {
                 Debug.Log("Достигнуто здание: " + targetBuilding.name);
-                isMoving = false; // Сбрасываем флаг после достижения цели
-                targetBuilding = null; // Сбрасываем цель
-                StartCoroutine(_repairBuilding.RepairBuildings());
+            
+                // Сбрасываем флаг движения, но оставляем цель
+                isMoving = false; 
+
+                // Начинаем выполнение корутины
+                StartCoroutine(RepairBuildingRoutine());
             }
+        }
+    }
+    
+    private IEnumerator RepairBuildingRoutine()
+    {
+        if (_repairBuilding != null)
+        {
+            yield return _repairBuilding.RepairBuildings();
+            targetBuilding = null; // Сбрасываем цель после завершения корутины
         }
     }
 

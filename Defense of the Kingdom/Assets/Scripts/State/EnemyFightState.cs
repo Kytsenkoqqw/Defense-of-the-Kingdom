@@ -26,7 +26,7 @@ namespace State
 
         public override void EnterState()
         {
-            Debug.Log("Enter Enemy Fight State");
+          //  Debug.Log("Enter Enemy Fight State");
         }
 
         public override void UpdateState()
