@@ -74,7 +74,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/DestroyTower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/DestroyHouse.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AttackArea.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tree/TreeFelling.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/Wood.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/DestoryWood.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Currensy/TakeWood.cs" />
@@ -103,6 +102,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/State/EnemyFightState.cs" />
         <option value="$PROJECT_DIR$/Assets/Kalkatos/DottedArrow/Scripts/ActivateOnMousePress.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buildings/RepairBuilding.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tree/TreeFelling.cs" />
       </list>
     </option>
   </component>
@@ -236,7 +236,8 @@
       <workItem from="1733932524483" duration="4360000" />
       <workItem from="1734006499920" duration="7412000" />
       <workItem from="1734098895503" duration="8377000" />
-      <workItem from="1734183194088" duration="3269000" />
+      <workItem from="1734183194088" duration="3532000" />
+      <workItem from="1734264350616" duration="4623000" />
     </task>
     <servers />
   </component>
